@@ -21,7 +21,7 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Unity 2021+ (Recommended)
+- Unity 6 (6000.0.33f1)
 - .NET SDK
 - Node.js & npm (For backend development)
 
