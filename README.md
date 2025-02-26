@@ -38,7 +38,4 @@
 - [ ] Core cultivation system
 - [ ] Skill tree & progression
 
-## 💡 Contributing
-We welcome contributions! Please follow the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
-
 🌟 **Embark on your path to immortality and forge your legend in the Nine Heavens!**
