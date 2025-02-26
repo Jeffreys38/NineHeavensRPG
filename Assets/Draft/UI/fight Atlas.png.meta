@@ -1,0 +1,1109 @@
+fileFormatVersion: 2
+guid: 7ae0c35a2429f7845a2179ae4f9498f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4387785131968549085
+    second: fight Atlas_0
+  - first:
+      213: 8759801935593167128
+    second: fight Atlas_1
+  - first:
+      213: 2044890031086618643
+    second: fight Atlas_2
+  - first:
+      213: 4399036472790939058
+    second: fight Atlas_3
+  - first:
+      213: -8972659964974466939
+    second: fight Atlas_4
+  - first:
+      213: 4001041925179051343
+    second: fight Atlas_5
+  - first:
+      213: 193120362287468914
+    second: fight Atlas_6
+  - first:
+      213: 2528948450740657037
+    second: fight Atlas_7
+  - first:
+      213: -2445955975378070594
+    second: fight Atlas_8
+  - first:
+      213: 5083692229742659973
+    second: fight Atlas_9
+  - first:
+      213: 4499184103011432457
+    second: fight Atlas_10
+  - first:
+      213: -1403411168302886831
+    second: fight Atlas_11
+  - first:
+      213: 4499953282718929497
+    second: fight Atlas_12
+  - first:
+      213: -3684502227918977440
+    second: fight Atlas_13
+  - first:
+      213: 115429602984902583
+    second: fight Atlas_14
+  - first:
+      213: 7629706018274550312
+    second: fight Atlas_15
+  - first:
+      213: 7223201772663138015
+    second: fight Atlas_16
+  - first:
+      213: 3757711590246198905
+    second: fight Atlas_17
+  - first:
+      213: -3016111580444659790
+    second: fight Atlas_18
+  - first:
+      213: 6555957307193300753
+    second: fight Atlas_19
+  - first:
+      213: -5321995750623765096
+    second: fight Atlas_20
+  - first:
+      213: 3490323321525763318
+    second: fight Atlas_21
+  - first:
+      213: -5055954415320479251
+    second: fight Atlas_22
+  - first:
+      213: 4739544968549431988
+    second: fight Atlas_23
+  - first:
+      213: 5825891345768411131
+    second: fight Atlas_24
+  - first:
+      213: -2320392117433584037
+    second: fight Atlas_25
+  - first:
+      213: -2330918847901479486
+    second: fight Atlas_26
+  - first:
+      213: -6021434237724221936
+    second: fight Atlas_27
+  - first:
+      213: 1934323595522336513
+    second: fight Atlas_28
+  - first:
+      213: -3851260540628915751
+    second: fight Atlas_29
+  - first:
+      213: 3034554056247844021
+    second: fight Atlas_30
+  - first:
+      213: 3504240573747207509
+    second: fight Atlas_31
+  - first:
+      213: 4552773699475475853
+    second: fight Atlas_32
+  - first:
+      213: -3417368626881993789
+    second: fight Atlas_33
+  - first:
+      213: 5899523395646111987
+    second: fight Atlas_34
+  - first:
+      213: 1265813364528082705
+    second: fight Atlas_35
+  - first:
+      213: 8199160441842476034
+    second: fight Atlas_36
+  - first:
+      213: -199515489913237813
+    second: fight Atlas_37
+  - first:
+      213: 89692282044462048
+    second: fight Atlas_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fight Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 107
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f26428ba47b13c0800000000000000
+      internalID: -4387785131968549085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 297
+        width: 61
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8195fc1f271119970800000000000000
+      internalID: 8759801935593167128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 278
+        width: 71
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5f0ba6d548c0d30800000000000000
+      internalID: 4399036472790939058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 315
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588f3511d45ba7380800000000000000
+      internalID: -8972659964974466939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 308
+        width: 142
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d0eb9be6e868730800000000000000
+      internalID: 4001041925179051343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 308
+        width: 33
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2711a0142f91ea200800000000000000
+      internalID: 193120362287468914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 279
+        width: 176
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bdbad8731a81320800000000000000
+      internalID: 2528948450740657037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 283
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb39857eff73e0ed0800000000000000
+      internalID: -2445955975378070594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 278
+        width: 85
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589893df527ec8640800000000000000
+      internalID: 5083692229742659973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 278
+        width: 81
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908b41f9a10507e30800000000000000
+      internalID: 4499184103011432457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 277
+        width: 85
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1509d7f5af4168ce0800000000000000
+      internalID: -1403411168302886831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267
+        width: 182
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952905a3bab037e30800000000000000
+      internalID: 4499953282718929497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 248
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06601cabeb40edcc0800000000000000
+      internalID: -3684502227918977440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 222
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfba72cc961a9100800000000000000
+      internalID: 115429602984902583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 197
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8222aef133922e960800000000000000
+      internalID: 7629706018274550312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 262
+        width: 181
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6ee88fdb7fd3460800000000000000
+      internalID: 7223201772663138015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 262
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e2ef838c2162430800000000000000
+      internalID: 3757711590246198905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 221
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf67a46f7e9426d0800000000000000
+      internalID: -3016111580444659790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 74
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11712e99f607bfa50800000000000000
+      internalID: 6555957307193300753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 112
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d9eebdf097426b0800000000000000
+      internalID: -5321995750623765096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 248
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcfdc2819e107030800000000000000
+      internalID: 3490323321525763318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 243
+        width: 196
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de941423f34a5d9b0800000000000000
+      internalID: -5055954415320479251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 247
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4baf067a90f36c140800000000000000
+      internalID: 4739544968549431988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 221
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff6c84ef49b9d050800000000000000
+      internalID: 5825891345768411131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 187
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5631c4c9af4ccfd0800000000000000
+      internalID: -2320392117433584037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdc19658a9e6afd0800000000000000
+      internalID: -2330918847901479486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 106
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e9216b6719f6ca0800000000000000
+      internalID: -6021434237724221936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 197
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107e3c7cf0918da10800000000000000
+      internalID: 1934323595522336513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 185
+        width: 112
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9a55271f29d8ac0800000000000000
+      internalID: -3851260540628915751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 185
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc9f5e16d6ec1a20800000000000000
+      internalID: 3034554056247844021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 140
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d96bd4c3091a030800000000000000
+      internalID: 3504240573747207509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 123
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d0afbde83be2f30800000000000000
+      internalID: 4552773699475475853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 140
+        width: 150
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3622007511390d0800000000000000
+      internalID: -3417368626881993789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 70
+        width: 219
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0c79575415fd150800000000000000
+      internalID: 5899523395646111987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 287
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f63a86c82119110800000000000000
+      internalID: 1265813364528082705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 101
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 204a4781bf449c170800000000000000
+      internalID: 8199160441842476034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 70
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce888018bd2b3df0800000000000000
+      internalID: -199515489913237813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fight Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 207
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3ba52c7a6ae3100800000000000000
+      internalID: 89692282044462048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fe0b4a8426e91934b866af7837c9f0e5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fight Atlas_0: -4387785131968549085
+      fight Atlas_1: 8759801935593167128
+      fight Atlas_10: 4499184103011432457
+      fight Atlas_11: -1403411168302886831
+      fight Atlas_12: 4499953282718929497
+      fight Atlas_13: -3684502227918977440
+      fight Atlas_14: 115429602984902583
+      fight Atlas_15: 7629706018274550312
+      fight Atlas_16: 7223201772663138015
+      fight Atlas_17: 3757711590246198905
+      fight Atlas_18: -3016111580444659790
+      fight Atlas_19: 6555957307193300753
+      fight Atlas_2: 2044890031086618643
+      fight Atlas_20: -5321995750623765096
+      fight Atlas_21: 3490323321525763318
+      fight Atlas_22: -5055954415320479251
+      fight Atlas_23: 4739544968549431988
+      fight Atlas_24: 5825891345768411131
+      fight Atlas_25: -2320392117433584037
+      fight Atlas_26: -2330918847901479486
+      fight Atlas_27: -6021434237724221936
+      fight Atlas_28: 1934323595522336513
+      fight Atlas_29: -3851260540628915751
+      fight Atlas_3: 4399036472790939058
+      fight Atlas_30: 3034554056247844021
+      fight Atlas_31: 3504240573747207509
+      fight Atlas_32: 4552773699475475853
+      fight Atlas_33: -3417368626881993789
+      fight Atlas_34: 5899523395646111987
+      fight Atlas_35: 1265813364528082705
+      fight Atlas_36: 8199160441842476034
+      fight Atlas_37: -199515489913237813
+      fight Atlas_38: 89692282044462048
+      fight Atlas_4: -8972659964974466939
+      fight Atlas_5: 4001041925179051343
+      fight Atlas_6: 193120362287468914
+      fight Atlas_7: 2528948450740657037
+      fight Atlas_8: -2445955975378070594
+      fight Atlas_9: 5083692229742659973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

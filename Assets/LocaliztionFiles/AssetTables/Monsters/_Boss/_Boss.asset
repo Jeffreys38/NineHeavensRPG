@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: _Boss
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 8b6c6f0e97d9e7a438be5635766246dc, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 1d7bbe8f24883da428d0d49b4c90f07e, type: 2}
+  - {fileID: 11400000, guid: 3d6d24d5627ec2a40ae6428e96e25700, type: 2}
+  - {fileID: 11400000, guid: d62dea3779af9654382c0c5d465ca514, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

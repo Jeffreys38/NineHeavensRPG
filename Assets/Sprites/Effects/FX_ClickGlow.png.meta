@@ -1,0 +1,675 @@
+fileFormatVersion: 2
+guid: 11dd3124093645345b76217e19d82523
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2743148746390295067
+    second: clicking_point_0
+  - first:
+      213: -62773390746408160
+    second: clicking_point_1
+  - first:
+      213: 4369114698073638999
+    second: clicking_point_2
+  - first:
+      213: -8544192671642363016
+    second: clicking_point_3
+  - first:
+      213: -8257285677459164303
+    second: clicking_point_4
+  - first:
+      213: -3129647160662937269
+    second: clicking_point_5
+  - first:
+      213: 2727476539732391460
+    second: clicking_point_6
+  - first:
+      213: -695578108268979437
+    second: clicking_point_7
+  - first:
+      213: 7587161712228220826
+    second: clicking_point_8
+  - first:
+      213: -4026919265449714408
+    second: clicking_point_9
+  - first:
+      213: 7923456956134626344
+    second: clicking_point_10
+  - first:
+      213: 5355993548169426543
+    second: clicking_point_11
+  - first:
+      213: -252823658567399163
+    second: clicking_point_12
+  - first:
+      213: 5536454432264177307
+    second: clicking_point_13
+  - first:
+      213: -2313020805360739132
+    second: clicking_point_14
+  - first:
+      213: 2657358919808861036
+    second: clicking_point_15
+  - first:
+      213: -2121008981653587904
+    second: clicking_point_16
+  - first:
+      213: -2686594579561178645
+    second: clicking_point_17
+  - first:
+      213: 6446372662665337833
+    second: clicking_point_18
+  - first:
+      213: -397230173534856583
+    second: clicking_point_19
+  - first:
+      213: 3253899172769936774
+    second: clicking_point_20
+  - first:
+      213: -5400914102042927388
+    second: clicking_point_21
+  - first:
+      213: 8178657658357602451
+    second: clicking_point_22
+  - first:
+      213: 6751498679868683315
+    second: clicking_point_23
+  - first:
+      213: 6898227368241593759
+    second: clicking_point_24
+  - first:
+      213: 1928737322432475551
+    second: clicking_point_25
+  - first:
+      213: 4551268196785361434
+    second: clicking_point_26
+  - first:
+      213: -3793371349135168730
+    second: clicking_point_27
+  - first:
+      213: -6982153979963507692
+    second: clicking_point_28
+  - first:
+      213: -1134191121302071248
+    second: clicking_point_29
+  - first:
+      213: 2576726200770985339
+    second: clicking_point_30
+  - first:
+      213: -867977748822112081
+    second: clicking_point_31
+  - first:
+      213: -963084108293108969
+    second: clicking_point_32
+  - first:
+      213: -6559325252845821301
+    second: clicking_point_33
+  - first:
+      213: -5522879428773555062
+    second: clicking_point_34
+  - first:
+      213: -8445096431723890281
+    second: clicking_point_35
+  - first:
+      213: -2751975707083156567
+    second: clicking_point_36
+  - first:
+      213: -377565724567414357
+    second: clicking_point_37
+  - first:
+      213: 7587815259440732142
+    second: clicking_point_38
+  - first:
+      213: 2750413128320415010
+    second: clicking_point_39
+  - first:
+      213: 919803827916585519
+    second: clicking_point_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FX_ClickGlow_0
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1609
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bed096c1bc06304da6849dd37e2776a
+      internalID: 1922767072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_1
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1587
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0d07032bd7b804ca4399410bbb8243
+      internalID: -339306593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_2
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1563
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2839cbc960396eb40a55be439c4e6509
+      internalID: 398076437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1294
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e075bbc10f7ddc245b9f7d6986baa057
+      internalID: -90433001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1285
+        width: 178
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfffd294a3fb7648a3b0bf97e09dfb6
+      internalID: 1596230523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_5
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1285
+        width: 178
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb57478f0ef63d64e9d77ea6bf2f6cea
+      internalID: 715018027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_6
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1286
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d06bb6a2a89d36449f284494dadd4bf
+      internalID: 1194081143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1036
+        width: 179
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8025e0cdc4aa10b4d8643c929bd0af24
+      internalID: -443275588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1036
+        width: 182
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c672fea6a6d52438b844b6de0ac15c
+      internalID: -955043584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_9
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1037
+        width: 185
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6606877ce853d514eb60542c1c94dc4f
+      internalID: 956861383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_10
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1038
+        width: 186
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149bfd7c2fee1e642915f6b3800cc52a
+      internalID: -184968155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_14
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 796
+        width: 183
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8965fc248667d4341ae0947b315082f8
+      internalID: 1269862382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 801
+        width: 197
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135847fe9af6dc94ea4d8242b7850e9e
+      internalID: -290391143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_16
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 800
+        width: 188
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca3ddc5d2ef9ab4f8afa310ceb0a2b8
+      internalID: 335869779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_18
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 798
+        width: 183
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6dfd3b4aaaf4f438388fc31d4a014c
+      internalID: -292891642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_31
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 560
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2309181490fe74ba5d8b2fdef8d748
+      internalID: -1452578115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_32
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 544
+        width: 212
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c18cde02b47024b937436300746543
+      internalID: -1035503057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX_ClickGlow_33
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 605
+        width: 179
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee8475e3889ef9468d7693de7307823
+      internalID: -1174023309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6ac93f0e8d4b7d54cb1289a7aba7cf2f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FX_ClickGlow_0: 1922767072
+      FX_ClickGlow_1: -339306593
+      FX_ClickGlow_10: -184968155
+      FX_ClickGlow_13: -1180537833
+      FX_ClickGlow_14: 1269862382
+      FX_ClickGlow_15: -290391143
+      FX_ClickGlow_16: 335869779
+      FX_ClickGlow_17: -408854185
+      FX_ClickGlow_18: -292891642
+      FX_ClickGlow_19: 1869963897
+      FX_ClickGlow_2: 398076437
+      FX_ClickGlow_20: 1474087741
+      FX_ClickGlow_21: 47721523
+      FX_ClickGlow_22: -1596554354
+      FX_ClickGlow_23: -894261562
+      FX_ClickGlow_24: -439112332
+      FX_ClickGlow_25: 1374069288
+      FX_ClickGlow_26: -2100502500
+      FX_ClickGlow_27: 665771459
+      FX_ClickGlow_28: -1764432278
+      FX_ClickGlow_29: -980803002
+      FX_ClickGlow_3: -90433001
+      FX_ClickGlow_30: -2116643298
+      FX_ClickGlow_31: -1452578115
+      FX_ClickGlow_32: -1035503057
+      FX_ClickGlow_33: -1174023309
+      FX_ClickGlow_34: 1089844777
+      FX_ClickGlow_35: -913748458
+      FX_ClickGlow_36: 1767902910
+      FX_ClickGlow_37: -118954656
+      FX_ClickGlow_38: 1407134500
+      FX_ClickGlow_39: -374605571
+      FX_ClickGlow_4: 1596230523
+      FX_ClickGlow_40: -1214135926
+      FX_ClickGlow_5: 715018027
+      FX_ClickGlow_6: 1194081143
+      FX_ClickGlow_7: -443275588
+      FX_ClickGlow_8: -955043584
+      FX_ClickGlow_9: 956861383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

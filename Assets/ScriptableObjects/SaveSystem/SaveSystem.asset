@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ae8b9c62264f0fb6d2681ce12f3881, type: 3}
+  m_Name: SaveSystem
+  m_EditorClassIdentifier: 
+  _saveSettingsEvent: {fileID: 11400000, guid: 4a7ebda2a1a914747a9f492fda3ecdaa, type: 2}
+  _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _playerState: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+  _playerInventory: {fileID: 11400000, guid: 158d629a8b2d29d4ab36a31f66ee09d9, type: 2}
+  _currentSettings: {fileID: 11400000, guid: 950aaff8e1731d345aadcace55d8bff4, type: 2}
+  gameData:
+    _protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+    _locationId: 
+    _itemStacks: []
+    _finishedQuestlineItemsGUIds: []
+    _masterVolume: 0
+    _musicVolume: 0
+    _sfxVolume: 0
+    _resolutionsIndex: 0
+    _antiAliasingIndex: 0
+    _shadowDistance: 0
+    _isFullscreen: 0
+    _currentLocale: {fileID: 11400000, guid: 255ab2b3d7c166844bb754b88405a404, type: 2}

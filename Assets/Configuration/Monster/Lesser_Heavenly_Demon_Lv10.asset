@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904a311ed5c44922a0d923a1e46ae60a, type: 3}
+  m_Name: Lesser_Heavenly_Demon_Lv10
+  m_EditorClassIdentifier: 
+  id: 0
+  name: Lesser Heavenly Demon
+  description: A legendary demon
+  icon: {fileID: 0}
+  level: 10
+  damage: 2500
+  maxArmor: 500
+  maxHealth: 3200

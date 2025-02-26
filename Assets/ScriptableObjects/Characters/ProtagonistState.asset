@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dda454e0c7049ca8acf7edfae72f854, type: 3}
+  m_Name: ProtagonistState
+  m_EditorClassIdentifier: 
+  currentHealth: 2000
+  currentMana: 2000
+  power: 30000
+  currentIntelligence: 100
+  currentLucky: 100
+  currentRealmTier: 0
+  currentRealmStage: 0
+  currentExp: 0

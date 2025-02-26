@@ -1,0 +1,11 @@
+﻿{
+  "version": "1.0.1",
+  "download_url": "https://example.com/download",
+  "release_notes": [
+    "Fixed a bug causing crashes during combat.",
+    "Improved performance in loading screens.",
+    "Added new character customization options.",
+    "Updated visuals for the main menu."
+  ],
+  "mandatory": true
+}
