@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SaveSystem : ScriptableObject
 {
@@ -10,12 +7,15 @@ public class SaveSystem : ScriptableObject
 	[SerializeField] private VoidEventChannelSO _saveSettingsEvent = default;
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
 	
-	[SerializeField] private ProtagonistStateSO _playerState = default;
-	[SerializeField] private InventorySO _playerInventory = default;
 	[SerializeField] private SettingsSO _currentSettings = default;
+	[SerializeField] private ProtagonistStateSO _defaultProtagonist = default;
+	[SerializeField] private ProtagonistStateSO _protagonist = default;
 	// [SerializeField] private QuestManagerSO _questManagerSO = default;
-
+	
+	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
+	
 	public GameData gameData;
+	public GameSceneSO savedLocation;
 	
 	void OnEnable()
 	{
@@ -32,10 +32,13 @@ public class SaveSystem : ScriptableObject
 	public void NewGame()
 	{
 		gameData = new GameData();
+		_protagonist = ScriptableObject.Instantiate(_defaultProtagonist);
 	}
 
-	public bool LoadGame(IDataHandler dataHandler)
+	public bool LoadGame()
 	{
+		gameData = _dataHandler.Load();
+		
 		// If no data can be loaded, initialize to a new game
 		if (gameData == null)
 		{
@@ -44,13 +47,29 @@ public class SaveSystem : ScriptableObject
 			return false;
 		}
 
-		Debug.Log("Loaded successfully.");
+		//savedLocation = LoadScriptableObjectByGUID<GameSceneSO>(gameData._locationId);
+		//_protagonist = LoadScriptableObjectByGUID<ProtagonistStateSO>(gameData._protagonistId);
+		
 		return true;
 	}
 	
+	// private T LoadScriptableObjectByGUID<T>(string guid) where T : ScriptableObject
+	// {
+	// 	string path = AssetDatabase.GUIDToAssetPath(guid);
+	// 	if (string.IsNullOrEmpty(path))
+	// 	{
+	// 		Debug.LogError($"Invalid GUID: {guid}");
+	// 		return null;
+	// 	}
+	// 	return AssetDatabase.LoadAssetAtPath<T>(path);
+	// } 
+	
 	public void SaveGame()
 	{
-		_playerState.SaveData(ref gameData);
+		gameData._protagonistId = _protagonist.Guid;
+		// 
+		
+		_dataHandler.Save(gameData);
 	}
 	
 	private void SaveSettings()
@@ -66,7 +85,7 @@ public class SaveSystem : ScriptableObject
 			gameData._locationId = locationSO.Guid;
 		}
 
-		SaveGame();
+		// SaveGame();
 	}
 
 	private void OnApplicationQuit()

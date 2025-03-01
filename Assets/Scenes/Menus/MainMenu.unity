@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 558267116}
   - component: {fileID: 558267118}
   - component: {fileID: 558267117}
-  - component: {fileID: 558267119}
+  - component: {fileID: 558267120}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -324,7 +324,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558267115}
   m_CullTransparentMesh: 1
---- !u!114 &558267119
+--- !u!114 &558267120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _locationsToLoad: {fileID: 11400000, guid: fe36128f1f3881746818d838ac14b1a5, type: 2}
   _saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
-  _showLoadScreen: 1
+  _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
   _onNewGameButton: {fileID: 11400000, guid: eb8720dc6d6d19d4f9e075f92a1e182a, type: 2}
   _onContinueButton: {fileID: 11400000, guid: 1b952cea5486eae49adc48f55dbccd6f, type: 2}
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 927521693}
   - component: {fileID: 927521692}
   - component: {fileID: 927521691}
+  - component: {fileID: 927521694}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -480,6 +481,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927521694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927521690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &1452711117
 GameObject:
   m_ObjectHideFlags: 0

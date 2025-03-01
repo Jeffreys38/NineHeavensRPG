@@ -215,6 +215,52 @@ MonoBehaviour:
   _changeMasterVolumeEventChannel: {fileID: 11400000, guid: 57d994a8bf24bbb47a0cba3703828992, type: 2}
   _changeSFXVolumeEventChannel: {fileID: 11400000, guid: 3d17a2a6f55f8d64ab70d8fac10669df, type: 2}
   _changeMusicVolumeEventChannel: {fileID: 11400000, guid: 942692ae811251c4a967cc58bae7d413, type: 2}
+--- !u!1 &317525373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317525374}
+  - component: {fileID: 317525375}
+  m_Layer: 0
+  m_Name: FadeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317525374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317525373}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1112.9645, y: 445.897, z: -7.1784763}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317525375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317525373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf40c01763445be9e1bed14a8438ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeChannelSO: {fileID: 11400000, guid: 797420901ae8b0444a8b3f446d83f948, type: 2}
+  _imageComponent: {fileID: 518712547}
 --- !u!1 &416861105
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &416861106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,8 +355,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 518712546}
   - {fileID: 1054649990}
+  - {fileID: 518712546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -527,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1054649990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -648,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 168398438901519939, guid: 3a55bb27b6cfc49418cda522430bc634, type: 3}
       propertyPath: m_PointAction
       value: 
-      objectReference: {fileID: -153855678479980026, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
+      objectReference: {fileID: -1654692200621890270, guid: 0c351be1e265ec744938bae91577ce5d, type: 3}
     - target: {fileID: 2128932905483888284, guid: 3a55bb27b6cfc49418cda522430bc634, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -709,3 +755,4 @@ SceneRoots:
   - {fileID: 87798873}
   - {fileID: 870339498}
   - {fileID: 1728524604}
+  - {fileID: 317525374}

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TX Tileset Stone Ground_0: -608112088230385668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

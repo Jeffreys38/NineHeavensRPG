@@ -11,17 +11,17 @@ using UnityEngine.Localization;
 public class GameData
 {
     // Protagonist state: current state, list of learned skill
-    public ProtagonistStateSO _protagonist = default;
+    public string _protagonistId;
     
     // Used to load scene
     public string _locationId;
     
     // Items in the protagonist's inventory
-    public List<SerializedItemStack> _itemStacks = new List<SerializedItemStack>();
+    public List<SerializedItemStack> _itemStacks;
     
     // List of GUIDs for completed questline items
     // Each entry in this list is a unique string representing a completed quest.  
-    public List<string> _finishedQuestlineItemsGUIds = new List<string>();
+    public List<string> _finishedQuestlineItemsGUIds;
     
     // Other settings
     public float _masterVolume = default;
@@ -32,6 +32,12 @@ public class GameData
     public float _shadowDistance = default;
     public bool _isFullscreen = default;
     public Locale _currentLocale = default;
+
+    public GameData()
+    {
+        _itemStacks = new List<SerializedItemStack>();
+        _finishedQuestlineItemsGUIds = new List<string>();
+    }
     
     public void SaveSettings(SettingsSO settings)
     {

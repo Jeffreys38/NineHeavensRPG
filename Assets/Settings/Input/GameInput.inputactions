@@ -22,15 +22,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "OpenInventory",
-                    "type": "Button",
-                    "id": "6d303616-8ca3-47d2-8fd2-f6da19c730eb",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -132,17 +123,6 @@
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "511c4c41-90f8-45e2-809c-9296da53cf94",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenInventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -160,9 +140,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Point",
+                    "name": "OpenInventory",
                     "type": "Button",
-                    "id": "f84a8a26-aba2-4f87-8f0b-79fede90fccb",
+                    "id": "e6cfcdab-1714-4ad0-91a8-142e76067992",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DragItem",
+                    "type": "Button",
+                    "id": "93b44129-db67-48f7-88d1-9bea6aed809b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DropItem",
+                    "type": "Button",
+                    "id": "b8c3cb40-2969-4922-8a5e-7707f2d19e3a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -176,19 +174,41 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "bddb5b31-1257-4469-ae79-7fc3b793309e",
-                    "path": "<Mouse>/Position",
+                    "id": "1b37163a-3a7b-4baa-a21a-5ec89f616013",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Point",
+                    "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "222a4c53-2a4d-4ae9-9c56-8a233248b4ae",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DragItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5e003b4-9755-45d7-9a50-b3dedeb1c906",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
