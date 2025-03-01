@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 2099239978312805896}
   - component: {fileID: 8295933847449665149}
   - component: {fileID: 1710838779864216011}
-  - component: {fileID: 7376386947738203516}
   m_Layer: 5
   m_Name: SkillSlot
   m_TagString: Untagged
@@ -602,23 +601,6 @@ MonoBehaviour:
   m_Spacing: {x: 490, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
---- !u!114 &7376386947738203516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8653387623644483696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92477e19a2e74b4d94e2eb3279b9ce91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillSlots:
-  - {fileID: 3068561962864602815}
-  - {fileID: 7588261860301382463}
-  - {fileID: 3701170379614881911}
-  - {fileID: 2372213655560965876}
 --- !u!1 &9009399486080005951
 GameObject:
   m_ObjectHideFlags: 0

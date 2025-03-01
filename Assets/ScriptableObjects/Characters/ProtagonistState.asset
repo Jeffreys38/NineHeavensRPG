@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda454e0c7049ca8acf7edfae72f854, type: 3}
   m_Name: ProtagonistState
   m_EditorClassIdentifier: 
+  _guid: b18040af8f8de00468701005dee38fc8
   currentHealth: 2000
   currentMana: 2000
   power: 30000
@@ -20,3 +21,5 @@ MonoBehaviour:
   currentRealmTier: 0
   currentRealmStage: 0
   currentExp: 0
+  currentPosition: {x: 0, y: 0, z: 0}
+  defaultRealmData: {fileID: 11400000, guid: 33c23704eb96f9046b5fe92ffcb6c83e, type: 2}

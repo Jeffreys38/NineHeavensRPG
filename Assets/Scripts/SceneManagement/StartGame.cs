@@ -11,6 +11,7 @@ public class StartGame : MonoBehaviour
 {
 	[SerializeField] private GameSceneSO _locationsToLoad;
 	[SerializeField] private SaveSystem _saveSystem = default;
+	[SerializeField] private InputReader _inputReader = default;
 	
 	[Header("Broadcasting on")]
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
@@ -18,25 +19,36 @@ public class StartGame : MonoBehaviour
 	[Header("Listening to")]
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
 	[SerializeField] private VoidEventChannelSO _onContinueButton = default;
-
-	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
+	
 	private bool _hasSaveData;
 
 	private void Start()
 	{
+		_inputReader.EnableMenuInput();
+		
 		_onNewGameButton.OnEventRaised += StartNewGame;
 		_onContinueButton.OnEventRaised += ContinuePreviousGame;
 	}
 
 	private void OnDestroy()
 	{
+		_inputReader.DisableAllInput();
+		
 		_onNewGameButton.OnEventRaised -= StartNewGame;
 		_onContinueButton.OnEventRaised -= ContinuePreviousGame;
 	}
 
 	private void StartNewGame()
 	{
-		_hasSaveData = _saveSystem.LoadGame(_dataHandler);
+		// Issue: Can't load forest scene if below code run (production mode)
+		// _hasSaveData = _saveSystem.LoadGame();
+		//
+		// // Starting from last saved if any
+		// if (_hasSaveData)
+		// {
+		// 	_locationsToLoad = _saveSystem.savedLocation;
+		// }
+		//
 		_loadLocation.RaiseEvent(_locationsToLoad, true, true);
 	}
 

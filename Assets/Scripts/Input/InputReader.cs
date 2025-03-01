@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
-public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
+public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameInput.IMenusActions
 {
 	[Space]
 	[SerializeField] private GameStateSO _gameStateManager;
@@ -13,16 +13,17 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 
 	// Gameplay
 	public event UnityAction AttackEvent = delegate { };
-	public event UnityAction AttackCanceledEvent = delegate { };
-	public event UnityAction InteractEvent = delegate { }; // Used to talk, pickup objects, interact with tools like the cooking cauldron
-	public event UnityAction InventoryActionButtonEvent = delegate { };
-	public event UnityAction SaveActionButtonEvent = delegate { };
-	public event UnityAction ResetActionButtonEvent = delegate { };
 	public event UnityAction<Vector2> MoveEvent = delegate { };
-	public event UnityAction<Vector2, bool> CameraMoveEvent = delegate { };
-	public event UnityAction EnableMouseControlCameraEvent = delegate { };
-	public event UnityAction DisableMouseControlCameraEvent = delegate { };
 	public event UnityAction StoppedMoving = delegate { };
+	
+	// Menus
+	public UnityAction OnOpenInventoryEvent;
+	public UnityAction OnCloseInventoryEvent;
+	public UnityAction OnStartDragItemEvent;
+	public UnityAction OnDropItemEvent;
+	
+	private bool isInventoryOpen = false;
+	private bool isDraggingItem = false;
 
 	private GameInput _gameInput;
 
@@ -32,139 +33,17 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 		{
 			_gameInput = new GameInput();
 
-			// _gameInput.Menus.SetCallbacks(this);
+			_gameInput.Menus.SetCallbacks(this);
 			_gameInput.Gameplay.SetCallbacks(this);
 			// _gameInput.Dialogues.SetCallbacks(this);
-			// _gameInput.Cheats.SetCallbacks(this);
 		}
-
-#if UNITY_EDITOR
-	// _gameInput.Cheats.Enable();
-#endif
 	}
 
 	private void OnDisable()
 	{
 		DisableAllInput();
 	}
-
-	public void OnAttack(InputAction.CallbackContext context)
-	{
-		switch (context.phase)
-		{
-			case InputActionPhase.Performed:
-				AttackEvent.Invoke();
-				break;
-			case InputActionPhase.Canceled:
-				AttackCanceledEvent.Invoke();
-				break;
-		}
-	}
-
-	public void OnOpenInventory(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	OpenInventoryEvent.Invoke();
-	}
-	public void OnCancel(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MenuCloseEvent.Invoke();
-	}
-
-	public void OnInventoryActionButton(InputAction.CallbackContext context)
-	{
-		if (context.phase == InputActionPhase.Performed)
-			InventoryActionButtonEvent.Invoke();
-	}
-
-	public void OnSaveActionButton(InputAction.CallbackContext context)
-	{
-		if (context.phase == InputActionPhase.Performed)
-			SaveActionButtonEvent.Invoke();
-	}
-
-	public void OnResetActionButton(InputAction.CallbackContext context)
-	{
-		if (context.phase == InputActionPhase.Performed)
-			ResetActionButtonEvent.Invoke();
-	}
-
-	public void OnInteract(InputAction.CallbackContext context)
-	{
-		if ((context.phase == InputActionPhase.Performed)
-			&& (_gameStateManager.CurrentGameState == GameState.Gameplay)) // Interaction is only possible when in gameplay GameState
-			InteractEvent.Invoke();
-	}
-
-	public void OnMove(InputAction.CallbackContext context)
-	{
-		Vector2 move = context.ReadValue<Vector2>();
-		
-		if (move != Vector2.zero) MoveEvent.Invoke(move);
-		else StoppedMoving.Invoke();
-	}
-
-	public void OnPause(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MenuPauseEvent.Invoke();
-	}
-
-	public void OnRotateCamera(InputAction.CallbackContext context)
-	{
-		CameraMoveEvent.Invoke(context.ReadValue<Vector2>(), IsDeviceMouse(context));
-	}
-
-	public void OnMouseControlCamera(InputAction.CallbackContext context)
-	{
-		if (context.phase == InputActionPhase.Performed)
-			EnableMouseControlCameraEvent.Invoke();
-
-		if (context.phase == InputActionPhase.Canceled)
-			DisableMouseControlCameraEvent.Invoke();
-	}
-
-	private bool IsDeviceMouse(InputAction.CallbackContext context) => context.control.device.name == "Mouse";
-
-	public void OnMoveSelection(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MoveSelectionEvent.Invoke();
-	}
-
-	public void OnAdvanceDialogue(InputAction.CallbackContext context)
-	{
-
-		// if (context.phase == InputActionPhase.Performed)
-		// 	AdvanceDialogueEvent.Invoke();
-	}
-
-	public void OnConfirm(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MenuClickButtonEvent.Invoke();
-	}
-
-
-	public void OnMouseMove(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MenuMouseMoveEvent.Invoke();
-	}
-
-	public void OnUnpause(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	MenuUnpauseEvent.Invoke();
-	}
-
-	public void OnOpenCheatMenu(InputAction.CallbackContext context)
-	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	CheatMenuEvent.Invoke();
-	}
-
+	
 	public void EnableDialogueInput()
 	{
 		// _gameInput.Menus.Enable();
@@ -174,7 +53,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 
 	public void EnableGameplayInput()
 	{
-		// _gameInput.Menus.Disable();
+		_gameInput.Menus.Disable();
 		// _gameInput.Dialogues.Disable();
 		_gameInput.Gameplay.Enable();
 	}
@@ -182,53 +61,85 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 	public void EnableMenuInput()
 	{
 		// _gameInput.Dialogues.Disable();
-		// _gameInput.Gameplay.Disable();
-		//
-		// _gameInput.Menus.Enable();
+		_gameInput.Gameplay.Disable();
+		_gameInput.Menus.Enable();
 	}
 
 	public void DisableAllInput()
 	{
-		// _gameInput.Gameplay.Disable();
-		// _gameInput.Menus.Disable();
+		_gameInput.Gameplay.Disable();
+		_gameInput.Menus.Disable();
 		// _gameInput.Dialogues.Disable();
 	}
 
-	public void OnChangeTab(InputAction.CallbackContext context)
+	public void OnAttack(InputAction.CallbackContext context)
 	{
-		// if (context.phase == InputActionPhase.Performed)
-		// 	TabSwitched.Invoke(context.ReadValue<float>());
+		switch (context.phase)
+		{
+			case InputActionPhase.Performed:
+				AttackEvent.Invoke();
+				break;
+		}
 	}
-
-	public bool LeftMouseDown() => Mouse.current.leftButton.isPressed;
 
 	public void OnClick(InputAction.CallbackContext context)
 	{
-
-	}
-
-	public void OnSubmit(InputAction.CallbackContext context)
-	{
-
+		if (context.performed)
+		{
+			Debug.Log("OnClick");
+		}
 	}
 
 	public void OnPoint(InputAction.CallbackContext context)
 	{
-
-	}
-	
-	public void OnRightClick(InputAction.CallbackContext context)
-	{
-
+		if (context.performed)
+		{
+			Debug.Log("OnPoint");
+		}
 	}
 
-	public void OnNavigate(InputAction.CallbackContext context)
+	// --- Inventory Controls ---
+	public void OnOpenInventory(InputAction.CallbackContext context)
 	{
-
+		if (context.performed)
+		{
+			isInventoryOpen = !isInventoryOpen;
+			if (isInventoryOpen)
+			{
+				EnableMenuInput();
+				OnOpenInventoryEvent?.Invoke();
+			}
+			else
+			{
+				EnableGameplayInput();
+				OnCloseInventoryEvent?.Invoke();
+			}
+		}
 	}
 
-	public void OnCloseInventory(InputAction.CallbackContext context)
+	public void OnDragItem(InputAction.CallbackContext context)
 	{
-		// CloseInventoryEvent.Invoke();
+		if (context.started)
+		{
+			isDraggingItem = true;
+			OnStartDragItemEvent?.Invoke();
+		}
+	}
+
+	public void OnDropItem(UnityEngine.InputSystem.InputAction.CallbackContext context)
+	{
+		if (context.performed)
+		{
+			isDraggingItem = false;
+			OnDropItemEvent?.Invoke();
+		}
+	}
+
+	public void OnMove(InputAction.CallbackContext context)
+	{
+		Vector2 move = context.ReadValue<Vector2>();
+		
+		if (move != Vector2.zero) MoveEvent.Invoke(move);
+		else StoppedMoving.Invoke();
 	}
 }

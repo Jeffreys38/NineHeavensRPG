@@ -31,10 +31,10 @@ public class SceneLoader : MonoBehaviour
 	private GameSceneSO _currentlyLoadedScene;
 	private bool _showLoadingScreen;
 
-	private SceneInstance _gameplayManagerSceneInstance = new SceneInstance();
-	private float _fadeDuration = .5f;
+	private SceneInstance _gameplayManagerSceneInstance;
 	private bool _isLoading = false; //To prevent a new loading request while already loading a new scene
-
+	private readonly float _fadeDuration = .9f;
+	
 	private void OnEnable()
 	{
 		_loadLocation.OnLoadingRequested += LoadLocation;
@@ -87,8 +87,7 @@ public class SceneLoader : MonoBehaviour
 		_isLoading = true;
 
 		//In case we are coming from the main menu, we need to load the Gameplay manager scene first
-		if (_gameplayManagerSceneInstance.Scene == null
-			|| !_gameplayManagerSceneInstance.Scene.isLoaded)
+		if (_gameplayManagerSceneInstance.Scene == null || !_gameplayManagerSceneInstance.Scene.isLoaded)
 		{
 			_gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
 			_gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
@@ -179,7 +178,6 @@ public class SceneLoader : MonoBehaviour
 
 		Scene s = obj.Result.Scene;
 		SceneManager.SetActiveScene(s);
-		LightProbes.TetrahedralizeAsync();
 
 		_isLoading = false;
 
@@ -193,7 +191,7 @@ public class SceneLoader : MonoBehaviour
 
 	private void StartGameplay()
 	{
-		_onSceneReady.RaiseEvent(); //Spawn system will spawn the PigChef in a gameplay scene
+		_onSceneReady.RaiseEvent();
 	}
 
 	private void ExitGame()

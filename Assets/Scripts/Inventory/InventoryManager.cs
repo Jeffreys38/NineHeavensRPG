@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+	[SerializeField] private InputReader _inputReader;
 	[SerializeField] private InventorySO _currentInventory = default;
 	[SerializeField] private SaveSystem _saveSystem;
 
@@ -17,12 +18,23 @@ public class InventoryManager : MonoBehaviour
 	
 	private void OnEnable()
 	{
-	
+		_inputReader.OnOpenInventoryEvent += OpenInventory;
+		_inputReader.OnCloseInventoryEvent += CloseInventory;
+		_inputReader.OnStartDragItemEvent += StartDraggingItem;
+		_inputReader.OnDropItemEvent += DropItem;
 	}
 
 	private void OnDisable()
 	{
-	
+		_inputReader.OnOpenInventoryEvent -= OpenInventory;
+		_inputReader.OnCloseInventoryEvent -= CloseInventory;
+		_inputReader.OnStartDragItemEvent -= StartDraggingItem;
+		_inputReader.OnDropItemEvent -= DropItem;
 	}
+	
+	private void OpenInventory() { Debug.Log("Inventory Opened!"); }
+	private void CloseInventory() { Debug.Log("Inventory Closed!"); }
+	private void StartDraggingItem() { Debug.Log("Dragging Item!"); }
+	private void DropItem() { Debug.Log("Dropped Item!"); }
 }
 
