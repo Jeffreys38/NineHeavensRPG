@@ -44,6 +44,15 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""3850ea40-a41c-4df5-b2b4-4610d3d28d8b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -145,6 +154,17 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b850735d-cada-44b7-be44-56bf391f1001"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -152,15 +172,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ""name"": ""Menus"",
             ""id"": ""bd0fe1ad-af56-44db-9381-743e73d81341"",
             ""actions"": [
-                {
-                    ""name"": ""Click"",
-                    ""type"": ""Button"",
-                    ""id"": ""128d4fef-0968-4194-9ff6-de00a003f495"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
                 {
                     ""name"": ""OpenInventory"",
                     ""type"": ""Button"",
@@ -190,17 +201,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""0dc4777c-3c61-4987-8aee-dce826895f68"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""1b37163a-3a7b-4baa-a21a-5ec89f616013"",
@@ -304,9 +304,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
+        m_Gameplay_Click = m_Gameplay.FindAction("Click", throwIfNotFound: true);
         // Menus
         m_Menus = asset.FindActionMap("Menus", throwIfNotFound: true);
-        m_Menus_Click = m_Menus.FindAction("Click", throwIfNotFound: true);
         m_Menus_OpenInventory = m_Menus.FindAction("OpenInventory", throwIfNotFound: true);
         m_Menus_DragItem = m_Menus.FindAction("DragItem", throwIfNotFound: true);
         m_Menus_DropItem = m_Menus.FindAction("DropItem", throwIfNotFound: true);
@@ -379,12 +379,14 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Attack;
+    private readonly InputAction m_Gameplay_Click;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
         public GameplayActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
+        public InputAction @Click => m_Wrapper.m_Gameplay_Click;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -400,6 +402,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Click.started += instance.OnClick;
+            @Click.performed += instance.OnClick;
+            @Click.canceled += instance.OnClick;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -410,6 +415,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Click.started -= instance.OnClick;
+            @Click.performed -= instance.OnClick;
+            @Click.canceled -= instance.OnClick;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -431,7 +439,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     // Menus
     private readonly InputActionMap m_Menus;
     private List<IMenusActions> m_MenusActionsCallbackInterfaces = new List<IMenusActions>();
-    private readonly InputAction m_Menus_Click;
     private readonly InputAction m_Menus_OpenInventory;
     private readonly InputAction m_Menus_DragItem;
     private readonly InputAction m_Menus_DropItem;
@@ -439,7 +446,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     {
         private @GameInput m_Wrapper;
         public MenusActions(@GameInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Click => m_Wrapper.m_Menus_Click;
         public InputAction @OpenInventory => m_Wrapper.m_Menus_OpenInventory;
         public InputAction @DragItem => m_Wrapper.m_Menus_DragItem;
         public InputAction @DropItem => m_Wrapper.m_Menus_DropItem;
@@ -452,9 +458,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MenusActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MenusActionsCallbackInterfaces.Add(instance);
-            @Click.started += instance.OnClick;
-            @Click.performed += instance.OnClick;
-            @Click.canceled += instance.OnClick;
             @OpenInventory.started += instance.OnOpenInventory;
             @OpenInventory.performed += instance.OnOpenInventory;
             @OpenInventory.canceled += instance.OnOpenInventory;
@@ -468,9 +471,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IMenusActions instance)
         {
-            @Click.started -= instance.OnClick;
-            @Click.performed -= instance.OnClick;
-            @Click.canceled -= instance.OnClick;
             @OpenInventory.started -= instance.OnOpenInventory;
             @OpenInventory.performed -= instance.OnOpenInventory;
             @OpenInventory.canceled -= instance.OnOpenInventory;
@@ -546,10 +546,10 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
     }
     public interface IMenusActions
     {
-        void OnClick(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnDragItem(InputAction.CallbackContext context);
         void OnDropItem(InputAction.CallbackContext context);

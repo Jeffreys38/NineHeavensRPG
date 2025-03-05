@@ -15,7 +15,7 @@ public enum SkillEffect
     None
 }
 
-[Serializable]
+[CreateAssetMenu(fileName = "NewSkill", menuName = "Skill", order = 1)]
 public class SkillSO : SerializableScriptableObject
 {
     [SerializeField] private string _name;
@@ -26,7 +26,7 @@ public class SkillSO : SerializableScriptableObject
     [SerializeField] private SkillEffect _skillEffect;
     [SerializeField] private int _baseDamage;
     [SerializeField] private RealmTier _requiredRealmTier;
-    [SerializeField] private RealmLevel _requiredRealmLevel;
+    [SerializeField] private RealmStage _requiredRealmStage;
     [SerializeField] private Rarity _rarity;
     [SerializeField] private float _cooldown;
     [SerializeField] private float _manaCost;
@@ -39,8 +39,10 @@ public class SkillSO : SerializableScriptableObject
     public SkillEffect SkillEffect => _skillEffect;
     public int BaseDamage => _baseDamage;
     public RealmTier RequiredRealmTier => _requiredRealmTier;
-    public RealmLevel RequiredRealmLevel => _requiredRealmLevel;
+    public RealmStage RequiredRealmLevel => _requiredRealmStage;
     public Rarity Rarity => _rarity;
     public float Cooldown => _cooldown;
     public float ManaCost => _manaCost;
+
+    public float currentCooldown;
 }

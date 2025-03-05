@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SaveSystem : ScriptableObject
@@ -7,15 +9,15 @@ public class SaveSystem : ScriptableObject
 	[SerializeField] private VoidEventChannelSO _saveSettingsEvent = default;
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
 	
-	[SerializeField] private SettingsSO _currentSettings = default;
-	[SerializeField] private ProtagonistStateSO _defaultProtagonist = default;
 	[SerializeField] private ProtagonistStateSO _protagonist = default;
-	// [SerializeField] private QuestManagerSO _questManagerSO = default;
+	[SerializeField] private InventorySO _playerInventory = default;
+	[SerializeField] private SettingsSO _currentSettings = default;
+	[SerializeField] private GameSceneSO _savedLocation;
 	
+	[Header("References")]
 	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
-	
+
 	public GameData gameData;
-	public GameSceneSO savedLocation;
 	
 	void OnEnable()
 	{
@@ -32,7 +34,6 @@ public class SaveSystem : ScriptableObject
 	public void NewGame()
 	{
 		gameData = new GameData();
-		_protagonist = ScriptableObject.Instantiate(_defaultProtagonist);
 	}
 
 	public bool LoadGame()
@@ -46,32 +47,35 @@ public class SaveSystem : ScriptableObject
 			NewGame();
 			return false;
 		}
-
-		//savedLocation = LoadScriptableObjectByGUID<GameSceneSO>(gameData._locationId);
-		//_protagonist = LoadScriptableObjectByGUID<ProtagonistStateSO>(gameData._protagonistId);
+        
+		// Data of player
+		List<string> skillGuids = gameData.protagonistData.learnedSkills;
+		// List<SkillSO> skills = new List<SkillSO>();
+		// foreach (var guid in skillGuids)
+		// {
+		// 	var skill = LoadAssetByGuid(guid, typeof(SkillSO)) as SkillSO;
+		// 	skills.Add(skill);
+		// }
+		_protagonist.SetData(gameData.protagonistData);
+		//_protagonist.LoadSkills(skills);
+		
+		// Data of inventory
 		
 		return true;
 	}
 	
-	// private T LoadScriptableObjectByGUID<T>(string guid) where T : ScriptableObject
-	// {
-	// 	string path = AssetDatabase.GUIDToAssetPath(guid);
-	// 	if (string.IsNullOrEmpty(path))
-	// 	{
-	// 		Debug.LogError($"Invalid GUID: {guid}");
-	// 		return null;
-	// 	}
-	// 	return AssetDatabase.LoadAssetAtPath<T>(path);
-	// } 
-	
+	private object LoadAssetByGuid(string guid, Type type)
+	{
+		string pathToAsset = AssetDatabase.GUIDToAssetPath(guid);
+
+		return AssetDatabase.LoadAssetAtPath(pathToAsset, type);
+	}
+
 	public void SaveGame()
 	{
-		gameData._protagonistId = _protagonist.Guid;
-		// 
-		
-		_dataHandler.Save(gameData);
+		// Save SO to game data
 	}
-	
+
 	private void SaveSettings()
 	{
 		gameData.SaveSettings(_currentSettings);
@@ -82,7 +86,7 @@ public class SaveSystem : ScriptableObject
 		LocationSO locationSO = locationToLoad as LocationSO;
 		if (locationSO)
 		{
-			gameData._locationId = locationSO.Guid;
+			gameData.locationId = locationSO.Guid;
 		}
 
 		// SaveGame();

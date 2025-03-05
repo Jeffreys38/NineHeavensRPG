@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: SharedPrefabs
   m_GUID: ea78991eb11c56f44ba73910d1e55ca4
   m_SerializeEntries:
+  - m_GUID: 1c1327a6f7e345c09c4551e236edb6e1
+    m_Address: Assets/Prefabs/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b853fa6b9eea3774ca37fed8ab2c881a
+    m_Address: Assets/Prefabs/Skills
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c2b5e6e8e40310a49b7446d54be5d5ee
     m_Address: Assets/Prefabs/Characters
     m_ReadOnly: 0

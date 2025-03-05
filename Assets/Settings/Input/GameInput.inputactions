@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "3850ea40-a41c-4df5-b2b4-4610d3d28d8b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -123,6 +132,17 @@
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b850735d-cada-44b7-be44-56bf391f1001",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -130,15 +150,6 @@
             "name": "Menus",
             "id": "bd0fe1ad-af56-44db-9381-743e73d81341",
             "actions": [
-                {
-                    "name": "Click",
-                    "type": "Button",
-                    "id": "128d4fef-0968-4194-9ff6-de00a003f495",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
                 {
                     "name": "OpenInventory",
                     "type": "Button",
@@ -168,17 +179,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "0dc4777c-3c61-4987-8aee-dce826895f68",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "1b37163a-3a7b-4baa-a21a-5ec89f616013",

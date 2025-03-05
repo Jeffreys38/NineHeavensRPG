@@ -5,12 +5,12 @@ public class SpawnSystem : MonoBehaviour
 {
 	[Header("Asset References")]
 	[SerializeField] private InputReader _inputReader = default;
-	[SerializeField] private Protagonist _playerPrefab = default;
-	[SerializeField] private TransformEventChannelSO _playerInstantiatedChannel = default;
+	[SerializeField] private GameObject _playerPrefab = default;
 	
 	[Header("Scene Ready Event")]
 	[SerializeField] private VoidEventChannelSO _onSceneReady = default; // Raised by SceneLoader when the scene is set to active
-
+	[SerializeField] private VoidEventChannelSO _onPlayerSpawned;
+	
 	private LocationEntrance[] _spawnLocations;
 	private Transform _defaultSpawnPoint;
 
@@ -39,9 +39,9 @@ public class SpawnSystem : MonoBehaviour
 	private void SpawnPlayer()
 	{
 		Transform spawnLocation = GetSpawnLocation();
-		Protagonist playerInstance = Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
+		Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
 		
-		_playerInstantiatedChannel.RaiseEvent(playerInstance.transform);
+		_onPlayerSpawned.RaiseEvent();
 		
 		//TODO: Probably move this to the GameManager once it's up and running
 		_inputReader.EnableGameplayInput();

@@ -12,7 +12,8 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	// so we can skip the null check when we use them
 
 	// Gameplay
-	public event UnityAction AttackEvent = delegate { };
+	public event UnityAction<int> AttackEvent = delegate { };
+	public event UnityAction<Vector2> ChoosePositionEvent = delegate { };
 	public event UnityAction<Vector2> MoveEvent = delegate { };
 	public event UnityAction StoppedMoving = delegate { };
 	
@@ -74,27 +75,25 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 
 	public void OnAttack(InputAction.CallbackContext context)
 	{
-		switch (context.phase)
+		if (context.performed)
 		{
-			case InputActionPhase.Performed:
-				AttackEvent.Invoke();
-				break;
+			int numKeyValue; 
+			
+			// Warning! If ctx.control.name can't parse as an int, numKeyValue will be 0
+			int.TryParse(context.control.name, out numKeyValue);
+			
+			AttackEvent.Invoke(numKeyValue);
 		}
 	}
 
-	public void OnClick(InputAction.CallbackContext context)
+	void GameInput.IGameplayActions.OnClick(InputAction.CallbackContext context)
 	{
 		if (context.performed)
 		{
-			Debug.Log("OnClick");
-		}
-	}
-
-	public void OnPoint(InputAction.CallbackContext context)
-	{
-		if (context.performed)
-		{
-			Debug.Log("OnPoint");
+			Vector2 screenPosition = Mouse.current.position.ReadValue();
+			Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+			
+			ChoosePositionEvent.Invoke(worldPosition);
 		}
 	}
 

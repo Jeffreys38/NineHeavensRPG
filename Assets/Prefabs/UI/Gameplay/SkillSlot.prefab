@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 7431127940986685318}
   - component: {fileID: 5581018098610689173}
   - component: {fileID: 2372213655560965876}
+  - component: {fileID: 1510726437860419336}
   m_Layer: 5
   m_Name: Skill_4
   m_TagString: Untagged
@@ -151,6 +152,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1510726437860419336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3045126067740488413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &3423395089578174194
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +176,7 @@ GameObject:
   - component: {fileID: 5876679285818701676}
   - component: {fileID: 8203862694829284864}
   - component: {fileID: 7588261860301382463}
+  - component: {fileID: 38490711101727826}
   m_Layer: 5
   m_Name: Skill_2
   m_TagString: Untagged
@@ -227,6 +242,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &38490711101727826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3423395089578174194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &6314447072376673391
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +266,7 @@ GameObject:
   - component: {fileID: 772205782376700623}
   - component: {fileID: 7118394634312494710}
   - component: {fileID: 3068561962864602815}
+  - component: {fileID: 4706799204134374021}
   m_Layer: 5
   m_Name: Skill_1
   m_TagString: Untagged
@@ -303,6 +332,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4706799204134374021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314447072376673391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &6461139673724617106
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +581,7 @@ GameObject:
   - component: {fileID: 2099239978312805896}
   - component: {fileID: 8295933847449665149}
   - component: {fileID: 1710838779864216011}
+  - component: {fileID: 7586089194104215541}
   m_Layer: 5
   m_Name: SkillSlot
   m_TagString: Untagged
@@ -601,6 +644,26 @@ MonoBehaviour:
   m_Spacing: {x: 490, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
+--- !u!114 &7586089194104215541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653387623644483696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7d42a5e5444a6288660a2fc9df0fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputReader: {fileID: 0}
+  _protagonistState: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+  slotImages:
+  - {fileID: 3068561962864602815}
+  - {fileID: 7588261860301382463}
+  - {fileID: 3701170379614881911}
+  - {fileID: 2372213655560965876}
+  cooldownOverlays: []
 --- !u!1 &9009399486080005951
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +675,7 @@ GameObject:
   - component: {fileID: 4550973839490012225}
   - component: {fileID: 7632730695445075509}
   - component: {fileID: 3701170379614881911}
+  - component: {fileID: 4901776224164126950}
   m_Layer: 5
   m_Name: Skill_3
   m_TagString: Untagged
@@ -677,3 +741,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4901776224164126950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009399486080005951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1

@@ -14,14 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _saveSettingsEvent: {fileID: 11400000, guid: 4a7ebda2a1a914747a9f492fda3ecdaa, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+  _playerInventory: {fileID: 11400000, guid: 158d629a8b2d29d4ab36a31f66ee09d9, type: 2}
   _currentSettings: {fileID: 11400000, guid: 950aaff8e1731d345aadcace55d8bff4, type: 2}
-  _defaultProtagonist: {fileID: 11400000, guid: 31ff04abc543bda4aa8e73fdd9709b3e, type: 2}
-  _protagonist: {fileID: 0}
+  _savedLocation: {fileID: 0}
   gameData:
-    _protagonistId: 
-    _locationId: 
-    _itemStacks: []
-    _finishedQuestlineItemsGUIds: []
+    protagonistData:
+      currentHealth: 0
+      currentMana: 0
+      power: 0
+      level: 0
+      currentIntelligence: 0
+      currentLucky: 0
+      currentRealmTier: 0
+      currentRealmStage: 0
+      currentExp: 0
+      currentPosition: {x: 0, y: 0, z: 0}
+      learnedSkills: []
+    locationId: 
+    itemStacks: []
+    finishedQuestlineItemsGUIds: []
     _masterVolume: 0
     _musicVolume: 0
     _sfxVolume: 0
@@ -30,4 +42,3 @@ MonoBehaviour:
     _shadowDistance: 0
     _isFullscreen: 0
     _currentLocale: {fileID: 0}
-  savedLocation: {fileID: 11400000, guid: fe36128f1f3881746818d838ac14b1a5, type: 2}

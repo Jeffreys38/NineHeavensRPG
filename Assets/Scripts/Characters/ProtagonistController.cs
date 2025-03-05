@@ -15,10 +15,7 @@ public class ProtagonistController : MonoBehaviour
 	private float _baseSpeed = 1f;
 
 	//These fields are read and manipulated by the StateMachine actions
-	[NonSerialized] public bool extraActionInput;
-	[NonSerialized] public bool attackInput;
-	[NonSerialized] public ControllerColliderHit lastHit;
-	[NonSerialized] public bool isRunning; // Used when using the keyboard to run, brings the normalised speed to 1
+	[NonSerialized] public bool isRunning;
 
 	public const float GRAVITY_MULTIPLIER = 5f;
 	public const float MAX_FALL_SPEED = -50f;
@@ -43,7 +40,6 @@ public class ProtagonistController : MonoBehaviour
 	{
 		_inputReader.MoveEvent += OnMove;
 		_inputReader.StoppedMoving += OnIdle;
-		_inputReader.AttackEvent += OnStartedAttack;
 		//...
 	}
 
@@ -52,7 +48,6 @@ public class ProtagonistController : MonoBehaviour
 	{
 		_inputReader.MoveEvent -= OnMove;
 		_inputReader.StoppedMoving -= OnIdle;
-		_inputReader.AttackEvent -= OnStartedAttack;
 		//...
 	}
 
@@ -100,9 +95,4 @@ public class ProtagonistController : MonoBehaviour
 		_inputVector = Vector2.zero;
 		isRunning = false;
 	}
-
-	private void OnStartedAttack() => attackInput = true;
-
-	// Triggered from Animation Event
-	public void ConsumeAttackInput() => attackInput = false;
 }

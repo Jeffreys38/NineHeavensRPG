@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3676692855857356094}
   - component: {fileID: 6514967763865796325}
   - component: {fileID: 6536651736912911770}
-  - component: {fileID: 2322057912461336714}
   m_Layer: 5
   m_Name: UI_Combat_Text
   m_TagString: Untagged
@@ -103,18 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2322057912461336714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495323437905889117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632e33614757455991c8c035e555d8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3159889006600772999
 GameObject:
   m_ObjectHideFlags: 0
