@@ -34,9 +34,7 @@ public class SettingsSystem : MonoBehaviour
 		_changeMusicVolumeEventChannel.RaiseEvent(_currentSettings.MusicVolume);//raise event for volume change
 		_changeSFXVolumeEventChannel.RaiseEvent(_currentSettings.SfxVolume); //raise event for volume change
 		_changeMasterVolumeEventChannel.RaiseEvent(_currentSettings.MasterVolume); //raise event for volume change
-		
-		Resolution currentResolution = Screen.currentResolution; // get a default resolution in case saved resolution doesn't exist in the resolution List
-		
+
 		LocalizationSettings.SelectedLocale = _currentSettings.CurrentLocale;
 	}
 	

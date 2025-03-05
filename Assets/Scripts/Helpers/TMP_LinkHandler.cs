@@ -19,14 +19,12 @@ public class TMP_LinkHandler : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("OnPointerClick");
         int linkIndex = TMP_TextUtilities.FindIntersectingLink(tmpText, Input.mousePosition, null);
         if (linkIndex != -1)
         {
             TMP_LinkInfo linkInfo = tmpText.textInfo.linkInfo[linkIndex];
             string linkID = linkInfo.GetLinkID();
             
-            Debug.Log(linkID);
             HandleLinkClick(linkID);
         }
     }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Protagonist State", menuName = "State/Protagonist State")]
@@ -13,29 +13,23 @@ public class ProtagonistStateSO : SerializableScriptableObject
     public RealmStage currentRealmStage;
     public int currentExp;
     public Vector3 currentPosition;
-    
-    [SerializeField] private RealmData defaultRealmData;
-    
-    // Default value when it is not assigned in inspector
-    private void OnEnable()
+    public List<SkillSO> learnedSkills;
+
+    public void SetData(ProtagonistData data)
     {
-        if (currentRealmTier == 0)
-        {
-            InitializeDefaults();
-        }
+        currentHealth = data.currentHealth;
+        currentMana = data.currentMana;
+        power = data.power;
+        currentIntelligence = data.currentIntelligence;
+        currentLucky = data.currentLucky;
+        currentRealmTier = data.currentRealmTier;
+        currentRealmStage = data.currentRealmStage;
+        currentExp = data.currentExp;
+        currentPosition = data.currentPosition;
     }
 
-    private void InitializeDefaults()
+    public void LoadSkills(List<SkillSO> skills)
     {
-        currentRealmTier = defaultRealmData.realmTier;
-        currentRealmStage = RealmStage.Early;
-        currentExp = 0;
-        
-        currentHealth = 100;
-        currentMana = 50;
-        power = 10;
-        currentIntelligence = 5.0f;
-        currentLucky = 1.0f;
-        currentPosition = Vector3.zero;
+        learnedSkills = skills;
     }
 }

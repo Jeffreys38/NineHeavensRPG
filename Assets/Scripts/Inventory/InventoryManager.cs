@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, IDataPersistence
 {
 	[SerializeField] private InputReader _inputReader;
 	[SerializeField] private InventorySO _currentInventory = default;
@@ -36,5 +36,15 @@ public class InventoryManager : MonoBehaviour
 	private void CloseInventory() { Debug.Log("Inventory Closed!"); }
 	private void StartDraggingItem() { Debug.Log("Dragging Item!"); }
 	private void DropItem() { Debug.Log("Dropped Item!"); }
+	
+	public void LoadData(GameData data)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public void SaveData(ref GameData data)
+	{
+		throw new System.NotImplementedException();
+	}
 }
 

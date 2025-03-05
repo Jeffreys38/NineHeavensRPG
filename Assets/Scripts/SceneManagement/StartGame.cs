@@ -40,15 +40,7 @@ public class StartGame : MonoBehaviour
 
 	private void StartNewGame()
 	{
-		// Issue: Can't load forest scene if below code run (production mode)
-		// _hasSaveData = _saveSystem.LoadGame();
-		//
-		// // Starting from last saved if any
-		// if (_hasSaveData)
-		// {
-		// 	_locationsToLoad = _saveSystem.savedLocation;
-		// }
-		//
+		_saveSystem.LoadGame();
 		_loadLocation.RaiseEvent(_locationsToLoad, true, true);
 	}
 
