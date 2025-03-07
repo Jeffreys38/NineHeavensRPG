@@ -656,14 +656,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7d42a5e5444a6288660a2fc9df0fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputReader: {fileID: 0}
+  _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
   _protagonistState: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
-  slotImages:
+  _defaultIcon: {fileID: 21300000, guid: a347b73ef6259844c815811ccb087aeb, type: 3}
+  _slotImages:
   - {fileID: 3068561962864602815}
   - {fileID: 7588261860301382463}
   - {fileID: 3701170379614881911}
   - {fileID: 2372213655560965876}
-  cooldownOverlays: []
+  _cooldownOverlays:
+  - {fileID: 4995118135309707501}
+  - {fileID: 5950588263136203704}
+  - {fileID: 7300844975186261236}
+  - {fileID: 4964670683484519896}
 --- !u!1 &9009399486080005951
 GameObject:
   m_ObjectHideFlags: 0

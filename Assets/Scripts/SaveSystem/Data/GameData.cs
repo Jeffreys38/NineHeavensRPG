@@ -11,6 +11,7 @@ using UnityEngine.Localization;
 public class GameData
 {
     public ProtagonistData protagonistData;
+    public MonsterSpawnerStateData monsterSpawnerStateData;
     public string locationId;
     public List<SerializedItemStack> itemStacks;
     

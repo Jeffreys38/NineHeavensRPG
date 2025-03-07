@@ -29,7 +29,7 @@ public class SkillSO : SerializableScriptableObject
     [SerializeField] private RealmStage _requiredRealmStage;
     [SerializeField] private Rarity _rarity;
     [SerializeField] private float _cooldown;
-    [SerializeField] private float _manaCost;
+    [SerializeField] private int _manaCost;
     
     public string Name => _name;
     public Sprite Icon => _icon;
@@ -42,7 +42,7 @@ public class SkillSO : SerializableScriptableObject
     public RealmStage RequiredRealmLevel => _requiredRealmStage;
     public Rarity Rarity => _rarity;
     public float Cooldown => _cooldown;
-    public float ManaCost => _manaCost;
+    public int ManaCost => _manaCost;
 
     public float currentCooldown;
 }

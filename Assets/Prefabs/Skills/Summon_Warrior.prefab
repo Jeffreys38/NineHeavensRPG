@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8a89f085d14b46970b82d94f1dedb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intInputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
-  _SFXEventChannel: {fileID: 11400000, guid: 64b9d1d5036448e4eb84a780730ff376, type: 2}
+  _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
+  _sfxEventChannel: {fileID: 11400000, guid: 64b9d1d5036448e4eb84a780730ff376, type: 2}
   _SFX: {fileID: 11400000, guid: afc0b837799534d4db4a59842e932ba4, type: 2}
   _SFXConfiguration: {fileID: 11400000, guid: 4fea454a3b4c65c4d8f936a5c93f9c26, type: 2}
   skillSO: {fileID: 11400000, guid: 8662a2191974f384398454be53c9f8ad, type: 2}
