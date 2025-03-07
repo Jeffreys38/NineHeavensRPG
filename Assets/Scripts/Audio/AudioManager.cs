@@ -147,6 +147,8 @@ public class AudioManager : MonoBehaviour
 		}
 
 		_musicSoundEmitter = _pool.Request();
+		
+		if (_musicSoundEmitter == null) { return AudioCueKey.Invalid; }
 		_musicSoundEmitter.FadeMusicIn(audioCue.GetClips()[0], audioConfiguration, 1f, startTime);
 		_musicSoundEmitter.OnSoundFinishedPlaying += StopMusicEmitter;
 

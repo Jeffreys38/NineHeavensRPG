@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Manages quest progress and chapters.
 /// </summary>
-public class QuestManager : MonoBehaviour, IDataPersistence
+public class QuestManager : MonoBehaviour
 {
     public List<ChapterSO> activeChapters = new List<ChapterSO>();
 
@@ -53,15 +53,5 @@ public class QuestManager : MonoBehaviour, IDataPersistence
                 // chapter.ClaimChapterRewards();
             }
         }
-    }
-
-    public void LoadData(GameData data)
-    {
-        
-    }
-
-    public void SaveData(ref GameData data)
-    {
-       
     }
 }

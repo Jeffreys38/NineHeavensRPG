@@ -6,12 +6,13 @@ using UnityEngine;
 public class SaveSystem : ScriptableObject
 {
 	[Header("Listening To")]
-	[SerializeField] private VoidEventChannelSO _saveSettingsEvent = default;
-	[SerializeField] private LoadEventChannelSO _loadLocation = default;
-	
-	[SerializeField] private ProtagonistStateSO _protagonist = default;
-	[SerializeField] private InventorySO _playerInventory = default;
-	[SerializeField] private SettingsSO _currentSettings = default;
+	[SerializeField] private VoidEventChannelSO _saveSettingsEvent;
+	[SerializeField] private LoadEventChannelSO _loadLocation;
+
+	[SerializeField] private ProtagonistStateSO _protagonist;
+	[SerializeField] private MonsterSpawnTrackerSO _monsterSpawnTracker;
+	[SerializeField] private InventorySO _playerInventory;
+	[SerializeField] private SettingsSO _currentSettings;
 	[SerializeField] private GameSceneSO _savedLocation;
 	
 	[Header("References")]
@@ -47,33 +48,42 @@ public class SaveSystem : ScriptableObject
 			NewGame();
 			return false;
 		}
-        
-		// Data of player
-		List<string> skillGuids = gameData.protagonistData.learnedSkills;
-		// List<SkillSO> skills = new List<SkillSO>();
-		// foreach (var guid in skillGuids)
-		// {
-		// 	var skill = LoadAssetByGuid(guid, typeof(SkillSO)) as SkillSO;
-		// 	skills.Add(skill);
-		// }
-		_protagonist.SetData(gameData.protagonistData);
-		//_protagonist.LoadSkills(skills);
 		
-		// Data of inventory
+		//_protagonist.LoadData(gameData);
+		// _protagonist.learnedSkills = LoadSkills(gameData.protagonistData.learnedSkills);
+		// _monsterSpawnTracker.LoadData(gameData);
 		
 		return true;
 	}
 	
+	private List<SkillSO> LoadSkills(List<string> skillGuids)
+	{
+		if (skillGuids == null) return new List<SkillSO>();
+
+		List<SkillSO> skills = new List<SkillSO>();
+		foreach (string guid in skillGuids)
+		{
+			SkillSO skill = LoadAssetByGuid(guid, typeof(SkillSO)) as SkillSO;
+			if (skill != null)
+				skills.Add(skill);
+		}
+		return skills;
+	}
+	
 	private object LoadAssetByGuid(string guid, Type type)
 	{
+#if UNITY_EDITOR
 		string pathToAsset = AssetDatabase.GUIDToAssetPath(guid);
 
 		return AssetDatabase.LoadAssetAtPath(pathToAsset, type);
+#endif
+		return null;
 	}
 
 	public void SaveGame()
 	{
-		// Save SO to game data
+		_protagonist.SaveData(ref gameData);
+		_monsterSpawnTracker.SaveData(ref gameData);
 	}
 
 	private void SaveSettings()

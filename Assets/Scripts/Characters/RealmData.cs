@@ -30,8 +30,8 @@ public class RealmLevel
     public int bonusMana;
     public int bonusAttack;
     public int bonusDefense;
-    public float currentIntelligence;
-    public float currentLucky;
+    public float bonusIntelligence;
+    public float bonusLucky;
 }
 
 [CreateAssetMenu(fileName = "New Realm Data", menuName = "Game Data/Realm Data")]

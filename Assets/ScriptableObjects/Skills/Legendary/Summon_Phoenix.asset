@@ -19,10 +19,10 @@ MonoBehaviour:
   _prefab: {fileID: 7885573725454618843, guid: b02088ca423a2be488a4fc08192057ed, type: 3}
   _skillType: 0
   _skillEffect: 1
-  _baseDamage: 5000
+  _baseDamage: 700
   _requiredRealmTier: 0
   _requiredRealmStage: 0
   _rarity: 2
-  _cooldown: 15
-  _manaCost: 2000
-  currentCooldown: 0
+  _cooldown: 1
+  _manaCost: 500
+  currentCooldown: -0.0025551412

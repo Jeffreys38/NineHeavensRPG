@@ -16,6 +16,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public event UnityAction<Vector2> ChoosePositionEvent = delegate { };
 	public event UnityAction<Vector2> MoveEvent = delegate { };
 	public event UnityAction StoppedMoving = delegate { };
+	public event UnityAction<MonsterController> PickTarget = delegate { };
 	
 	// Menus
 	public UnityAction OnOpenInventoryEvent;
@@ -94,6 +95,18 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 			Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
 			
 			ChoosePositionEvent.Invoke(worldPosition);
+			
+			// If a target is selected
+			Collider2D hitCollider = Physics2D.OverlapPoint(worldPosition);
+			if (hitCollider != null)
+			{
+				MonsterController entity = hitCollider.GetComponent<MonsterController>();
+				PickTarget.Invoke(entity);
+			}
+			else
+			{
+				PickTarget.Invoke(null);
+			}
 		}
 	}
 
