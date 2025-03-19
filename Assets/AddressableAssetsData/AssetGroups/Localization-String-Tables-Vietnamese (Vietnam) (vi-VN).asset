@@ -15,6 +15,24 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Vietnamese (Vietnam) (vi-VN)
   m_GUID: 452d1ca869c84564ea6c48845d013a7e
   m_SerializeEntries:
+  - m_GUID: 01711cfdada5db64ba7b0f10e54bc7e1
+    m_Address: ItemAttributes_vi-VN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-vi-VN
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ca72563d016c114ea62c3e87216750e
+    m_Address: EquipmentsDescription_vi-VN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-vi-VN
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b1e5a2d063eded4ca5fb108c97ebafc
+    m_Address: Description_Monster_vi-VN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-vi-VN
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 26429d77dcb2ce74e862e30ee1b81e48
     m_Address: _Normal_vi-VN
     m_ReadOnly: 1
@@ -23,6 +41,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d76992664337c941973cdcd166b4355
     m_Address: _Elite_vi-VN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-vi-VN
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 801b40f8361f3c74396379d5c8551b52
+    m_Address: Equipments_vi-VN
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-vi-VN

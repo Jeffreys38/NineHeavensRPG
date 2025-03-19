@@ -212,6 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8ace000d3cdd74c808d08c3c97aa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
   _realmManager: {fileID: 0}
+  _onExpGained: {fileID: 11400000, guid: 081a279878f232c42892dcc0b622ca17, type: 2}
   _realmEvent: {fileID: 11400000, guid: 579b9842761dead43bfebc8a5eac0aca, type: 2}
+  _onExpChanged: {fileID: 11400000, guid: 3bd4008d303302542895096085840e1d, type: 2}

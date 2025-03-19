@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6042ab5d6df4ccf93370319a7fdb955, type: 3}
+  m_Name: Shared
+  m_EditorClassIdentifier: 
+  commonDrop:
+    minDrops: 3
+    maxDrops: 5
+    rareChance: 20
+    legendaryChance: 0
+  rareDrop:
+    minDrops: 3
+    maxDrops: 5
+    rareChance: 20
+    legendaryChance: 0
+  legendaryDrop:
+    minDrops: 3
+    maxDrops: 5
+    rareChance: 70
+    legendaryChance: 10
+  commonItems:
+  - {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+  - {fileID: 11400000, guid: 7b87e5a5c48fa684d962f1308b94cb37, type: 2}
+  - {fileID: 11400000, guid: ed20e53cc8c9ef14192e007b78d5aeee, type: 2}
+  rareItems:
+  - {fileID: 11400000, guid: 3a5b6be3e9025d749ac68f83a544818f, type: 2}
+  legendaryItems:
+  - {fileID: 11400000, guid: b995ce4ee6004e741a4dd5b727816850, type: 2}

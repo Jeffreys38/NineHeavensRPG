@@ -1,7 +1,4 @@
-﻿namespace JeffreyInc.Gameplay
+﻿public class GameManager
 {
-    public class GameManager
-    {
         
-    }
 }

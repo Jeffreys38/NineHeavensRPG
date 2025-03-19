@@ -1,38 +1,65 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RealmManager : MonoBehaviour
 {
-    [Header("Listening To")] [SerializeField]
-    private RealmData _realmData;
-
+    [SerializeField] private List<RealmData> _realmDatas;
     [SerializeField] private ProtagonistStateSO _protagonistState;
+    
+    [Header("Listening To")]
+    [SerializeField] private VoidEventChannelSO _onExpChanged;
+    [SerializeField] private RealmEventChannelSO _realmEvent;
 
-    [Header("Broadcasting On")] [SerializeField]
-    private RealmEventChannelSO _realmEvent;
-
-    public void GainExp(int amount)
+    private void OnEnable()
     {
-        _protagonistState.currentExp += amount;
-        Debug.Log($"Nhận {amount} EXP! Tổng EXP: {_protagonistState.currentExp}");
-        CheckForRealmUpgrade();
+        _onExpChanged.OnEventRaised += CheckForRealmUpgrade;
+    }
+
+    private void OnDisable()
+    {
+        _onExpChanged.OnEventRaised -= CheckForRealmUpgrade;
     }
 
     private void CheckForRealmUpgrade()
     {
-        foreach (var level in _realmData.levels)
-        {
-            if (level.stage == _protagonistState.currentRealmStage &&
-                _protagonistState.currentExp >= level.requiredExp)
-            {
-                _protagonistState.currentExp -= level.requiredExp;
-                AdvanceRealm(level);
-                _realmEvent.RaiseEvent(_protagonistState.currentRealmTier, _protagonistState.currentRealmStage);
-                break;
-            }
-        }
+        RealmData currentRealm = GetCurrentRealmData();
+        if (currentRealm == null) return;
+
+        RealmLevel nextLevel = GetNextRealmLevel(currentRealm);
+        if (nextLevel == null || _protagonistState.currentExp < nextLevel.requiredExp) return;
+
+        _protagonistState.currentExp -= nextLevel.requiredExp;
+        UpgradeRealm(nextLevel);
+        _realmEvent.RaiseEvent(_protagonistState.currentRealmTier, _protagonistState.currentRealmStage);
     }
 
-    private void AdvanceRealm(RealmLevel level)
+    private RealmData GetCurrentRealmData()
+    {
+        foreach (var realm in _realmDatas)
+        {
+            if (realm.realmTier == _protagonistState.currentRealmTier)
+                return realm;
+        }
+        return null;
+    }
+
+    private RealmLevel GetNextRealmLevel(RealmData realmData)
+    {
+        foreach (var level in realmData.levels)
+        {
+            if (level.stage == _protagonistState.currentRealmStage)
+                return level;
+        }
+        return null;
+    }
+
+    private void UpgradeRealm(RealmLevel level)
+    {
+        ApplyRealmBonuses(level);
+        AdvanceRealmStage();
+    }
+
+    private void ApplyRealmBonuses(RealmLevel level)
     {
         _protagonistState.currentHealth += level.bonusHealth;
         _protagonistState.currentMana += level.bonusMana;
@@ -40,20 +67,18 @@ public class RealmManager : MonoBehaviour
         _protagonistState.currentDefense += level.bonusDefense;
         _protagonistState.currentIntelligence += level.bonusIntelligence;
         _protagonistState.currentLucky += level.bonusLucky;
+    }
 
-        // (Early -> Mid -> Late -> new stage)
-        if (_protagonistState.currentRealmStage == RealmStage.Early)
-        {
-            _protagonistState.currentRealmStage = RealmStage.Mid;
-        }
-        else if (_protagonistState.currentRealmStage == RealmStage.Mid)
-        {
-            _protagonistState.currentRealmStage = RealmStage.Late;
-        }
-        else
+    private void AdvanceRealmStage()
+    {
+        if (_protagonistState.currentRealmStage == RealmStage.Late)
         {
             _protagonistState.currentRealmStage = RealmStage.Early;
             UpgradeRealmTier();
+        }
+        else
+        {
+            _protagonistState.currentRealmStage++;
         }
     }
 

@@ -16,13 +16,13 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public event UnityAction<Vector2> ChoosePositionEvent = delegate { };
 	public event UnityAction<Vector2> MoveEvent = delegate { };
 	public event UnityAction StoppedMoving = delegate { };
-	public event UnityAction<MonsterController> PickTarget = delegate { };
+	public event UnityAction<MonsterHealth> PickTarget = delegate { };
 	
 	// Menus
-	public UnityAction OnOpenInventoryEvent;
-	public UnityAction OnCloseInventoryEvent;
-	public UnityAction OnStartDragItemEvent;
-	public UnityAction OnDropItemEvent;
+	public event UnityAction OpenInventoryEvent;
+	public event UnityAction CloseInventoryEvent;
+	public event UnityAction StartDragItemEvent;
+	public event UnityAction DropItemEvent;
 	
 	private bool isInventoryOpen = false;
 	private bool isDraggingItem = false;
@@ -100,7 +100,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 			Collider2D hitCollider = Physics2D.OverlapPoint(worldPosition);
 			if (hitCollider != null)
 			{
-				MonsterController entity = hitCollider.GetComponent<MonsterController>();
+				MonsterHealth entity = hitCollider.GetComponent<MonsterHealth>();
 				PickTarget.Invoke(entity);
 			}
 			else
@@ -113,28 +113,26 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	// --- Inventory Controls ---
 	public void OnOpenInventory(InputAction.CallbackContext context)
 	{
-		if (context.performed)
+		if (context.phase == InputActionPhase.Performed)
 		{
-			isInventoryOpen = !isInventoryOpen;
-			if (isInventoryOpen)
-			{
-				EnableMenuInput();
-				OnOpenInventoryEvent?.Invoke();
-			}
-			else
-			{
-				EnableGameplayInput();
-				OnCloseInventoryEvent?.Invoke();
-			}
+			OpenInventoryEvent.Invoke();
 		}
 	}
+    
+    public void OnCloseInventory(InputAction.CallbackContext context)
+    {
+    	if (context.phase == InputActionPhase.Performed)
+    	{
+    		CloseInventoryEvent.Invoke();
+    	}
+    }
 
 	public void OnDragItem(InputAction.CallbackContext context)
 	{
 		if (context.started)
 		{
 			isDraggingItem = true;
-			OnStartDragItemEvent?.Invoke();
+			StartDragItemEvent?.Invoke();
 		}
 	}
 
@@ -143,7 +141,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 		if (context.performed)
 		{
 			isDraggingItem = false;
-			OnDropItemEvent?.Invoke();
+			DropItemEvent?.Invoke();
 		}
 	}
 

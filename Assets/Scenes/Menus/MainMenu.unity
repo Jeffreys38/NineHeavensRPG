@@ -367,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52845bb1f0d471eb2f4ffa0ccd54c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameStateManager: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
   _locationsToLoad: {fileID: 11400000, guid: fe36128f1f3881746818d838ac14b1a5, type: 2}
   _saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}

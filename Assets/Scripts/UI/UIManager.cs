@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class UIManager
+public class UIManager : MonoBehaviour
 {
     [Header("Scene UI")]
-    // [SerializeField] private UIInventory _inventoryPanel = default;
+    [SerializeField] private UIInventory _inventoryPanel = default;
     
     [Header("Gameplay")]
     [SerializeField] private GameStateSO _gameStateManager = default;
@@ -19,13 +19,35 @@ public class UIManager
 
     private void OnEnable()
     {
-        
+	    _inputReader.OpenInventoryEvent += SetInventoryScreen;
+	    _inputReader.CloseInventoryEvent += CloseInventoryScreen;
     }
     
     private void OnDisable()
     {
-        
+	    _inputReader.OpenInventoryEvent -= SetInventoryScreen;
+	    _inputReader.CloseInventoryEvent -= CloseInventoryScreen;
     }
     
-    
+    private void SetInventoryScreen()
+    {
+	    if (_gameStateManager.CurrentGameState == GameState.Gameplay)
+	    {
+		    OpenInventoryScreen();
+	    }
+    }
+
+    private void OpenInventoryScreen()
+    {
+	    _inventoryPanel.gameObject.SetActive(true);
+	    _inputReader.EnableMenuInput();
+	    _gameStateManager.UpdateGameState(GameState.Inventory);
+    }
+	
+    public void CloseInventoryScreen()
+    {
+	    _inventoryPanel.gameObject.SetActive(false);
+	    _inputReader.EnableGameplayInput();
+	    _gameStateManager.UpdateGameState(GameState.Gameplay);
+    }
 }

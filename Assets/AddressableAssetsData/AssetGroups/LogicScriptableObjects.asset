@@ -25,11 +25,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c7a2ec48e1c9433fa1c6db735bf2b483
-    m_Address: Assets/ScriptableObjects/StateMachine
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da55e78f7b48936449caf438126be790
     m_Address: Assets/ScriptableObjects/EventChannels
     m_ReadOnly: 0
