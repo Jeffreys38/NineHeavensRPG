@@ -17,7 +17,11 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 2a68be5fcf8159e46a585a2c37f5c61e, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 8289896279179264
+    m_Localized: ' Frost Wraith'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

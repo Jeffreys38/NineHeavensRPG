@@ -21,6 +21,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-zh-Hans
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29229349d0824fc479e2c106039d446e
+    m_Address: ItemAttributes_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48638b28c552ff44292e779c7a438d6c
+    m_Address: Description_Monster_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cf816a3b2864d349a1de3bd99cbcf7f
+    m_Address: EquipmentsDescription_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61d7b0a22a6b5074a935dce2a94c1550
+    m_Address: Equipments_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 887239d83cf74fd41b6574122243e8e3
     m_Address: _Elite_zh-Hans
     m_ReadOnly: 1

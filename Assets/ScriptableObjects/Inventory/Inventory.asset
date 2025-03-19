@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   _items:
-  - _item: {fileID: 11400000, guid: 9a3bf40d69aecfa48b285dd666c417e3, type: 2}
-    Amount: 10
+  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+    Amount: 100
+  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+    Amount: 24
+  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+    Amount: 32
+  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+    Amount: 24
+  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
+    Amount: 12

@@ -13,7 +13,7 @@ public class TargetStatsUI : MonoBehaviour
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private VoidEventChannelSO _onDamageDealt;
 
-    private MonsterController _target;
+    private MonsterHealth _healthTarget;
 
     private void OnEnable()
     {
@@ -25,18 +25,19 @@ public class TargetStatsUI : MonoBehaviour
         _inputReader.PickTarget -= SetTarget;
     }
 
-    private void SetTarget(MonsterController target)
+    private void SetTarget(MonsterHealth healthTarget)
     {
-        if (_target != null)
+        // Clean previous
+        if (healthTarget != null)
         {
-            _target.OnHealthChanged -= UpdateHealthBar;
+            healthTarget.OnHealthChanged -= UpdateHealthBar;
         }
 
-        _target = target;
-
-        if (_target != null)
+        _healthTarget = healthTarget;
+        if (_healthTarget != null)
         {
-            _target.OnHealthChanged += UpdateHealthBar;
+            _healthTarget.OnHealthChanged += UpdateHealthBar;
+            UpdateHealthBar(healthTarget.currentHealth, healthTarget.Entity.MaxHealth);
             ShowBar();
         }
         else
@@ -48,7 +49,6 @@ public class TargetStatsUI : MonoBehaviour
     private void ShowBar()
     {
         _targetBar.gameObject.SetActive(true);
-        UpdateHealthBar(_target);
     }
 
     private void HideBar()
@@ -56,13 +56,8 @@ public class TargetStatsUI : MonoBehaviour
         _targetBar.gameObject.SetActive(false);
     }
 
-    private void UpdateHealthBar(MonsterController target)
+    private void UpdateHealthBar(int currentHealth, int maxHealth)
     {
-        if (target == null) return;
-
-        int currentHealth = target.GetCurrentHealth();
-        int maxHealth = target.GetMaxHealth();
-
         _healthText.SetText($"{currentHealth}");
         _healthBar.fillAmount = (float)currentHealth / maxHealth;
     }

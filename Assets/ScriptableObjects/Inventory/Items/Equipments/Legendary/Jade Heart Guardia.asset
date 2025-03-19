@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396242b72dcc4c1680bf4f8f0591af7e, type: 3}
+  m_Name: Jade Heart Guardia
+  m_EditorClassIdentifier: 
+  _guid: 3a5b6be3e9025d749ac68f83a544818f
+  _itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:8bc8f1a1bfccb3344969d180b85a4ad1
+    m_TableEntryReference:
+      m_KeyId: 29690560512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:1b6dc6439c0259d4d95d2ec35af4c879
+    m_TableEntryReference:
+      m_KeyId: 15903883264
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: -5263162850707922008, guid: 877415c169f5ec74d80aee5d28a6c544, type: 3}
+  _prefab: {fileID: 5789549946002913333, guid: 8775fad1bd0876947a8ebf62a775f9b0, type: 3}
+  _itemType: 1
+  _tabType: 1
+  rarity: 2
+  _bonusAttack: 2000
+  _bonusDefense: 2800
+  _bonusIntelligence: 2900
+  _bonusLucky: 2400
+  _equipmentType: 3
+  references:
+    version: 2
+    RefIds: []

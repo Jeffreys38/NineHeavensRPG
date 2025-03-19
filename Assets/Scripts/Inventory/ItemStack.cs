@@ -9,6 +9,7 @@ public class ItemStack
 	public ItemSO Item => _item;
 
 	public int Amount;
+	
 	public ItemStack()
 	{
 		_item = null;

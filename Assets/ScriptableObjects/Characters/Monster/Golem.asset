@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6de6a22fb774b39ab42e4ab34b24dde, type: 3}
+  m_Name: Golem
+  m_EditorClassIdentifier: 
+  _name:
+    m_TableReference:
+      m_TableCollectionName: GUID:2a68be5fcf8159e46a585a2c37f5c61e
+    m_TableEntryReference:
+      m_KeyId: 8289896279179264
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:fa08f6cf02c482e44b7b80e818f6f4aa
+    m_TableEntryReference:
+      m_KeyId: 166387122176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _prefabReview: {fileID: 3220910249603206970, guid: 4609b631f60ed6147a912f5dfa6be12e, type: 3}
+  _realmStage: 0
+  _realmTier: 0
+  _maxHealth: 5000
+  _maxMana: 5000
+  _maxAttack: 1200
+  _maxDefense: 2300
+  _maxIntelligence: 1000
+  _maxLucky: 1000
+  _learnedSkills: []
+  _rarity: 0
+  _receivedEXP: 300
+  _monsterDropTable: {fileID: 11400000, guid: 90e4e96fe916b4f4ab6e582ccd7119fe, type: 2}
+  references:
+    version: 2
+    RefIds: []

@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 39188480d039be9438efa81e38134447
   m_SerializeEntries:
+  - m_GUID: 1b6dc6439c0259d4d95d2ec35af4c879
+    m_Address: Assets/LocaliztionFiles/AssetTables/Equipments/EquipmentsDescription/EquipmentsDescription
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a68be5fcf8159e46a585a2c37f5c61e
     m_Address: Assets/LocaliztionFiles/AssetTables/Monsters/New Folder/_Normal Shared
       Data.asset
@@ -38,9 +44,26 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bc8f1a1bfccb3344969d180b85a4ad1
+    m_Address: Assets/LocaliztionFiles/AssetTables/Equipments Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3f011f45acda314299757157f80c52e
     m_Address: Assets/LocaliztionFiles/AssetTables/Monsters/_Elite/_Elite Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e02b905b85c0c6b4cbc4d42c73c4e663
+    m_Address: Assets/LocaliztionFiles/AssetTables/ItemAttributes/ItemAttributes
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa08f6cf02c482e44b7b80e818f6f4aa
+    m_Address: Assets/LocaliztionFiles/AssetTables/Monsters/Description/Description_Monster
+      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

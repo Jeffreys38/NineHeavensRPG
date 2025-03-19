@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: ProtagonistState
   m_EditorClassIdentifier: 
   _guid: b18040af8f8de00468701005dee38fc8
-  currentAtk: 100
-  currentDefense: 100
-  currentHealth: 5000
-  maxHealth: 5000
-  currentMana: 20000
-  maxMana: 20000
-  power: 400000
+  currentAtk: 0
+  currentDefense: 0
+  currentHealth: 3200
+  maxHealth: 3200
+  currentMana: 65500
+  maxMana: 80000
+  power: 1000
   currentIntelligence: 0
   currentLucky: 0
   realmData: {fileID: 11400000, guid: 33c23704eb96f9046b5fe92ffcb6c83e, type: 2}
   currentRealmTier: 0
   currentRealmStage: 0
-  currentExp: 8000
+  currentExp: 3300
   currentPosition: {x: 0, y: 0, z: 0}
   learnedSkills:
   - {fileID: 11400000, guid: aceea84dc1e30ab4abf90d2d0d845ada, type: 2}

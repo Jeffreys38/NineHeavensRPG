@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 2258026109370417250}
   - component: {fileID: 354934082489810389}
   - component: {fileID: 2997972909383598280}
+  - component: {fileID: 69684598561364021}
   m_Layer: 5
   m_Name: PlayerStatsUI
   m_TagString: Untagged
@@ -156,6 +157,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &69684598561364021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306591464362328281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bda62f9aa7546a0b57436e89829e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _protagonistState: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+  _healthBar: {fileID: 3616791229703556535}
+  _manaBar: {fileID: 7977851571440243346}
+  _expBar: {fileID: 1501323255552841872}
+  _expText: {fileID: 6325249337694322763}
+  _powerText: {fileID: 1445228132344024073}
+  _onHealthChanged: {fileID: 11400000, guid: d24e4574be3bc0c46be0ca1b5e5b73c0, type: 2}
+  _onManaChanged: {fileID: 11400000, guid: 1a75463c65e401f40848965b25ce29bf, type: 2}
+  _onExpChanged: {fileID: 11400000, guid: 3bd4008d303302542895096085840e1d, type: 2}
+  _onPowerChanged: {fileID: 11400000, guid: e7a83b689e2169a4a9922adead0c587b, type: 2}
 --- !u!1 &2466204715778186987
 GameObject:
   m_ObjectHideFlags: 0

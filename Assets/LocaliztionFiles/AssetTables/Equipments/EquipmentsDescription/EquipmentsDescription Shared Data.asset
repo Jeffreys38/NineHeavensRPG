@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: EquipmentsDescription Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: EquipmentsDescription
+  m_TableCollectionNameGuidString: 1b6dc6439c0259d4d95d2ec35af4c879
+  m_Entries:
+  - m_Id: 15903883264
+    m_Key: EmeraldDivineBrace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127707250688
+    m_Key: GoldenEssenceWristband
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147101712384
+    m_Key: PrimordialDragon Horn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145994416128
+    m_Key: JadeHeartGuardian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423992885248
+    m_Key: InfernalFlameHelm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135806451712
+    m_Key: BloodscaleDemonRing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137672916992
+    m_Key: HolyRadianceRobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140520849408
+    m_Key: ThunderEmperorHelm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142169210880
+    m_Key: CelestialDemonBoots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142974517248
+    m_Key: ThunderGod'sGreaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143708520448
+    m_Key: PhantomDemonRing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144484466688
+    m_Key: "Heaven\u2019sEyeRing"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145289773056
+    m_Key: StormfangBoots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133612830720
+    m_Key: FlameDragonArmor
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 143707465597321298
+  references:
+    version: 2
+    RefIds:
+    - rid: 143707465597321298
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1741451172238

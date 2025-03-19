@@ -27,14 +27,38 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a6433df43a9c6843ad2a832db9a0224
+    m_Address: EquipmentsDescription_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d6d24d5627ec2a40ae6428e96e25700
     m_Address: _Boss_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4307fba5e7ba0fe4092f6dc4df65dbe2
+    m_Address: Description_Monster_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99a5735d4615c0c439b8290a4b4233d7
+    m_Address: ItemAttributes_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b353929ca61c45b4b8fef23a55a318b1
     m_Address: _Elite_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b463cea55f51f8444a62c8cfc012b43d
+    m_Address: Equipments_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

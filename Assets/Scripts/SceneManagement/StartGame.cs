@@ -9,6 +9,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 /// </summary>
 public class StartGame : MonoBehaviour
 {
+	[SerializeField] private GameStateSO _gameStateManager;
 	[SerializeField] private GameSceneSO _locationsToLoad;
 	[SerializeField] private SaveSystem _saveSystem = default;
 	[SerializeField] private InputReader _inputReader = default;
@@ -42,6 +43,8 @@ public class StartGame : MonoBehaviour
 	{
 		_saveSystem.LoadGame();
 		_loadLocation.RaiseEvent(_locationsToLoad, true, true);
+		
+		_gameStateManager.UpdateGameState(GameState.Gameplay);
 	}
 
 	private void ContinuePreviousGame()
