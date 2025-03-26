@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HuyetTayThuyGiao_zh-Hans
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-Hans
+  m_SharedData: {fileID: 11400000, guid: a951f5d6ebccd83459b4fd752ba55fec, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9117499392
+    m_Localized: "\u4F60\u6765\u5230\u8FD9\u91CC\uFF0C\u4E5F\u662F\u4E00\u79CD\u7F18\u5206\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58165690368
+    m_Localized: "\u6211\u5DF2\u5BDF\u89C9\u8FC7\u4F60\u7684\u6C14\u606F\uFF0C\u592A\u8FC7\u5B71\u5F31\uFF0C\u4E00\u4E2A\u5931\u53BB\u5168\u90E8\u4FEE\u4E3A\u4E4B\u4EBA\uFF0C\u4E0E\u5E9F\u7269\u4F55\u5F02\uFF1F\u4E0D\u8FC7\u2026\u2026\u4F60\u4ECD\u6709\u673A\u4F1A\u8BC1\u660E\u81EA\u5DF1\u7684\u4EF7\u503C\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 609867661312
+    m_Localized: "\u65E2\u7136\u8E0F\u4E0A\u4E86\u8FD9\u6761\u9053\u8DEF\uFF0C\u5C31\u62FF\u51FA\u4F60\u7684\u5B9E\u529B\uFF0C\u8BC1\u660E\u4F60\u662F\u5426\u6709\u8D44\u683C\u8D70\u4E0B\u53BB\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 720098164736
+    m_Localized: "\u524D\u65B9\u6709\u51E0\u53EA\u77F3\u5BD2\u517D\uFF0C\u82E5\u4F60\u80FD\u65A9\u6740\u4E94\u53EA\uFF0C\u6211\u6216\u8BB8\u4F1A\u8003\u8651\u8BA9\u4F60\u7559\u4E0B\u591A\u4E9B\u65F6\u65E5\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279500423299072
+    m_Localized: "\u4E0D\u9519\uFF0C\u770B\u8D77\u6765\u4F60\u5E76\u975E\u6BEB\u65E0\u7528\u5904\u3002\u4E0D\u8FC7\uFF0C\u522B\u6025\u7740\u5F97\u610F\uFF0C\u524D\u8DEF\u6F2B\u6F2B\uFF0C\u4F60\u8FD8\u5DEE\u5F97\u8FDC\u5462\u2026\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744928444416
+    m_Localized: "\u90A3\u4E48\uFF0C\u6682\u4E14\u522B\u8FC7\uFF0C\u82E5\u6709\u7F18\uFF0C\u81EA\u4F1A\u518D\u89C1\u3002"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
