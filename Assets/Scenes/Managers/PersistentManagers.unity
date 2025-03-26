@@ -174,7 +174,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 219831925}
-  - component: {fileID: 219831926}
   m_Layer: 0
   m_Name: SettingsSystemManager
   m_TagString: Untagged
@@ -197,24 +196,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &219831926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219831924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94129d338e26911429e5dab259ac24f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SaveSettingsEvent: {fileID: 11400000, guid: 4a7ebda2a1a914747a9f492fda3ecdaa, type: 2}
-  _currentSettings: {fileID: 11400000, guid: 950aaff8e1731d345aadcace55d8bff4, type: 2}
-  _saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
-  _changeMasterVolumeEventChannel: {fileID: 11400000, guid: 57d994a8bf24bbb47a0cba3703828992, type: 2}
-  _changeSFXVolumeEventChannel: {fileID: 11400000, guid: 3d17a2a6f55f8d64ab70d8fac10669df, type: 2}
-  _changeMusicVolumeEventChannel: {fileID: 11400000, guid: 942692ae811251c4a967cc58bae7d413, type: 2}
 --- !u!1 &317525373
 GameObject:
   m_ObjectHideFlags: 0
