@@ -15,6 +15,6 @@ MonoBehaviour:
   _guid: d38e329909070474d9f03902da411930
   description: Holds the current game state, and fires an event to notify when Combat
     state is entered or left
-  _currentGameState: 6
+  _currentGameState: 0
   _previousGameState: 0
   _onCombatStateEvent: {fileID: 11400000, guid: 2ea618c3d72058a4f91b8f0b391f193e, type: 2}

@@ -15,8 +15,19 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 39188480d039be9438efa81e38134447
   m_SerializeEntries:
+  - m_GUID: 0f97e578cb7c4a248ab322a056687f55
+    m_Address: Assets/LocaliztionFiles/AssetTables/Action/Action Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b6dc6439c0259d4d95d2ec35af4c879
     m_Address: Assets/LocaliztionFiles/AssetTables/Equipments/EquipmentsDescription/EquipmentsDescription
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a24dfe46c868564a92d37852a368006
+    m_Address: Assets/LocaliztionFiles/AssetTables/Dialogue System/NPC_JadeFairy/TramLanDoatMenh/TramLanDoatMenh
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
@@ -49,8 +60,32 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a951f5d6ebccd83459b4fd752ba55fec
+    m_Address: Assets/LocaliztionFiles/AssetTables/Dialogue System/Dialogue_NPC_JadeFairy_Welcome/Dialogue_NPC_JadeFairy_Welcome
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b039af62dea5ad742a9d80b6bea90445
+    m_Address: Assets/LocaliztionFiles/AssetTables/Quest/Quest_Description/Quest_Description
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3f011f45acda314299757157f80c52e
     m_Address: Assets/LocaliztionFiles/AssetTables/Monsters/_Elite/_Elite Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc085e967411bdc48a4e213ec65fe346
+    m_Address: Assets/LocaliztionFiles/AssetTables/Dialogue System/NPC_JadeFairy/ThienMenhThanBan/ThienMenhThanBan
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6dbba41474a87e4eb9f5110d1b1eec4
+    m_Address: Assets/LocaliztionFiles/AssetTables/Quest/Quest_Name/Quest_Name Shared
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []

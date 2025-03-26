@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
-public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameInput.IMenusActions
+public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameInput.IMenusActions, GameInput.IDialoguesActions
 {
 	[Space]
 	[SerializeField] private GameStateSO _gameStateManager;
@@ -11,6 +11,9 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	// Assign delegate{} to events to initialise them with an empty delegate
 	// so we can skip the null check when we use them
 
+	// Dialogues
+	public event UnityAction NextDialogueEvent = delegate { };
+	
 	// Gameplay
 	public event UnityAction<int> AttackEvent = delegate { };
 	public event UnityAction<Vector2> ChoosePositionEvent = delegate { };
@@ -48,30 +51,30 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	
 	public void EnableDialogueInput()
 	{
-		// _gameInput.Menus.Enable();
-		// _gameInput.Gameplay.Disable();
-		// _gameInput.Dialogues.Enable();
+		_gameInput.Dialogues.Enable();
+		_gameInput.Menus.Disable();
+		_gameInput.Gameplay.Disable();
 	}
 
 	public void EnableGameplayInput()
 	{
-		_gameInput.Menus.Disable();
-		// _gameInput.Dialogues.Disable();
 		_gameInput.Gameplay.Enable();
+		_gameInput.Menus.Disable();
+		_gameInput.Dialogues.Disable();
 	}
 
 	public void EnableMenuInput()
 	{
-		// _gameInput.Dialogues.Disable();
-		_gameInput.Gameplay.Disable();
 		_gameInput.Menus.Enable();
+		_gameInput.Dialogues.Disable();
+		_gameInput.Gameplay.Disable();
 	}
 
 	public void DisableAllInput()
 	{
 		_gameInput.Gameplay.Disable();
 		_gameInput.Menus.Disable();
-		// _gameInput.Dialogues.Disable();
+		_gameInput.Dialogues.Disable();
 	}
 
 	public void OnAttack(InputAction.CallbackContext context)
@@ -151,5 +154,13 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 		
 		if (move != Vector2.zero) MoveEvent.Invoke(move);
 		else StoppedMoving.Invoke();
+	}
+
+	public void OnNextDialogue(InputAction.CallbackContext context)
+	{
+		if (context.performed)
+		{
+			NextDialogueEvent?.Invoke();
+		}
 	}
 }

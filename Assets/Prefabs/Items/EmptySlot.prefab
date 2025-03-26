@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemClickEvent: {fileID: 11400000, guid: a315e94768a6aeb4bafa88bfc7b43f41, type: 2}
+  _removedEquipmentEvent: {fileID: 11400000, guid: 795fa3cbbdcf0c045918c9dc29018be0, type: 2}
+  _equipmentAssignedEvent: {fileID: 11400000, guid: d43253aed7602cd448f1cb3a69d0b359, type: 2}
   _quantityText: {fileID: 5293025938213873796}
   _isEquipmentSlot: 0
   _slotType: 0

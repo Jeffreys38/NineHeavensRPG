@@ -32,7 +32,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: -5263162850707922008, guid: 877415c169f5ec74d80aee5d28a6c544, type: 3}
-  _prefab: {fileID: 5789549946002913333, guid: 8775fad1bd0876947a8ebf62a775f9b0, type: 3}
+  _prefab:
+    m_AssetGUID: 8775fad1bd0876947a8ebf62a775f9b0
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   _itemType: 1
   _tabType: 1
   rarity: 2
@@ -40,7 +45,9 @@ MonoBehaviour:
   _bonusDefense: 2800
   _bonusIntelligence: 2900
   _bonusLucky: 2400
-  _equipmentType: 3
+  _equipmentType: 4
+  _enhancementLevel: 0
+  enhancementMultiplier: 0.1
   references:
     version: 2
     RefIds: []

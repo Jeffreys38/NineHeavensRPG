@@ -2,11 +2,14 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 {
     [Header("Broadcasting On")] 
     [SerializeField] private ItemEventChannelSO _itemClickEvent;
+    [SerializeField] private EquipmentEventChannelSO _removedEquipmentEvent;
+    [SerializeField] private EquipmentEventChannelSO _equipmentAssignedEvent;
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI _quantityText;
@@ -26,14 +29,27 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
     public void SetItem(ItemStack itemStack)
     {
         _currentItemStack = itemStack;
+    
+        if (IsEquipmentSlot && itemStack.Item is EquipmentItemSO equipmentItem)
+        {
+            _equipmentAssignedEvent.RaiseEvent(equipmentItem);
+        }
         
-        _item = Instantiate(_currentItemStack.Item.Prefab, transform);
-        _item.transform.SetAsFirstSibling();
-
-        UpdateQuantity(_currentItemStack.Amount);
-        
-        // Apply behaviors for item (event when clicking, drag & drop)
-        ApplyBehavior();
+        itemStack.Item.Prefab.InstantiateAsync(transform).Completed += handle =>
+        {
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                _item = handle.Result;
+                _item.transform.SetAsFirstSibling();
+            
+                UpdateQuantity(_currentItemStack.Amount);
+                ApplyBehavior();
+            }
+            else
+            {
+                Debug.LogError("Failed to load item prefab.");
+            }
+        };
     }
 
     private void UpdateQuantity(int amount = 0)
@@ -46,6 +62,11 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 
     public void ClearItem()
     {
+        if (IsEquipmentSlot && _currentItemStack.Item as EquipmentItemSO)
+        {
+            _removedEquipmentEvent.RaiseEvent(_currentItemStack.Item as EquipmentItemSO);
+        }
+        
         _currentItemStack = null;
         Destroy(_item);
         _quantityText.text = "";
@@ -72,25 +93,26 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 
         // If the target slot is an equipment slot, check if the dragged item is a valid equipment type
         var equipmentItemSO = sourceSlot.CurrentItem.Item as EquipmentItemSO;
-        if (this.IsEquipmentSlot && (equipmentItemSO == null || this.SlotType != equipmentItemSO.EquipmentType))
+        if (IsEquipmentSlot && (equipmentItemSO == null || this.SlotType != equipmentItemSO.EquipmentType))
         {
             Debug.Log("Cannot place this item in this slot!");
             return;
         }
 
         // Move the item from the source slot to the target slot
-        this.SetItem(sourceSlot.CurrentItem);
+        Debug.Log("Dropped: " + sourceSlot.CurrentItem.Item);
+        SetItem(sourceSlot.CurrentItem);
         sourceSlot.ClearItem();
     }
 
     private void SwapItem(UIItemSlot sourceSlot)
     {
-        if (sourceSlot.IsEmpty || this.IsEmpty) return;
+        if (sourceSlot.IsEmpty || IsEmpty) return;
 
-        var tempItem = this._currentItemStack;
-        var tempGameObject = this._item;
+        var tempItem = _currentItemStack;
+        var tempGameObject = _item;
 
-        this.SetItem(sourceSlot.CurrentItem);
+        SetItem(sourceSlot.CurrentItem);
         sourceSlot.SetItem(tempItem);
 
         Destroy(tempGameObject);
@@ -98,8 +120,9 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (_currentItemStack == null) return;
+        
         ItemSO item = _currentItemStack.Item;
-
         if (item != null)
         {
             _itemClickEvent.RaiseEvent(item);

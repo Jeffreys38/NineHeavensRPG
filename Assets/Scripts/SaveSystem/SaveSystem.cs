@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SaveSystem : ScriptableObject
 {
@@ -9,13 +6,10 @@ public class SaveSystem : ScriptableObject
 	[SerializeField] private VoidEventChannelSO _saveSettingsEvent;
 	[SerializeField] private LoadEventChannelSO _loadLocation;
 
+	[Header("Data")]
 	[SerializeField] private ProtagonistStateSO _protagonist;
-	[SerializeField] private MonsterSpawnTrackerSO _monsterSpawnTracker;
 	[SerializeField] private InventorySO _playerInventory;
-	[SerializeField] private SettingsSO _currentSettings;
-	[SerializeField] private GameSceneSO _savedLocation;
 	
-	[Header("References")]
 	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
 
 	public GameData gameData;
@@ -49,46 +43,20 @@ public class SaveSystem : ScriptableObject
 			return false;
 		}
 		
-		//_protagonist.LoadData(gameData);
-		// _protagonist.learnedSkills = LoadSkills(gameData.protagonistData.learnedSkills);
-		// _monsterSpawnTracker.LoadData(gameData);
+		(_protagonist as IDataPersistence)?.LoadData(gameData);
+		(_playerInventory as IDataPersistence)?.LoadData(gameData);
 		
 		return true;
 	}
-	
-	private List<SkillSO> LoadSkills(List<string> skillGuids)
-	{
-		if (skillGuids == null) return new List<SkillSO>();
 
-		List<SkillSO> skills = new List<SkillSO>();
-		foreach (string guid in skillGuids)
-		{
-			SkillSO skill = LoadAssetByGuid(guid, typeof(SkillSO)) as SkillSO;
-			if (skill != null)
-				skills.Add(skill);
-		}
-		return skills;
-	}
-	
-	private object LoadAssetByGuid(string guid, Type type)
-	{
-#if UNITY_EDITOR
-		string pathToAsset = AssetDatabase.GUIDToAssetPath(guid);
-
-		return AssetDatabase.LoadAssetAtPath(pathToAsset, type);
-#endif
-		return null;
-	}
-
-	public void SaveGame()
+	private void SaveGame()
 	{
 		_protagonist.SaveData(ref gameData);
-		_monsterSpawnTracker.SaveData(ref gameData);
 	}
 
 	private void SaveSettings()
 	{
-		gameData.SaveSettings(_currentSettings);
+	
 	}
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen = true, bool fadeScreen = false)
@@ -100,10 +68,5 @@ public class SaveSystem : ScriptableObject
 		}
 
 		// SaveGame();
-	}
-
-	private void OnApplicationQuit()
-	{
-		SaveGame();
 	}
 }

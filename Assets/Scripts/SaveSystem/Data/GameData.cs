@@ -11,40 +11,17 @@ using UnityEngine.Localization;
 public class GameData
 {
     public ProtagonistData protagonistData;
-    public MonsterSpawnerStateData monsterSpawnerStateData;
     public string locationId;
     public List<SerializedItemStack> itemStacks;
-    
-    // List of GUIDs for completed questline items
-    // Each entry in this list is a unique string representing a completed quest.  
-    public List<string> finishedQuestlineItemsGUIds;
+    public List<string> finishedQuestItemsGUIds;
     
     // Other settings
-    public float _masterVolume = default;
-    public float _musicVolume = default;
-    public float _sfxVolume = default;
-    public int _resolutionsIndex = default;
-    public int _antiAliasingIndex = default;
-    public float _shadowDistance = default;
-    public bool _isFullscreen = default;
     public Locale _currentLocale = default;
 
     public GameData()
     {
         itemStacks = new List<SerializedItemStack>();
-        finishedQuestlineItemsGUIds = new List<string>();
+        finishedQuestItemsGUIds = new List<string>();
         protagonistData = new ProtagonistData();
-    }
-    
-    public void SaveSettings(SettingsSO settings)
-    {
-        _masterVolume = settings.MasterVolume;
-        _musicVolume = settings.MusicVolume;
-        _sfxVolume = settings.SfxVolume;
-        _resolutionsIndex = settings.ResolutionsIndex;
-        _antiAliasingIndex = settings.AntiAliasingIndex;
-        _shadowDistance = settings.ShadowDistance;
-        _isFullscreen = settings.IsFullscreen;
-        _currentLocale = settings.CurrentLocale;
     }
 }

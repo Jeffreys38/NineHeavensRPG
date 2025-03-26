@@ -1,33 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Protagonist State", menuName = "State/Protagonist State")]
 public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
 {
-    [Header("Character Stats")] 
+    [Header("Info")] 
+    public string nickName;
+    public string avatarUrl;
+    public string bio;
+    public GameObject prefabReview;
+
+    [Header("Character Base Stats")] 
+    public int maxHealth;
+    public int maxMana;
+    
+    [Header("Character Current Stats")] 
     public int currentAtk;
     public int currentDefense;
     public int currentHealth;
-    public int maxHealth;
     public int currentMana;
-    public int maxMana;
-    public int power;
     public float currentIntelligence;
     public float currentLucky;
     
-    [Header("Realm Progression")]
-    public RealmData realmData;
-    public RealmTier currentRealmTier;
-    public RealmStage currentRealmStage;
+    [Header("Character Bonus Stats")] 
+    public int bonusAtk;
+    public int bonusDefense;
+    public int bonusHealth;
+    public int bonusMana;
+    public float bonusIntelligence;
+    public float bonusLucky;
+    
+    public int power;
     public int currentExp;
-
     public Vector3 currentPosition;
     public List<SkillSO> learnedSkills;
-
+    
+    [Header("Realm Progression")]
+    public RealmTier currentRealmTier;
+    public RealmStage currentRealmStage;
+  
+    [Header("Equipped Items")]
+    public Dictionary<EquipmentType, EquipmentItemSO> equippedItems = new Dictionary<EquipmentType, EquipmentItemSO>();
+    
     public void LoadData(GameData gameData)
     {
+        Debug.Log("Called");
         var protagonistData = gameData.protagonistData;
         
         currentHealth = protagonistData.currentHealth;
@@ -59,19 +76,5 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
             skillsGUID.Add(skill.Guid.ToString());
         }
         data.protagonistData.learnedSkills = skillsGUID;
-    }
-    
-    public int GetRequiredExpForCurrentRealm()
-    {
-        if (realmData == null) return 99999; // Fallback
-
-        foreach (var level in realmData.levels)
-        {
-            if (level.stage == currentRealmStage)
-            {
-                return level.requiredExp;
-            }
-        }
-        return 99999;
     }
 }

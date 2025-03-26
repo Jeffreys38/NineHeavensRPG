@@ -1,4 +1,6 @@
-﻿public class GameManager
+﻿using UnityEngine;
+
+public class GameManager : MonoBehaviour
 {
-        
+       
 }

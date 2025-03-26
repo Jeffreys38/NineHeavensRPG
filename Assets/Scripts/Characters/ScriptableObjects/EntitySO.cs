@@ -5,7 +5,7 @@ using UnityEngine.Localization;
 
 // Only used for monster, npc
 [CreateAssetMenu(fileName = "New Entity", menuName = "GameData/Entity")]
-public class EntitySO : ScriptableObject
+public class EntitySO : SerializableScriptableObject
 {
     [SerializeField] private LocalizedString _name;
     [SerializeField] private LocalizedString _description;

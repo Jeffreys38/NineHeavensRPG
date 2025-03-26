@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RealmManager : MonoBehaviour
 {
@@ -7,17 +8,30 @@ public class RealmManager : MonoBehaviour
     [SerializeField] private ProtagonistStateSO _protagonistState;
     
     [Header("Listening To")]
-    [SerializeField] private VoidEventChannelSO _onExpChanged;
     [SerializeField] private RealmEventChannelSO _realmEvent;
+    [SerializeField] private ExpRequestEventChannelSO _expRequestEvent;
+    [SerializeField] private IntEventChannelSO _onExpGained;
+    
+    [Header("Broadcasting On")]
+    [SerializeField] private VoidEventChannelSO _powerChangedEvent;
+    [SerializeField] private VoidEventChannelSO _expChangedEvent;
 
     private void OnEnable()
     {
-        _onExpChanged.OnEventRaised += CheckForRealmUpgrade;
+        _onExpGained.OnEventRaised += AddExp;
+        _expRequestEvent.OnRequestExp += ProvideExpData;
     }
 
     private void OnDisable()
     {
-        _onExpChanged.OnEventRaised -= CheckForRealmUpgrade;
+        _onExpGained.OnEventRaised -= AddExp;
+        _expRequestEvent.OnRequestExp -= ProvideExpData;
+    }
+
+    private void AddExp(int exp)
+    {
+        _protagonistState.currentExp += exp;
+        CheckForRealmUpgrade();
     }
 
     private void CheckForRealmUpgrade()
@@ -26,7 +40,11 @@ public class RealmManager : MonoBehaviour
         if (currentRealm == null) return;
 
         RealmLevel nextLevel = GetNextRealmLevel(currentRealm);
-        if (nextLevel == null || _protagonistState.currentExp < nextLevel.requiredExp) return;
+        if (nextLevel == null || _protagonistState.currentExp < nextLevel.requiredExp)
+        {
+            _expChangedEvent.RaiseEvent();
+            return;
+        }
 
         _protagonistState.currentExp -= nextLevel.requiredExp;
         UpgradeRealm(nextLevel);
@@ -57,6 +75,9 @@ public class RealmManager : MonoBehaviour
     {
         ApplyRealmBonuses(level);
         AdvanceRealmStage();
+        
+        _powerChangedEvent.RaiseEvent();
+        _expChangedEvent.RaiseEvent();
     }
 
     private void ApplyRealmBonuses(RealmLevel level)
@@ -90,5 +111,28 @@ public class RealmManager : MonoBehaviour
             _protagonistState.currentRealmTier = (RealmTier)nextTierIndex;
             Debug.Log($"Đột phá cảnh giới mới: {_protagonistState.currentRealmTier}!");
         }
+    }
+    
+    private void ProvideExpData(UnityAction<int> callback)
+    {
+        int exp = GetRequiredExpForCurrentRealm();
+        callback?.Invoke(exp);
+    }
+    
+    private int GetRequiredExpForCurrentRealm()
+    {
+        if (_realmDatas == null) return 99999; // Fallback
+
+        foreach (var realm in _realmDatas)
+        {
+            foreach (var level in realm.levels)
+            {
+                if (level.stage == _protagonistState.currentRealmStage)
+                {
+                    return level.requiredExp;
+                }
+            }
+        }
+        return 99999; // Fallback
     }
 }

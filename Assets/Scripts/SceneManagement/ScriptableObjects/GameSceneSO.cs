@@ -19,12 +19,12 @@ public class GameSceneSO : DescriptionBaseSO
         Location, //SceneSelector tool will also load PersistentManagers and Gameplay
         Menu, //SceneSelector tool will also load Gameplay
 
-        //Special scenes
+        // Special scenes
         Initialisation,
         PersistentManagers,
         Gameplay,
 
-        //Work in progress scenes that don't need to be played
+        // Work in progress scenes that don't need to be played
         Art,
     }
 }

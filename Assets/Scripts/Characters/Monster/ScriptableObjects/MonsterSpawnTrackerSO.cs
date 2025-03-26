@@ -43,9 +43,9 @@ public class MonsterSpawnTrackerSO : ScriptableObject, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        var monsterSpawnerStateData = data.monsterSpawnerStateData;
-        
-        _spawnerStates = monsterSpawnerStateData._spawnerStates;
+        // var monsterSpawnerStateData = data.monsterSpawnerStateData;
+        //
+        // _spawnerStates = monsterSpawnerStateData._spawnerStates;
     }
     
     public void SaveData(ref GameData data)
