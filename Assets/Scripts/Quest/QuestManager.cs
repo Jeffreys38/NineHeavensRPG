@@ -2,56 +2,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Manages quest progress and chapters.
+/// 
 /// </summary>
 public class QuestManager : MonoBehaviour
 {
-    public List<ChapterSO> activeChapters = new List<ChapterSO>();
+    [SerializeField] private List<QuestDataSO> _currentQuests = new List<QuestDataSO>();
+    
+    [Header("Broadcasting On")] 
+    [SerializeField] private ItemStackEventChannelSO _addItemEvent;
 
-    /// <summary>
-    /// Accepts a quest and assigns it to the player.
-    /// </summary>
-    public void AcceptQuest(QuestDataSO quest)
+    [Header("Listening To")] 
+    [SerializeField] private ItemStackEventChannelSO _onQuestRewardRequested;
+    [SerializeField] private QuestEventChannelSO _onQuestAddRequested;
+    
+    public List<QuestDataSO> CurrentQuests => _currentQuests;
+
+    private void OnEnable()
     {
-        if (quest.QuestState == QuestState.NotStarted)
-        {
-            quest.StartQuest();
-            Debug.Log($"Quest Accepted: {quest.QuestTitle.GetLocalizedString()}");
-        }
+        // _onQuestRewardRequested.OnEventRaised += GrantRewards;
+        _onQuestAddRequested.OnEventRaised += AddQuest;
     }
 
-    public void CheckQuestProgress(QuestDataSO quest)
+    private void OnDisable()
     {
-        if (quest.QuestState == QuestState.Completed) return;
-
-        if (quest.CheckCompletion())
-        {
-            quest.CompleteQuest();
-            GiveQuestRewards(quest);
-            Debug.Log($"Quest Completed: {quest.QuestTitle.GetLocalizedString()}");
-
-            CheckChapterProgress();
-        }
+       // _onQuestRewardRequested.OnEventRaised -= GrantRewards;
+        _onQuestAddRequested.OnEventRaised -= AddQuest;
     }
 
-    private void GiveQuestRewards(QuestDataSO quest)
+    private void AddQuest(QuestDataSO quest)
     {
-        foreach (var reward in quest.RewardItems)
-        {
-            // InventoryManager.Instance.AddItem(reward.item, reward.quantity);
-        }
+        quest.questState = QuestState.InProgress;
+        _currentQuests.Add(quest);
         
-        // Player.Instance.AddExp(quest.rewardExp);
+        Debug.Log("Active quest: " + quest.questState.ToString());
     }
 
-    private void CheckChapterProgress()
+    private void GrantRewards(ItemStack rewards)
     {
-        foreach (var chapter in activeChapters)
-        {
-            if (chapter.IsCompleted())
-            {
-                // chapter.ClaimChapterRewards();
-            }
-        }
+        _addItemEvent.RaiseEvent(rewards);
     }
 }

@@ -3,18 +3,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player/Player Realm Manager")]
 public class PlayerRealmSO : DescriptionBaseSO
 {
-    [Header("Listening To")] 
-    [SerializeField] private RealmData _realmData;
-
     [SerializeField] private ProtagonistStateSO _protagonistState;
-
+    [SerializeField] private RealmData _realmData;
+    
     [Header("Broadcasting On")] 
     [SerializeField] private RealmEventChannelSO _realmEvent;
 
     public void GainExp(int amount)
     {
         _protagonistState.currentExp += amount;
-        Debug.Log($"Nhận {amount} EXP! Tổng EXP: {_protagonistState.currentExp}");
+
         CheckForRealmUpgrade();
     }
 

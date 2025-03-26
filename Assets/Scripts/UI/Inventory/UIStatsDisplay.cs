@@ -12,8 +12,9 @@ public class UIStatsDisplay : MonoBehaviour
 
     [SerializeField] private Image _icon;
     [SerializeField] private LocalizeStringEvent _titleLocalizedEvent;
+    [SerializeField] private TextMeshProUGUI _enhanceLevelText;
     [SerializeField] private LocalizeStringEvent _descriptionLocalizedEvent;
-    [SerializeField] private UIGroupStat _statPrefab;
+    [SerializeField] private GameObject _statPrefab;
     [SerializeField] private Transform _statParent;
     
     private readonly List<UIGroupStat> _statInstances = new();
@@ -26,6 +27,11 @@ public class UIStatsDisplay : MonoBehaviour
     private void OnDisable()
     {
         _onItemClicked.OnEventRaised -= HandleItem;
+    }
+
+    void Start()
+    {
+        
     }
 
     private void HandleItem(ItemSO item)
@@ -48,6 +54,8 @@ public class UIStatsDisplay : MonoBehaviour
 
     private void DisplayEquipmentStats(EquipmentItemSO equipment)
     {
+        _enhanceLevelText.text = "(+" + equipment.EnhancementLevel + ")";
+        
         foreach (var stat in equipment.GetStats())
         {
             CreateStat(stat.Key, stat.Value);
@@ -69,9 +77,10 @@ public class UIStatsDisplay : MonoBehaviour
 
     private void CreateStat(LocalizedString key, string value)
     {
-        UIGroupStat statInstance = Instantiate(_statPrefab, _statParent);
-        statInstance.Set(key, value, _statParent);
-        _statInstances.Add(statInstance);
+        GameObject statInstance = Instantiate(_statPrefab, _statParent);
+        UIGroupStat stat = statInstance.GetComponent<UIGroupStat>();
+        stat.Set(key, value, _statParent);
+        _statInstances.Add(stat);
     }
 
     private void ClearStats()

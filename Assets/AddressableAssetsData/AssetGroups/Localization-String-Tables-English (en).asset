@@ -27,8 +27,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10d2d93410b40724c950ee35fbecc8e1
+    m_Address: ThienMenhThanBan_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1529d7b36bc69954db6d1dba90312ce1
+    m_Address: Action_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1a6433df43a9c6843ad2a832db9a0224
     m_Address: EquipmentsDescription_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2310d1d957e6e6349a522fab55e08097
+    m_Address: TramLanDoatMenh_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -41,6 +59,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4307fba5e7ba0fe4092f6dc4df65dbe2
     m_Address: Description_Monster_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 758b80ee6f6505d48bf75b125e736d31
+    m_Address: Quest_Description_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -63,11 +87,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf68f350fa397894db95d5a959cdd577
+    m_Address: Quest_Name_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c74cc7289e14d8845969e134c8b203cb
     m_Address: Scene Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0ba8b2c04ea9564f859ada24c4dfc77
+    m_Address: HuyetTayThuyGiao_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b6c2fad1dbca5bd46bb4c6d45d1de32b, type: 2}

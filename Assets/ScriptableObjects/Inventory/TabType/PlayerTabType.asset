@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b99d626c35407a8da15efb411b9f24, type: 3}
   m_Name: PlayerTabType
   m_EditorClassIdentifier: 
-  _tabType: 1
+  _inventory: {fileID: 0}
+  _tabType: 0
+  _maxSlots: 200

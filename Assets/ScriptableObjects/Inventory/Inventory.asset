@@ -14,12 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _items:
   - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
-    Amount: 100
-  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
-    Amount: 24
-  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
-    Amount: 32
-  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
-    Amount: 24
-  - _item: {fileID: 11400000, guid: 26f6cf5205a6efd478225b57e3cce5f3, type: 2}
-    Amount: 12
+    Amount: 1
+  _inventoryTabs:
+  - {fileID: 11400000, guid: 8ea4b45f1e913a7428e65314f17fa519, type: 2}

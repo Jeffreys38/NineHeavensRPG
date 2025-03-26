@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,14 +18,17 @@ public class PlayerStatsUI : MonoBehaviour
     [SerializeField] private VoidEventChannelSO _onHealthChanged;
     [SerializeField] private VoidEventChannelSO _onManaChanged;
     [SerializeField] private VoidEventChannelSO _onExpChanged;
-    [SerializeField] private VoidEventChannelSO _onPowerChanged;
-
+    [SerializeField] private VoidEventChannelSO _onPowerUpdated;
+    
+    [Header("Broadcasting On")]
+    [SerializeField] private ExpRequestEventChannelSO _expRequestEvent;
+    
     private void OnEnable()
     {
         _onHealthChanged.OnEventRaised += UpdateHealthBar;
         _onManaChanged.OnEventRaised += UpdateManaBar;
         _onExpChanged.OnEventRaised += UpdateExpBar;
-        _onPowerChanged.OnEventRaised += UpdatePowerBar;
+        _onPowerUpdated.OnEventRaised += UpdatePowerBar;
     }
 
     private void OnDisable()
@@ -32,7 +36,7 @@ public class PlayerStatsUI : MonoBehaviour
         _onHealthChanged.OnEventRaised -= UpdateHealthBar;
         _onManaChanged.OnEventRaised -= UpdateManaBar;
         _onExpChanged.OnEventRaised -= UpdateExpBar;
-        _onPowerChanged.OnEventRaised -= UpdatePowerBar;
+        _onPowerUpdated.OnEventRaised -= UpdatePowerBar;
     }
 
     private void Start()
@@ -57,18 +61,18 @@ public class PlayerStatsUI : MonoBehaviour
 
     private void UpdateExpBar()
     {
-        int currentExp = _protagonistState.currentExp;
-        int requiredExp = _protagonistState.GetRequiredExpForCurrentRealm();
-
-        float expPercent = (float)currentExp / requiredExp;
-        _expBar.fillAmount = Mathf.Clamp01(expPercent);
-        _expText.text = $"{currentExp} / {requiredExp}";
+        _expRequestEvent.RequestExp(requiredExp =>
+        {
+            int currentExp = _protagonistState.currentExp;
+            float expPercent = (float)currentExp / requiredExp;
+            
+            _expBar.fillAmount = Mathf.Clamp01(expPercent);
+            _expText.text = $"{currentExp} / {requiredExp}";
+        });
     }
 
     private void UpdatePowerBar()
     {
-        int power = _protagonistState.power;
-        
-        _powerText.SetText(power.ToString() + " CP");
+        _powerText.SetText(_protagonistState.power + " CP");
     }
 }

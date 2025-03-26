@@ -105,6 +105,7 @@ public class UIDropReward : MonoBehaviour
     
     private void AddItemToInventory(ItemSO item)
     {
-        // _addItemEvent.RaiseEvent(item);
+        Debug.Log("Add Item To Inventory");
+        _addItemEvent.RaiseEvent(item);
     }
 }

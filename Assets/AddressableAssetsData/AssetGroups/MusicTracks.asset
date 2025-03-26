@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: MusicTracks
   m_GUID: 39a473ebc1caafd46a63b1af1083bbad
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0f77bcada8ac4ec39b3612b5f899f4ed
+    m_Address: Assets/Audio
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b6c2fad1dbca5bd46bb4c6d45d1de32b, type: 2}
   m_SchemaSet:

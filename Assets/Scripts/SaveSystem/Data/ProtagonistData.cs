@@ -7,7 +7,6 @@ public class ProtagonistData
 {
     public int currentHealth;
     public int currentMana;
-    public int level;
     public float currentIntelligence;
     public float currentLucky;
     public RealmTier currentRealmTier;

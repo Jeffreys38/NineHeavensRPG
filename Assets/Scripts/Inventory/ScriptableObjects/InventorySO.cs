@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory/Inventory")]
-public class InventorySO : ScriptableObject
+public class InventorySO : ScriptableObject, IDataPersistence
 {
     [SerializeField] private List<ItemStack> _items = new List<ItemStack>();
     [SerializeField] private List<InventoryTabSO> _inventoryTabs;
@@ -31,7 +31,7 @@ public class InventorySO : ScriptableObject
         }
 
         _items.Add(new ItemStack(item, count));
-        Sort();
+        // Sort();
     }
 
     public void Remove(ItemSO item, int count = 1)
@@ -106,5 +106,15 @@ public class InventorySO : ScriptableObject
         }
 
         return equipmentList;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void LoadData(GameData data)
+    {
+        throw new System.NotImplementedException();
     }
 }
