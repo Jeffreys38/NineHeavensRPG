@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aba17f39b6f42a993ace5e857ec1761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentQuests: []
+  _questListSaved: {fileID: 11400000, guid: ebeb5b020cf53794081a4c6d9d7487fe, type: 2}
   _addItemEvent: {fileID: 0}
   _onQuestRewardRequested: {fileID: 0}
   _onQuestAddRequested: {fileID: 11400000, guid: 613c87990b120e74586f71da9567216f, type: 2}

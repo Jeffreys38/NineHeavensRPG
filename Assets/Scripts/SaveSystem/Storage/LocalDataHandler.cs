@@ -4,7 +4,7 @@ public class LocalDataHandler : IDataHandler
 {
     public GameData Load()
     {
-        return null;
+        return new GameData();
     }
 
     public void Save(GameData gameData)

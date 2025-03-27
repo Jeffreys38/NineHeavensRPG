@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe091e74c97432b84143c99fc3217a7, type: 3}
-  m_Name: Inventory
+  m_Script: {fileID: 11500000, guid: 747e4fa49a154847872a0fa80f105536, type: 3}
+  m_Name: Storage_QuestList
   m_EditorClassIdentifier: 
-  _items: []
-  _inventoryTabs:
-  - {fileID: 11400000, guid: 0c39f2e3f53e54e44a6e8b78dd1c43ab, type: 2}
-  - {fileID: 11400000, guid: 852c8685963a8a54f9da250c54c79b85, type: 2}
+  _currentQuests: []
