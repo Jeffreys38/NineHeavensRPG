@@ -44,7 +44,6 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
     
     public void LoadData(GameData gameData)
     {
-        Debug.Log("Called");
         var protagonistData = gameData.protagonistData;
         
         currentHealth = protagonistData.currentHealth;

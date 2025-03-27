@@ -18,13 +18,13 @@ MonoBehaviour:
   bio: 
   prefabReview: {fileID: 8623045530711256422, guid: 0a7a5464b8a32794db1106fa00b1c2c6, type: 3}
   maxHealth: 5700
-  maxMana: 80000
+  maxMana: 50000
   currentAtk: 500
   currentDefense: 500
-  currentHealth: 6700
-  currentMana: 34900
-  currentIntelligence: 500
-  currentLucky: 500
+  currentHealth: 0
+  currentMana: 50000
+  currentIntelligence: 0
+  currentLucky: 0
   bonusAtk: 0
   bonusDefense: 0
   bonusHealth: 0
@@ -32,11 +32,11 @@ MonoBehaviour:
   bonusIntelligence: 0
   bonusLucky: 0
   power: 0
-  currentExp: 8300
+  currentExp: 0
   currentPosition: {x: 0, y: 0, z: 0}
   learnedSkills:
   - {fileID: 11400000, guid: aceea84dc1e30ab4abf90d2d0d845ada, type: 2}
   - {fileID: 11400000, guid: 8662a2191974f384398454be53c9f8ad, type: 2}
   - {fileID: 11400000, guid: 9c8d1915d14f7df469ea9a3538d36cd2, type: 2}
   currentRealmTier: 0
-  currentRealmStage: 1
+  currentRealmStage: 0

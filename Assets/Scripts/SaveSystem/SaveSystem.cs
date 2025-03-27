@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 
 public class SaveSystem : ScriptableObject
 {
@@ -9,6 +10,7 @@ public class SaveSystem : ScriptableObject
 	[Header("Data")]
 	[SerializeField] private ProtagonistStateSO _protagonist;
 	[SerializeField] private InventorySO _playerInventory;
+	[SerializeField] private QuestListSO _questListSaved;
 	
 	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
 
@@ -43,8 +45,9 @@ public class SaveSystem : ScriptableObject
 			return false;
 		}
 		
-		(_protagonist as IDataPersistence)?.LoadData(gameData);
-		(_playerInventory as IDataPersistence)?.LoadData(gameData);
+		_protagonist.LoadData(gameData);
+		_playerInventory.LoadData(gameData);
+		_questListSaved.LoadData(gameData);
 		
 		return true;
 	}
@@ -52,6 +55,8 @@ public class SaveSystem : ScriptableObject
 	private void SaveGame()
 	{
 		_protagonist.SaveData(ref gameData);
+		_playerInventory.SaveData(ref gameData);
+		_questListSaved.SaveData(ref gameData);
 	}
 
 	private void SaveSettings()

@@ -6,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public class QuestManager : MonoBehaviour
 {
-    [SerializeField] private List<QuestDataSO> _currentQuests = new List<QuestDataSO>();
+    [SerializeField] private QuestListSO _questListSaved;
     
     [Header("Broadcasting On")] 
     [SerializeField] private ItemStackEventChannelSO _addItemEvent;
@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private ItemStackEventChannelSO _onQuestRewardRequested;
     [SerializeField] private QuestEventChannelSO _onQuestAddRequested;
     
-    public List<QuestDataSO> CurrentQuests => _currentQuests;
+    public List<QuestDataSO> CurrentQuests => _questListSaved.CurrentQuests;
 
     private void OnEnable()
     {
@@ -32,7 +32,7 @@ public class QuestManager : MonoBehaviour
     private void AddQuest(QuestDataSO quest)
     {
         quest.questState = QuestState.InProgress;
-        _currentQuests.Add(quest);
+        _questListSaved.AddQuest(quest);
         
         Debug.Log("Active quest: " + quest.questState.ToString());
     }

@@ -110,11 +110,36 @@ public class InventorySO : ScriptableObject, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        throw new System.NotImplementedException();
+        data.itemStacks.Clear();
+            
+        foreach (var item in _items)
+        {
+            var serializeItem = new SerializedItemStack(item.Item.Guid, item.Amount);
+            data.itemStacks.Add(serializeItem);
+        }
     }
 
     public void LoadData(GameData data)
     {
-        throw new System.NotImplementedException();
+        data.itemStacks.Clear();
+        
+        List<string> itemGuids = GetItemGuidsByItemStacks(data.itemStacks);
+        AddressableLoader.LoadAssetsByGuids<ItemStack>(itemGuids, (loadedItem) =>
+        {
+            _items.AddRange(loadedItem);
+            Debug.Log($"Loaded {_items.Count} items from Addressables.");
+        });
+    }
+
+    private List<string> GetItemGuidsByItemStacks(List<SerializedItemStack> itemStacks)
+    {
+        List<string> itemGuids = new List<string>();
+
+        foreach (var itemStack in itemStacks)
+        {
+            itemGuids.Add(itemStack.itemGuid);
+        }
+        
+        return itemGuids;
     }
 }
