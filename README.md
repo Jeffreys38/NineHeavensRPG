@@ -1,7 +1,7 @@
 ![NineHeavensRPG](./docs/assets/img/info_theme.png)
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.reddit.com/r/SecondMeAI/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/qu%E1%BB%91c-th%E1%BA%AFng-tr%C6%B0%C6%A1ng-b%E1%BB%93-7362982b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
 
 </div>
 
