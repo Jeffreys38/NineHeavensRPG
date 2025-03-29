@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,18 +12,28 @@ public enum BuffItemType
     Lucky
 }
 
+[Serializable]
+public class BuffEntry
+{
+    public BuffItemType Type;
+    public int Value;
+}
+
 [CreateAssetMenu(fileName = "NewBuffItem", menuName = "Inventory/BuffItem")]
 public class BuffItemSO : ItemSO
 {
-    [SerializeField] private Dictionary<BuffItemType, int> _buffs = new Dictionary<BuffItemType, int>();
-    
-    public Dictionary<BuffItemType, int> Buffs => _buffs;
-    
-    public void SetBuff(BuffItemType type, int value)
+    [SerializeField] private List<BuffEntry> _buffs = new List<BuffEntry>();
+
+    public Dictionary<BuffItemType, int> Buffs
     {
-        if (_buffs.ContainsKey(type))
-            _buffs[type] = value;
-        else
-            _buffs.Add(type, value);
+        get
+        {
+            var dict = new Dictionary<BuffItemType, int>();
+            foreach (var entry in _buffs)
+            {
+                dict[entry.Type] = entry.Value;
+            }
+            return dict;
+        }
     }
 }

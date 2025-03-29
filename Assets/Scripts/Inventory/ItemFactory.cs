@@ -19,19 +19,7 @@ public static class ItemFactory
 
     public static BuffItemSO CreateBuffItem(Rarity rarity, RarityStatRangeSO statRange, BuffItemSO baseItem)
     {
-        BuffItemSO newItem = ScriptableObject.Instantiate(baseItem);
-        newItem.rarity = rarity;
-
-        foreach (BuffItemType type in System.Enum.GetValues(typeof(BuffItemType)))
-        {
-            Vector2 range = statRange.GetRange(rarity, type);
-            if (range != Vector2.zero)
-            {
-                newItem.SetBuff(type, GetRandomStat(range));
-            }
-        }
-
-        return newItem;
+        return null;
     }
 
     private static int GetRandomStat(Vector2 range)

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ece3cb9fec4039a84c8c06dd15f169, type: 3}
+  m_Name: Ginseng_LV1
+  m_EditorClassIdentifier: 
+  _guid: 533836f5b7a2fc440b6b9ea9dbe8e14c
+  _itemName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: -4538518683816334861, guid: d8792520e870aaa49902fdbbe26f3ca8, type: 3}
+  _prefab:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _itemType: 0
+  _tabType: 2
+  rarity: 0
+  _buffs:
+  - Type: 0
+    Value: 1000
+  - Type: 1
+    Value: 1200
+  references:
+    version: 2
+    RefIds: []
