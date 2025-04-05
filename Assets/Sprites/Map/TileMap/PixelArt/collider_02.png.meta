@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: edfece14dc631834e9ab27b2030b8fab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4970919221743385384
+    second: collider_02_0
+  - first:
+      213: 3835545685919406440
+    second: collider_02_1
+  - first:
+      213: -5645813775828014617
+    second: collider_02_2
+  - first:
+      213: -3685085922260542422
+    second: collider_02_3
+  - first:
+      213: 8603715853912237682
+    second: collider_02_4
+  - first:
+      213: 3757386228663940324
+    second: collider_02_5
+  - first:
+      213: 5919103984438334074
+    second: collider_02_6
+  - first:
+      213: 2228568488405114740
+    second: collider_02_7
+  - first:
+      213: -1352634218528545852
+    second: collider_02_8
+  - first:
+      213: -4255620882401598055
+    second: collider_02_9
+  - first:
+      213: 6152370034231852844
+    second: collider_02_10
+  - first:
+      213: 7938389269388272840
+    second: collider_02_11
+  - first:
+      213: -6879684329308990191
+    second: collider_02_12
+  - first:
+      213: 1961613682326216970
+    second: collider_02_13
+  - first:
+      213: 7789422436420177609
+    second: collider_02_14
+  - first:
+      213: -1815599905308829519
+    second: collider_02_15
+  - first:
+      213: 4789011335418113832
+    second: collider_02_16
+  - first:
+      213: 7847075529073510532
+    second: collider_02_17
+  - first:
+      213: 7862581079880140598
+    second: collider_02_18
+  - first:
+      213: 2524076796504394347
+    second: collider_02_19
+  - first:
+      213: 284687602318904391
+    second: collider_02_20
+  - first:
+      213: -8842292674394128668
+    second: collider_02_21
+  - first:
+      213: 6867669701632661549
+    second: collider_02_22
+  - first:
+      213: -3296619094537868265
+    second: collider_02_23
+  - first:
+      213: -3181980204099297930
+    second: collider_02_24
+  - first:
+      213: -5466146643951610150
+    second: collider_02_25
+  - first:
+      213: -4386511791236253216
+    second: collider_02_26
+  - first:
+      213: -8754554157149190884
+    second: collider_02_27
+  - first:
+      213: -4738842990419500536
+    second: collider_02_28
+  - first:
+      213: -2384214246433283820
+    second: collider_02_29
+  - first:
+      213: 4129359976078746950
+    second: collider_02_30
+  - first:
+      213: -8256643702175615263
+    second: collider_02_31
+  - first:
+      213: 3547603721325499004
+    second: collider_02_32
+  - first:
+      213: 6412683319772772163
+    second: collider_02_33
+  - first:
+      213: -154811373373924366
+    second: collider_02_34
+  - first:
+      213: 7996645871800985052
+    second: collider_02_35
+  - first:
+      213: 699868019668914215
+    second: collider_02_36
+  - first:
+      213: 7754265631169831527
+    second: collider_02_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: collider_02_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 218
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d403dc0e4fb30bb0800000000000000
+      internalID: -4970919221743385384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 203
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8691201da789a3530800000000000000
+      internalID: 3835545685919406440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 217
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9a3cf984a06a1b0800000000000000
+      internalID: -5645813775828014617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 191
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c1edcc0e1fbdcc0800000000000000
+      internalID: -3685085922260542422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_4
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 187
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276e5d41cf9866770800000000000000
+      internalID: 8603715853912237682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 188
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e475731edae42430800000000000000
+      internalID: 3757386228663940324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 197
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72db0d86b1e42250800000000000000
+      internalID: 5919103984438334074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_7
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 192
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f14059b377dee10800000000000000
+      internalID: 2228568488405114740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_8
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 126
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c36195485a7a3de0800000000000000
+      internalID: -1352634218528545852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_9
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 122
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995e7bdca5ff0f4c0800000000000000
+      internalID: -4255620882401598055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_10
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 125
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2fb52113fb916550800000000000000
+      internalID: 6152370034231852844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 124
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c429aa2bf2da2e60800000000000000
+      internalID: 7938389269388272840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_12
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 153
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11557b87d837680a0800000000000000
+      internalID: -6879684329308990191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_13
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 154
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01a991404d093b10800000000000000
+      internalID: 1961613682326216970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_14
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 151
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce48409f66991c60800000000000000
+      internalID: 7789422436420177609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_15
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 122
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b895dd6181bdc6e0800000000000000
+      internalID: -1815599905308829519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_16
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 140
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f6ae0bf6cf57240800000000000000
+      internalID: 4789011335418113832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_17
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 124
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488461c3e9966ec60800000000000000
+      internalID: 7847075529073510532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_18
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 123
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63786fb95df7d1d60800000000000000
+      internalID: 7862581079880140598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_19
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 122
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a43792972570320800000000000000
+      internalID: 2524076796504394347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_20
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 123
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c0d20bdd963f300800000000000000
+      internalID: 284687602318904391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_21
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 55
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eef2be39add94580800000000000000
+      internalID: -8842292674394128668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_22
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 74
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d281788053dde4f50800000000000000
+      internalID: 6867669701632661549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_23
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 72
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cec46566e0042d0800000000000000
+      internalID: -3296619094537868265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 69
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d165cfcd557d3d0800000000000000
+      internalID: -3181980204099297930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 70
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6121596985424b0800000000000000
+      internalID: -5466146643951610150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_26
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 71
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9fc4044caff13c0800000000000000
+      internalID: -4386511791236253216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_27
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 42
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c150430b063918680800000000000000
+      internalID: -8754554157149190884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_29
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 2
+        width: 28
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4112be466c199eed0800000000000000
+      internalID: -2384214246433283820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_30
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645a3eb150f6e4930800000000000000
+      internalID: 4129359976078746950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_31
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e63bd66c428a6d80800000000000000
+      internalID: -8256643702175615263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_32
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72d57dd9ce9b3130800000000000000
+      internalID: 3547603721325499004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_33
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 5
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347f024e08d6ef850800000000000000
+      internalID: 6412683319772772163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_34
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 6
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb5bda40eff9ddf0800000000000000
+      internalID: -154811373373924366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_35
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 6
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5aa476d0bc9fe60800000000000000
+      internalID: 7996645871800985052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_36
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 4
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720950e714e66b900800000000000000
+      internalID: 699868019668914215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_37
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 11
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762e5e7f18fac9b60800000000000000
+      internalID: 7754265631169831527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collider_02_28
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 7
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7175f7694c0c52a48800cab6e4d4842f
+      internalID: 1235258977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2107ca6cd21ac3f4c82d5a229b10a654
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      collider_02_0: -4970919221743385384
+      collider_02_1: 3835545685919406440
+      collider_02_10: 6152370034231852844
+      collider_02_11: 7938389269388272840
+      collider_02_12: -6879684329308990191
+      collider_02_13: 1961613682326216970
+      collider_02_14: 7789422436420177609
+      collider_02_15: -1815599905308829519
+      collider_02_16: 4789011335418113832
+      collider_02_17: 7847075529073510532
+      collider_02_18: 7862581079880140598
+      collider_02_19: 2524076796504394347
+      collider_02_2: -5645813775828014617
+      collider_02_20: 284687602318904391
+      collider_02_21: -8842292674394128668
+      collider_02_22: 6867669701632661549
+      collider_02_23: -3296619094537868265
+      collider_02_24: -3181980204099297930
+      collider_02_25: -5466146643951610150
+      collider_02_26: -4386511791236253216
+      collider_02_27: -8754554157149190884
+      collider_02_28: 1235258977
+      collider_02_29: -2384214246433283820
+      collider_02_3: -3685085922260542422
+      collider_02_30: 4129359976078746950
+      collider_02_31: -8256643702175615263
+      collider_02_32: 3547603721325499004
+      collider_02_33: 6412683319772772163
+      collider_02_34: -154811373373924366
+      collider_02_35: 7996645871800985052
+      collider_02_36: 699868019668914215
+      collider_02_37: 7754265631169831527
+      collider_02_4: 8603715853912237682
+      collider_02_5: 3757386228663940324
+      collider_02_6: 5919103984438334074
+      collider_02_7: 2228568488405114740
+      collider_02_8: -1352634218528545852
+      collider_02_9: -4255620882401598055
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
