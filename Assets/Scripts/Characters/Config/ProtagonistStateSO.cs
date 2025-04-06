@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Protagonist State", menuName = "State/Protagonist State")]
@@ -67,6 +68,8 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
         data.protagonistData.currentRealmStage = currentRealmStage;
         data.protagonistData.currentExp = currentExp;
         data.protagonistData.currentPosition = currentPosition;
+        data.protagonistData.power = power;
+        data.protagonistData.equippedEquipments = ConvertEquippedItemsToList();
         
         // Bind skill
         List<string> skillsGUID = new List<string>();
@@ -76,4 +79,9 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
         }
         data.protagonistData.learnedSkills = skillsGUID;
     }
+    
+    private List<string> ConvertEquippedItemsToList()
+    {
+        return equippedItems.Select(kvp => kvp.Value.Guid).ToList();
+    } 
 }

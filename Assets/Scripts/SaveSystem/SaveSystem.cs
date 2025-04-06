@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class SaveSystem : ScriptableObject
@@ -12,8 +13,9 @@ public class SaveSystem : ScriptableObject
 	[SerializeField] private InventorySO _playerInventory;
 	[SerializeField] private QuestListSO _questListSaved;
 	
-	private readonly IDataHandler _dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler();
-
+	private IDataHandler _dataHandler;
+	
+	public string savedPath = "";
 	public GameData gameData;
 	
 	void OnEnable()
@@ -35,6 +37,7 @@ public class SaveSystem : ScriptableObject
 
 	public bool LoadGame()
 	{
+		_dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler(savedPath);
 		gameData = _dataHandler.Load();
 		
 		// If no data can be loaded, initialize to a new game
@@ -52,11 +55,13 @@ public class SaveSystem : ScriptableObject
 		return true;
 	}
 
-	private void SaveGame()
+	public void SaveGame()
 	{
 		_protagonist.SaveData(ref gameData);
 		_playerInventory.SaveData(ref gameData);
 		_questListSaved.SaveData(ref gameData);
+		
+		_dataHandler.Save(gameData);
 	}
 
 	private void SaveSettings()
