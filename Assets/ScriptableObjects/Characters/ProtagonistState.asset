@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda454e0c7049ca8acf7edfae72f854, type: 3}
   m_Name: ProtagonistState
   m_EditorClassIdentifier: 
-  _guid: b18040af8f8de00468701005dee38fc8
   nickName: 
   avatarUrl: 
   bio: 
@@ -21,8 +20,8 @@ MonoBehaviour:
   maxMana: 50000
   currentAtk: 500
   currentDefense: 500
-  currentHealth: 0
-  currentMana: 50000
+  currentHealth: 3000
+  currentMana: 3000
   currentIntelligence: 0
   currentLucky: 0
   bonusAtk: 0

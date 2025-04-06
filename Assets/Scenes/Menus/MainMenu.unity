@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStateManager: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
-  _locationsToLoad: {fileID: 11400000, guid: fe36128f1f3881746818d838ac14b1a5, type: 2}
+  _locationsToLoad: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
   _saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
