@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Analytics;
@@ -21,7 +23,16 @@ public class StartGame : MonoBehaviour
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
 	[SerializeField] private VoidEventChannelSO _onContinueButton = default;
 	
+	public SaveSystem SaveSystem => _saveSystem;
+	
+	private const string FileName = "GameData.json";
+	private string savedPath;
 	private bool _hasSaveData;
+
+	private void Awake()
+	{
+		_saveSystem.savedPath = Path.Combine(Application.persistentDataPath, FileName);
+	}
 
 	private void Start()
 	{

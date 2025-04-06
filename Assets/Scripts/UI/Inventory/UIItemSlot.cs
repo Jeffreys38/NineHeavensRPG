@@ -79,7 +79,7 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        var draggedItem = eventData.pointerDrag?.GetComponent<UIDragItem>();
+        var draggedItem = eventData.pointerDrag.GetComponent<UIDragItem>();
         if (draggedItem == null) return;
 
         var sourceSlot = draggedItem.ParentSlot;
@@ -100,7 +100,6 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
         }
 
         // Move the item from the source slot to the target slot
-        Debug.Log("Dropped: " + sourceSlot.CurrentItem.Item);
         SetItem(sourceSlot.CurrentItem);
         sourceSlot.ClearItem();
     }

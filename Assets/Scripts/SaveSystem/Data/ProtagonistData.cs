@@ -13,6 +13,7 @@ public class ProtagonistData
     public RealmStage currentRealmStage;
     public int currentExp;
     public Vector3 currentPosition;
+    public List<string> equippedEquipments;
     public List<string> learnedSkills;
     
     // Auto-update
