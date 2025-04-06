@@ -1,26 +1,36 @@
 // using Cinemachine;
+
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class LocationEntrance : MonoBehaviour
 {
+    [SerializeField] private GameSceneSO _sceneToLoad;
     [SerializeField] private PathSO _entrancePath;
     [SerializeField] private PathStorageSO _pathStorage = default; //This is where the last path taken has been stored
-    // [SerializeField] private CinemachineVirtualCamera entranceShot;
     
-    [Header("Lisenting on")]
+    [Header("Listening to")]
     [SerializeField] private VoidEventChannelSO _onSceneReady;
+    
+    [Header("Broadcasting on")]
+    [SerializeField] private LoadEventChannelSO _loadLocation = default;
+    
     public PathSO EntrancePath => _entrancePath;
     
     private void Awake()
     {
-        if(_pathStorage.lastPathTaken == _entrancePath)
+       
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            // entranceShot.Priority = 100;
-            _onSceneReady.OnEventRaised += PlanTransition;
+            _loadLocation.RaiseEvent(_sceneToLoad, true, true);
         }
     }
-    
+
     private void PlanTransition()
     {
         StartCoroutine(TransitionToGameCamera());

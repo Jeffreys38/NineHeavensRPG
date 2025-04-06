@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396242b72dcc4c1680bf4f8f0591af7e, type: 3}
+  m_Name: Mage's Boots
+  m_EditorClassIdentifier: 
+  _guid: c9a2ef796d0755543b8c96b37a3c5faf
+  _itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:8bc8f1a1bfccb3344969d180b85a4ad1
+    m_TableEntryReference:
+      m_KeyId: 441365692416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: 6603381962626525725, guid: 877415c169f5ec74d80aee5d28a6c544, type: 3}
+  _prefab:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _itemType: 1
+  _tabType: 1
+  rarity: 2
+  _bonusAttack: 5500
+  _bonusDefense: 3500
+  _bonusIntelligence: 6000
+  _bonusLucky: 3000
+  _equipmentType: 5
+  _enhancementLevel: 0
+  enhancementMultiplier: 0.1
+  references:
+    version: 2
+    RefIds: []

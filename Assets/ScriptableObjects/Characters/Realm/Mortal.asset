@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548244eb037e454288bb412ebdeca1f0, type: 3}
+  m_Name: Mortal
+  m_EditorClassIdentifier: 
+  realmTier: 0
+  levels:
+  - stage: 0
+    requiredExp: 10000
+    bonusHealth: 500
+    bonusMana: 500
+    bonusAttack: 500
+    bonusDefense: 500
+    bonusIntelligence: 500
+    bonusLucky: 500
+  - stage: 1
+    requiredExp: 20000
+    bonusHealth: 700
+    bonusMana: 700
+    bonusAttack: 700
+    bonusDefense: 700
+    bonusIntelligence: 700
+    bonusLucky: 700
+  - stage: 2
+    requiredExp: 30000
+    bonusHealth: 900
+    bonusMana: 900
+    bonusAttack: 900
+    bonusDefense: 900
+    bonusIntelligence: 900
+    bonusLucky: 900

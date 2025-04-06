@@ -10,38 +10,18 @@ using UnityEngine.Localization;
 [Serializable]
 public class GameData
 {
-    // Protagonist state: current state, list of learned skill
-    public ProtagonistStateSO _protagonist = default;
-    
-    // Used to load scene
-    public string _locationId;
-    
-    // Items in the protagonist's inventory
-    public List<SerializedItemStack> _itemStacks = new List<SerializedItemStack>();
-    
-    // List of GUIDs for completed questline items
-    // Each entry in this list is a unique string representing a completed quest.  
-    public List<string> _finishedQuestlineItemsGUIds = new List<string>();
+    public ProtagonistData protagonistData;
+    public string locationId;
+    public List<SerializedItemStack> itemStacks;
+    public List<string> finishedQuestItemsGUIds;
     
     // Other settings
-    public float _masterVolume = default;
-    public float _musicVolume = default;
-    public float _sfxVolume = default;
-    public int _resolutionsIndex = default;
-    public int _antiAliasingIndex = default;
-    public float _shadowDistance = default;
-    public bool _isFullscreen = default;
     public Locale _currentLocale = default;
-    
-    public void SaveSettings(SettingsSO settings)
+
+    public GameData()
     {
-        _masterVolume = settings.MasterVolume;
-        _musicVolume = settings.MusicVolume;
-        _sfxVolume = settings.SfxVolume;
-        _resolutionsIndex = settings.ResolutionsIndex;
-        _antiAliasingIndex = settings.AntiAliasingIndex;
-        _shadowDistance = settings.ShadowDistance;
-        _isFullscreen = settings.IsFullscreen;
-        _currentLocale = settings.CurrentLocale;
+        itemStacks = new List<SerializedItemStack>();
+        finishedQuestItemsGUIds = new List<string>() {"1667f9c06fb5f30458b95a1808670908"};
+        protagonistData = new ProtagonistData();
     }
 }

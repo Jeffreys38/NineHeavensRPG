@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      girl_01_0: -7273410167302873882
+      girl_01_1: -7978323480053676858
+      girl_01_10: -9008792902643170371
+      girl_01_11: 5213842689694103206
+      girl_01_12: 1837074514623751938
+      girl_01_13: -5129171721255933282
+      girl_01_14: 1597080670868404731
+      girl_01_15: 8882274932829953316
+      girl_01_2: 5248020518535396829
+      girl_01_3: 3569973229417779204
+      girl_01_4: -8457593394015840903
+      girl_01_5: 5727096476945282562
+      girl_01_6: -8802740272481310410
+      girl_01_7: 5836642576925895784
+      girl_01_8: 4576505678647898388
+      girl_01_9: 7113405344737134515
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

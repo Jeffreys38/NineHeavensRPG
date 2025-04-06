@@ -1,20 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SaveSystem : ScriptableObject
 {
 	[Header("Listening To")]
-	[SerializeField] private VoidEventChannelSO _saveSettingsEvent = default;
-	[SerializeField] private LoadEventChannelSO _loadLocation = default;
-	
-	[SerializeField] private ProtagonistStateSO _playerState = default;
-	[SerializeField] private InventorySO _playerInventory = default;
-	[SerializeField] private SettingsSO _currentSettings = default;
-	// [SerializeField] private QuestManagerSO _questManagerSO = default;
+	[SerializeField] private VoidEventChannelSO _saveSettingsEvent;
+	[SerializeField] private LoadEventChannelSO _loadLocation;
 
+	[Header("Data")]
+	[SerializeField] private ProtagonistStateSO _protagonist;
+	[SerializeField] private InventorySO _playerInventory;
+	[SerializeField] private QuestListSO _questListSaved;
+	
+	private IDataHandler _dataHandler;
+	
+	public string savedPath = "";
 	public GameData gameData;
 	
 	void OnEnable()
@@ -34,8 +35,11 @@ public class SaveSystem : ScriptableObject
 		gameData = new GameData();
 	}
 
-	public bool LoadGame(IDataHandler dataHandler)
+	public bool LoadGame()
 	{
+		_dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler(savedPath);
+		gameData = _dataHandler.Load();
+		
 		// If no data can be loaded, initialize to a new game
 		if (gameData == null)
 		{
@@ -43,19 +47,26 @@ public class SaveSystem : ScriptableObject
 			NewGame();
 			return false;
 		}
-
-		Debug.Log("Loaded successfully.");
+		
+		_protagonist.LoadData(gameData);
+		_playerInventory.LoadData(gameData);
+		_questListSaved.LoadData(gameData);
+		
 		return true;
 	}
-	
+
 	public void SaveGame()
 	{
-		_playerState.SaveData(ref gameData);
+		_protagonist.SaveData(ref gameData);
+		_playerInventory.SaveData(ref gameData);
+		_questListSaved.SaveData(ref gameData);
+		
+		_dataHandler.Save(gameData);
 	}
-	
+
 	private void SaveSettings()
 	{
-		gameData.SaveSettings(_currentSettings);
+	
 	}
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen = true, bool fadeScreen = false)
@@ -63,14 +74,9 @@ public class SaveSystem : ScriptableObject
 		LocationSO locationSO = locationToLoad as LocationSO;
 		if (locationSO)
 		{
-			gameData._locationId = locationSO.Guid;
+			gameData.locationId = locationSO.Guid;
 		}
 
-		SaveGame();
-	}
-
-	private void OnApplicationQuit()
-	{
-		SaveGame();
+		// SaveGame();
 	}
 }

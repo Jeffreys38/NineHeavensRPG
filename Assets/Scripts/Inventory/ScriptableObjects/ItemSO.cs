@@ -1,29 +1,46 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Localization;
 
-// References from: https://forum.unity.com/threads/inventory-system.980646/
-
+public enum ItemType { Consumable, Equipment, Ingredient }
 public enum Rarity { Common, Rare, Legendary }
 
-[CreateAssetMenu(fileName = "Item", menuName = "Inventory/Item")]
-public class ItemSO : SerializableScriptableObject
+public interface IItemInfoProvider
 {
-    [Tooltip("The name of the item")]
-    [SerializeField] private LocalizedString _name = default;
+    LocalizedString GetTitle();
+    LocalizedString GetDescription();
+    Dictionary<LocalizedString, string> GetStats();
+}
+
+/// <summary>
+/// Base class for all items in the game.
+/// </summary>
+public abstract class ItemSO : SerializableScriptableObject
+{
+    [SerializeField] private LocalizedString _itemName;
+    [SerializeField] private LocalizedString _description;
+    [SerializeField] private Sprite _icon;
+    [SerializeField] private AssetReferenceGameObject  _prefab;
+    [SerializeField] private ItemType _itemType;
+    [SerializeField] private InventoryTabType _tabType; 
     
-    [SerializeField] private Sprite _previewImage = default;
+    public Rarity rarity;
     
-    [SerializeField] private LocalizedString _description = default;
-    
-    [SerializeField] private InventoryTabSO _inventoryTab = default;
-    
-    public LocalizedString Name => _name;
-    public Sprite PreviewImage => _previewImage;
+    public LocalizedString ItemName => _itemName;
     public LocalizedString Description => _description;
-    public InventoryTabSO InventoryTab => _inventoryTab;
-    
-    // Only used for crafted item
-    public virtual List<ItemStack> IngredientsList { get; }
-    public virtual ItemSO ResultingCrafting { get; }
+    public Sprite Icon => _icon;
+    public AssetReferenceGameObject  Prefab => _prefab;
+    public ItemType ItemType => _itemType;
+    public InventoryTabType TabType => _tabType;
+}
+
+/// <summary>
+/// Represents an item reward with quantity.
+/// </summary>
+[System.Serializable]
+public class ItemReward
+{
+    public ItemSO item;
+    public int quantity;
 }

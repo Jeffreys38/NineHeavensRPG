@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rock_in_water_03_0: 4233368624885858298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

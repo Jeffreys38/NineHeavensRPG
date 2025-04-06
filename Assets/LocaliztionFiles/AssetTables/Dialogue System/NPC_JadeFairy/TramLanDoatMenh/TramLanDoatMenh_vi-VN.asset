@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TramLanDoatMenh_vi-VN
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: vi-VN
+  m_SharedData: {fileID: 11400000, guid: 2a24dfe46c868564a92d37852a368006, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6118572032
+    m_Localized: "Ng\u01B0\u01A1i c\xF3 bi\u1EBFt t\u1EA1i sao ta \u0111\u01B0\u1EE3c
+      g\u1ECDi l\xE0 Ng\u1ECDc Giao Ti\xEAn T\u1EED kh\xF4ng?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155498708992
+    m_Localized: "Huy\u1EBFt m\u1EA1ch c\u1EE7a ta kh\xF4ng thu\u1EA7n khi\u1EBFt
+      nh\u01B0 r\u1ED3ng, nh\u01B0ng \u0111\u1EE7 \u0111\u1EC3 khi\u1EBFn ta \u0111\u1EE9ng
+      tr\xEAn h\xE0ng v\u1EA1n sinh linh. Ng\u01B0\u01A1i mu\u1ED1n m\u1EA1nh l\xEAn
+      sao? Mu\u1ED1n r\u1EEDa s\u1EA1ch s\u1EF1 s\u1EC9 nh\u1EE5c v\xEC b\u1ECB v\u1ECB
+      h\xF4n phu ph\u1EA3n b\u1ED9i?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169629319168
+    m_Localized: "T\u1ED1t. \u0110em v\u1EC1 cho ta ba chi\u1EBFc L\xE2n Gi\xE1c
+      Ng\u1ECDc Giao, th\u1EE9 \u0111\xF3 ch\u1EE9a \u0111\u1EF1ng linh kh\xED thu\u1EA7n
+      khi\u1EBFt. \u0110\u1ED5i l\u1EA1i, ta s\u1EBD ban cho ng\u01B0\u01A1i m\u1ED9t
+      ch\xFAt s\u1EE9c m\u1EA1nh."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200025440256
+    m_Localized: "H\u1EEB, kh\xF4ng ng\u1EDD ng\u01B0\u01A1i l\u1EA1i l\xE0m \u0111\u01B0\u1EE3c
+      th\u1EADt. \u0110\u01B0\u1EE3c r\u1ED3i, \u0111\xE2y l\xE0 ph\u1EA7n th\u01B0\u1EDFng.
+      Nh\u01B0ng \u0111\u1EEBng t\u01B0\u1EDFng r\u1EB1ng ch\u1EC9 th\u1EBF l\xE0
+      \u0111\u1EE7. N\u1EBFu mu\u1ED1n \u0111\u1EE9ng trong h\xE0ng ng\u0169 c\u01B0\u1EDDng
+      gi\u1EA3, ng\u01B0\u01A1i c\xF2n ph\u1EA3i n\u1ED7 l\u1EF1c nhi\u1EC1u."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

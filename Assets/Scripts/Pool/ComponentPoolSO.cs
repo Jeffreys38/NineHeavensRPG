@@ -39,13 +39,11 @@ namespace UOP1.Pool
 		public override T Request()
 		{
 			T member = base.Request();
-			
-			// Avoid missing reference exception: SoundEmitter has been destroyed but we are still trying to access it
+
 			if (member == null)
 			{
-				Request();
+				return null;
 			}
-		
 			member.gameObject.SetActive(true);
 			return member;
 		}

@@ -25,6 +25,13 @@ public class RealmLevel
 {
     public RealmStage stage;
     public int requiredExp;
+    
+    public int bonusHealth;
+    public int bonusMana;
+    public int bonusAttack;
+    public int bonusDefense;
+    public float bonusIntelligence;
+    public float bonusLucky;
 }
 
 [CreateAssetMenu(fileName = "New Realm Data", menuName = "Game Data/Realm Data")]

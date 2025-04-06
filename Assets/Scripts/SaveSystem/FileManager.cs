@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class FileManager
@@ -66,5 +67,35 @@ public static class FileManager
 		}
 
 		return true;
+	}
+
+	public static bool DeleteFile(string fileName)
+	{
+		if (string.IsNullOrEmpty(fileName))
+		{
+			Debug.LogError("File name is null or empty.");
+			return false;
+		}
+
+		var fullPath = Path.Combine(Application.persistentDataPath, fileName);
+
+		if (File.Exists(fullPath))
+		{
+			try
+			{
+				File.Delete(fullPath);
+				return true;
+			}
+			catch (IOException e)
+			{
+				Debug.LogError($"Failed to delete file: {fullPath}. Error: {e.Message}");
+			}
+		}
+		else
+		{
+			Debug.LogWarning($"File not found: {fullPath}");
+		}
+
+		return false;
 	}
 }

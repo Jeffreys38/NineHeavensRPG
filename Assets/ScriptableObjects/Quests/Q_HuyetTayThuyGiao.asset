@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857ce9f934e24b908611dd6c2ec3de89, type: 3}
+  m_Name: Q_HuyetTayThuyGiao
+  m_EditorClassIdentifier: 
+  _guid: 1667f9c06fb5f30458b95a1808670908
+  questName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d6dbba41474a87e4eb9f5110d1b1eec4
+    m_TableEntryReference:
+      m_KeyId: 6814826496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:b039af62dea5ad742a9d80b6bea90445
+    m_TableEntryReference:
+      m_KeyId: 6273761280
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  rewards: []
+  experienceReward: 50000
+  questState: 0
+  enemyID: fe42f77a51d8ef343b1f5a0542eb41b9
+  requiredKill: 5
+  currentKill: 0
+  _onEnemyKilled: {fileID: 11400000, guid: 6a2da443b6d52834b8b24875006e389f, type: 2}
+  references:
+    version: 2
+    RefIds: []

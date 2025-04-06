@@ -5,7 +5,7 @@ public class DatabaseDataHandler : IDataHandler
     public GameData Load()
     {
         // Test data
-        return new GameData();
+        return null;
     }
 
     public void Save(GameData gameData)

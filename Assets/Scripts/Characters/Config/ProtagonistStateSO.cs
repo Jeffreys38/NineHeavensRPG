@@ -1,73 +1,87 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Protagonist State", menuName = "State/Protagonist State")]
-public class ProtagonistStateSO : ScriptableObject, IDataPersistence
+public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
 {
+    [Header("Info")] 
+    public string nickName;
+    public string avatarUrl;
+    public string bio;
+    public GameObject prefabReview;
+
+    [Header("Character Base Stats")] 
+    public int maxHealth;
+    public int maxMana;
+    
+    [Header("Character Current Stats")] 
+    public int currentAtk;
+    public int currentDefense;
     public int currentHealth;
     public int currentMana;
-    public int power;
     public float currentIntelligence;
     public float currentLucky;
-    public RealmTier currentRealmTier;
-    public RealmStage currentRealmStage;
+    
+    [Header("Character Bonus Stats")] 
+    public int bonusAtk;
+    public int bonusDefense;
+    public int bonusHealth;
+    public int bonusMana;
+    public float bonusIntelligence;
+    public float bonusLucky;
+    
+    public int power;
     public int currentExp;
     public Vector3 currentPosition;
+    public List<SkillSO> learnedSkills;
     
-    [SerializeField] private RealmData defaultRealmData;
+    [Header("Realm Progression")]
+    public RealmTier currentRealmTier;
+    public RealmStage currentRealmStage;
+  
+    [Header("Equipped Items")]
+    public Dictionary<EquipmentType, EquipmentItemSO> equippedItems = new Dictionary<EquipmentType, EquipmentItemSO>();
     
-    // Default value when it is not assigned in inspector
-    private void OnEnable()
+    public void LoadData(GameData gameData)
     {
-        if (currentRealmTier == 0)
-        {
-            InitializeDefaults();
-        }
-    }
-
-    private void InitializeDefaults()
-    {
-        if (defaultRealmData != null)
-        {
-            currentRealmTier = defaultRealmData.realmTier;
-            currentRealmStage = RealmStage.Early;
-            currentExp = 0;
-            
-            Debug.Log("Default Realm Data is not assigned. Please assign it in the inspector.");
-        }
-
-        currentHealth = 100;
-        currentMana = 50;
-        power = 10;
-        currentIntelligence = 5.0f;
-        currentLucky = 1.0f;
-        currentPosition = Vector3.zero;
-    }
-     
-    public void LoadData(GameData data)
-    {
-        currentHealth = data._protagonist.currentHealth;
-        currentMana = data._protagonist.currentMana;
-        currentRealmTier = data._protagonist.currentRealmTier;
-        currentRealmStage = data._protagonist.currentRealmStage;
-        currentExp = data._protagonist.currentExp;
-        power = data._protagonist.power;
-        currentIntelligence = data._protagonist.currentIntelligence;
-        currentLucky = data._protagonist.currentLucky;
-        currentPosition = data._protagonist.currentPosition;
+        var protagonistData = gameData.protagonistData;
+        
+        currentHealth = protagonistData.currentHealth;
+        currentMana = protagonistData.currentMana;
+        power = protagonistData.power;
+        currentIntelligence = protagonistData.currentIntelligence;
+        currentLucky = protagonistData.currentLucky;
+        currentRealmTier = protagonistData.currentRealmTier;
+        currentRealmStage = protagonistData.currentRealmStage;
+        currentExp = protagonistData.currentExp;
+        currentPosition = protagonistData.currentPosition;
     }
     
     public void SaveData(ref GameData data)
     {
-        if (data == null) Debug.LogWarning("Cannot save a null GameData");
-        data._protagonist.currentHealth = currentHealth;
-        data._protagonist.currentMana = currentMana;
-        data._protagonist.currentRealmTier = currentRealmTier;
-        data._protagonist.currentRealmStage = currentRealmStage;
-        data._protagonist.currentExp = currentExp;
-        data._protagonist.power = power;
-        data._protagonist.currentIntelligence = currentIntelligence;
-        data._protagonist.currentLucky = currentLucky;
-        data._protagonist.currentPosition = currentPosition;
+        data.protagonistData.currentHealth = currentHealth;
+        data.protagonistData.currentMana = currentMana;
+        data.protagonistData.currentIntelligence = currentIntelligence;
+        data.protagonistData.currentLucky = currentLucky;
+        data.protagonistData.currentRealmTier = currentRealmTier;
+        data.protagonistData.currentRealmStage = currentRealmStage;
+        data.protagonistData.currentExp = currentExp;
+        data.protagonistData.currentPosition = currentPosition;
+        data.protagonistData.power = power;
+        data.protagonistData.equippedEquipments = ConvertEquippedItemsToList();
+        
+        // Bind skill
+        List<string> skillsGUID = new List<string>();
+        foreach (var skill in learnedSkills)
+        {
+            skillsGUID.Add(skill.Guid.ToString());
+        }
+        data.protagonistData.learnedSkills = skillsGUID;
     }
+    
+    private List<string> ConvertEquippedItemsToList()
+    {
+        return equippedItems.Select(kvp => kvp.Value.Guid).ToList();
+    } 
 }

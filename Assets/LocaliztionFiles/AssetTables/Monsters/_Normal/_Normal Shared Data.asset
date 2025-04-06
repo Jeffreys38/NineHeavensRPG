@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: _Normal
   m_TableCollectionNameGuidString: 2a68be5fcf8159e46a585a2c37f5c61e
-  m_Entries: []
+  m_Entries:
+  - m_Id: 8289896279179264
+    m_Key: ' FrostWraith'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

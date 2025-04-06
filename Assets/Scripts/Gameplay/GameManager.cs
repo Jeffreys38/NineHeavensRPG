@@ -1,7 +1,6 @@
-﻿namespace JeffreyInc.Gameplay
+﻿using UnityEngine;
+
+public class GameManager : MonoBehaviour
 {
-    public class GameManager
-    {
-        
-    }
+    public SaveSystem saveSystem;
 }

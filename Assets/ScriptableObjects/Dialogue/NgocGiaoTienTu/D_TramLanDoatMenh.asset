@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9969fc3c6c425ba6e25374a3966868, type: 3}
+  m_Name: D_TramLanDoatMenh
+  m_EditorClassIdentifier: 
+  nodes:
+  - dialogueText:
+      m_TableReference:
+        m_TableCollectionName: GUID:2a24dfe46c868564a92d37852a368006
+      m_TableEntryReference:
+        m_KeyId: 6118572032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices: []
+    isEndNode: 0
+  - dialogueText:
+      m_TableReference:
+        m_TableCollectionName: GUID:2a24dfe46c868564a92d37852a368006
+      m_TableEntryReference:
+        m_KeyId: 155498708992
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices: []
+    isEndNode: 0
+  - dialogueText:
+      m_TableReference:
+        m_TableCollectionName: GUID:2a24dfe46c868564a92d37852a368006
+      m_TableEntryReference:
+        m_KeyId: 169629319168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices:
+    - choiceText:
+        m_TableReference:
+          m_TableCollectionName: GUID:0f97e578cb7c4a248ab322a056687f55
+        m_TableEntryReference:
+          m_KeyId: 408444600320
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      questToStart: {fileID: 0}
+      nextNodeIndex: 0
+    isEndNode: 1
+  - dialogueText:
+      m_TableReference:
+        m_TableCollectionName: GUID:2a24dfe46c868564a92d37852a368006
+      m_TableEntryReference:
+        m_KeyId: 200025440256
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    choices:
+    - choiceText:
+        m_TableReference:
+          m_TableCollectionName: GUID:0f97e578cb7c4a248ab322a056687f55
+        m_TableEntryReference:
+          m_KeyId: 408444600320
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      questToStart: {fileID: 0}
+      nextNodeIndex: 0
+    isEndNode: 0
+  references:
+    version: 2
+    RefIds: []

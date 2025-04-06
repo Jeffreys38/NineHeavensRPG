@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0038cfba56ff40a0be567af8e0b15b4b, type: 3}
+  m_Name: Summon_Warrior
+  m_EditorClassIdentifier: 
+  _guid: 8662a2191974f384398454be53c9f8ad
+  _name: Summon Warrior
+  _icon: {fileID: -4270754910414030590, guid: e421601fcc9e45e4f9b6b9af91b495c2, type: 3}
+  _description: Summon Phoenix
+  _prefab: {fileID: 7885573725454618843, guid: 0442d1de047f2ef489bbeb2dc19a7754, type: 3}
+  _skillType: 0
+  _skillEffect: 1
+  _baseDamage: 30000
+  _requiredRealmTier: 0
+  _requiredRealmStage: 0
+  _rarity: 2
+  _cooldown: 1
+  _manaCost: 1200
+  currentCooldown: -0.0018605611
