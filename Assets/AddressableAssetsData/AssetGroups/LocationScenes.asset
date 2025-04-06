@@ -30,8 +30,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c68cce6530696ce44ad7dd029157530b
-    m_Address: Assets/Scenes/Locations/_EmptyLocation.unity
+  - m_GUID: c310d3c27dc3a214e975081d254bee3f
+    m_Address: Assets/Scenes/Introduction.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

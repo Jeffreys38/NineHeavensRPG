@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 public class GameSceneSO : DescriptionBaseSO
 {
     public GameSceneType sceneType;
-    public AssetReference sceneReference; //Used at runtime to load the scene from the right AssetBundle
+    public AssetReference sceneReference; // Used at runtime to load the scene from the right AssetBundle
     public AudioCueSO musicTrack;
 
     /// <summary>
@@ -15,9 +15,9 @@ public class GameSceneSO : DescriptionBaseSO
     /// </summary>
     public enum GameSceneType
     {
-        //Playable scenes
-        Location, //SceneSelector tool will also load PersistentManagers and Gameplay
-        Menu, //SceneSelector tool will also load Gameplay
+        // Playable scenes
+        Location,
+        Menu,
 
         // Special scenes
         Initialisation,
@@ -26,5 +26,6 @@ public class GameSceneSO : DescriptionBaseSO
 
         // Work in progress scenes that don't need to be played
         Art,
+        Cutscene
     }
 }

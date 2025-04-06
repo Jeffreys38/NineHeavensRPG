@@ -4,6 +4,7 @@ using UnityEngine;
 public class HUDController : MonoBehaviour
 {
     [SerializeField] private VoidEventChannelSO _onSceneReady = default;
+    [SerializeField] private GameStateSO _gameState = default;
 
     public GameObject canvasGameplay;
 
@@ -19,6 +20,14 @@ public class HUDController : MonoBehaviour
 
     private void ShowHUD()
     {
-        canvasGameplay.SetActive(true);
+        if (_gameState.CurrentGameState == GameState.Gameplay)
+        {
+            canvasGameplay.SetActive(true);
+        }
+    }
+    
+    private void HideHUD()
+    {
+        canvasGameplay.SetActive(false);
     }
 }

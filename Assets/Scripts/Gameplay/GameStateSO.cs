@@ -6,7 +6,7 @@ public enum GameState
 {
 	Gameplay, // regular state: player moves, attacks, can perform actions
 	Pause, // pause menu is opened, the whole game world is frozen
-	Inventory, // when inventory UI
+	Inventory,
 	Dialogue,
 	Cutscene,
 	LocationTransition, // when the character steps into LocationExit trigger, fade to black begins and control is removed from the player

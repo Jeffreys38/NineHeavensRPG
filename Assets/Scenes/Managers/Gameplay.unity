@@ -1781,13 +1781,86 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4167387308471268666, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1777671277}
   m_SourcePrefab: {fileID: 100100000, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
 --- !u!20 &1777671274 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
   m_PrefabInstance: {fileID: 1777671273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1777671275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4167387308471268666, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+  m_PrefabInstance: {fileID: 1777671273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1777671276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5001460384480673298, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+  m_PrefabInstance: {fileID: 1777671273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1777671277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777671275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1777671276}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 262144
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &2103088367
 GameObject:
   m_ObjectHideFlags: 0
