@@ -20,6 +20,26 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 686a44a7cd33e4e46bbd04a5cc0cea80
+    m_Address: Assets/Scenes/Locations/Village_Town_2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6b86c1234f6c8644bdbb6196cce3e8f
+    m_Address: Assets/Scenes/Locations/Village_Town_1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c68cce6530696ce44ad7dd029157530b
+    m_Address: Assets/Scenes/Locations/_EmptyLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd4ab9beb6ef9454484fea5c1232c1ce
+    m_Address: Assets/Scenes/Locations/Village_Town_3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b6c2fad1dbca5bd46bb4c6d45d1de32b, type: 2}
   m_SchemaSet:

@@ -34192,6 +34192,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: _sceneToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
+    - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: _entrancePath
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3880699278621692960, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: m_Name
       value: LocationEntrance
