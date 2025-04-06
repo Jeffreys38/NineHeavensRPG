@@ -7,7 +7,9 @@ public class CutsceneEventListener : MonoBehaviour
       [SerializeField] private CutsceneEventChannelSO _onCutSceneRequested;
       
       [Header("Broadcasting on")]
-      [SerializeField] private LoadEventChannelSO _loadLocation = default;
+      [SerializeField] private LoadEventChannelSO _loadCutScene = default;
+
+      public SaveSystem saveSystem;
 
       private void OnEnable()
       {
@@ -21,6 +23,12 @@ public class CutsceneEventListener : MonoBehaviour
       
       private void PlayCutsceneIfFirstTimeAsync(CutsceneSO cutscene)
       {
+            var finishedCutSceneGUIds = saveSystem.gameData.finishedCutSceneGUIds;
             
+            if (!finishedCutSceneGUIds.Contains(cutscene.Guid))
+            {
+                  _loadCutScene.RaiseEvent(cutscene, showLoadingScreen: false, fadeScreen: true);
+                  finishedCutSceneGUIds.Add(cutscene.Guid);
+            }
       }
 }

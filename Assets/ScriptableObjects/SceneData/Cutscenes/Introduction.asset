@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7992d49267f40aca047fd73a7cee476, type: 3}
+  m_Script: {fileID: 11500000, guid: b1727f4f88df4a06a977f6d239acaa88, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
   description: 
@@ -21,4 +21,3 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   musicTrack: {fileID: 0}
-  isViewed: 0

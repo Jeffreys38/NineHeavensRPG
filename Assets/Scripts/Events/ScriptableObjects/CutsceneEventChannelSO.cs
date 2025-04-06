@@ -8,7 +8,6 @@ public class CutsceneEventChannelSO : ScriptableObject
 	
     public void RaiseEvent(CutsceneSO value)
     {
-        if (OnEventRaised != null)
-            OnEventRaised.Invoke(value);
+         OnEventRaised?.Invoke(value);
     }
 }

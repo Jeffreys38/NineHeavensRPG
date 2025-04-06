@@ -14,6 +14,7 @@ public class GameData
     public string locationId;
     public List<SerializedItemStack> itemStacks;
     public List<string> finishedQuestItemsGUIds;
+    public List<string> finishedCutSceneGUIds;
     
     // Other settings
     public Locale _currentLocale = default;
@@ -23,5 +24,6 @@ public class GameData
         itemStacks = new List<SerializedItemStack>();
         finishedQuestItemsGUIds = new List<string>() {"1667f9c06fb5f30458b95a1808670908"};
         protagonistData = new ProtagonistData();
+        finishedCutSceneGUIds = new List<string>();
     }
 }

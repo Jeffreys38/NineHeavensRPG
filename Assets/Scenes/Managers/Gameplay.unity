@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onSceneReady: {fileID: 11400000, guid: 11b5bb2f3111ad646bc16e6ceb6077e6, type: 2}
+  _gameState: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
   canvasGameplay: {fileID: 3688911320529145763, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
 --- !u!1 &434726280
 GameObject:
