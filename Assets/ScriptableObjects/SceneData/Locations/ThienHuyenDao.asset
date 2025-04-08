@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc84d566b10c4b62aaa190a6edc7844e, type: 3}
-  m_Name: Healven_Island
+  m_Name: ThienHuyenDao
   m_EditorClassIdentifier: 
+  _guid: 1bb1ff3615216f7408fa0c12d52cf7e6
   description: "C\u1EEDu thi\xEAn \u0111\u1EA1i l\u1EE5c - M\xE0n m\u1EDF \u0111\u1EA7u"
   sceneType: 0
   sceneReference:
@@ -21,16 +22,16 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   musicTrack: {fileID: 11400000, guid: c8d81481e6e25cd4ba9f0d4d044c8271, type: 2}
+  cutscene: {fileID: 11400000, guid: 0711b00617e754a46b6780865f419920, type: 2}
   locationName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:12e00f2f10555ca4384e34654acf47e0
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 11574083584
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  cutscene: {fileID: 11400000, guid: 0711b00617e754a46b6780865f419920, type: 2}
   references:
     version: 2
     RefIds: []

@@ -23,6 +23,7 @@ UserSettings/
 *.userprefs
 *.pidb
 *.booproj
+*.DotSettings.user
 
 # ==========
 # Unity Cache

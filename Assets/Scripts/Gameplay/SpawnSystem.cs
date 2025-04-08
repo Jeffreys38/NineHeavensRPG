@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnSystem : MonoBehaviour
 {
@@ -46,8 +45,7 @@ public class SpawnSystem : MonoBehaviour
             {
                 if (entrance.spawnPointOverride != null)
                     return entrance.spawnPointOverride;
-
-                // Nếu không có override thì dịch ra một chút như trước
+                
                 Vector3 spawnPos = entrance.transform.position + entrance.transform.forward * 1.5f;
                 GameObject temp = new GameObject("TempSpawnPoint");
                 temp.transform.position = spawnPos;

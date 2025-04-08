@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 290658467}
   - component: {fileID: 290658469}
   - component: {fileID: 290658468}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 1213112073}
   - component: {fileID: 1213112072}
   - component: {fileID: 1213112074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6355,7 +6355,7 @@ GameObject:
   - component: {fileID: 1440404292}
   - component: {fileID: 1440404294}
   - component: {fileID: 1440404293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40150,7 +40150,7 @@ PrefabInstance:
       objectReference: {fileID: 1778236707}
     - target: {fileID: 3880699278621692960, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: m_Name
-      value: LocationEntrance (1)
+      value: Path_ThienHuyenDao_HonNguyenChiDia
       objectReference: {fileID: 0}
     - target: {fileID: 4263316618927035862, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40219,7 +40219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989426703}
   - component: {fileID: 1989426702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Island_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

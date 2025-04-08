@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Scene_Name_vi-VN
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: vi-VN
+  m_SharedData: {fileID: 11400000, guid: 12e00f2f10555ca4384e34654acf47e0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11574083584
+    m_Localized: "Thi\xEAn Huy\u1EC1n \u0110\u1EA3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99348283392
+    m_Localized: "H\u1ED7n Nguy\xEAn Chi \u0110\u1ECBa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328256618496
+    m_Localized: "Linh T\u1EA1ng Huy\u1EC1n C\u1EA3nh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438923329536
+    m_Localized: "Thi\xEAn \u0110\u1EA1o M\xF4n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

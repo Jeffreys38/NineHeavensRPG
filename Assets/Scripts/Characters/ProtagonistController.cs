@@ -29,26 +29,19 @@ public class ProtagonistController : MonoBehaviour
 		_rigidbody2D = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
 	}
-
-	private void OnControllerColliderHit(ControllerColliderHit hit)
-	{
-		// lastHit = hit;
-	}
-
+	
 	// Adds listeners for events being triggered in the InputReader script
 	private void OnEnable()
 	{
 		_inputReader.MoveEvent += OnMove;
 		_inputReader.StoppedMoving += OnIdle;
-		//...
 	}
 
-	//Removes all listeners to the events coming from the InputReader script
+	// Removes all listeners to the events coming from the InputReader script
 	private void OnDisable()
 	{
 		_inputReader.MoveEvent -= OnMove;
 		_inputReader.StoppedMoving -= OnIdle;
-		//...
 	}
 
 	private void FixedUpdate()
