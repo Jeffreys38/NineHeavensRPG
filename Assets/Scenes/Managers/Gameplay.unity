@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3688911320529145763, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3956050729479525585, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
       propertyPath: _inGameScreen
@@ -405,7 +405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5771033527306348075, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6106308659785429036, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -561,6 +561,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2623699195932472037, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
   m_PrefabInstance: {fileID: 334489269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &334489272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3688911320529145763, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
+  m_PrefabInstance: {fileID: 334489269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &352624314
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onSceneReady: {fileID: 11400000, guid: 11b5bb2f3111ad646bc16e6ceb6077e6, type: 2}
   _gameState: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
-  canvasGameplay: {fileID: 3688911320529145763, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
+  canvasGameplay: {fileID: 334489272}
 --- !u!1 &434726280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1747,10 @@ PrefabInstance:
     - target: {fileID: 1302683532046786571, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -9.775286
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118017374983065599, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: Lens.ModeOverride
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4167387308471268666, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: m_Layer

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5001460384480673298}
   - component: {fileID: 1309947958241130144}
   - component: {fileID: 5103592947950646361}
-  - component: {fileID: 8677770678562708271}
   m_Layer: 0
   m_Name: CinemachineBrain
   m_TagString: MainCamera
@@ -117,14 +116,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8677770678562708271
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4167387308471268666}
-  m_Enabled: 1
 --- !u!1 &5138290836097706751
 GameObject:
   m_ObjectHideFlags: 0
