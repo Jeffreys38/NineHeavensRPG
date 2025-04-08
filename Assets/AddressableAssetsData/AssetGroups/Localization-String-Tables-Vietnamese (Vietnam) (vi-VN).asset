@@ -94,6 +94,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-vi-VN
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cabe3bb673cde894582dfbe7125f6214
+    m_Address: Scene_Name_vi-VN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-vi-VN
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d62dea3779af9654382c0c5d465ca514
     m_Address: _Boss_vi-VN
     m_ReadOnly: 1

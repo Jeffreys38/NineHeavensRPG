@@ -94,6 +94,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-zh-Hans
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5f19520319bf294fabbeee0ce8f7f50
+    m_Address: Scene_Name_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f741a046605802345b37c0783a273be5
     m_Address: _World_zh-Hans
     m_ReadOnly: 1

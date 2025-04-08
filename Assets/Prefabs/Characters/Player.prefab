@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8953215213984480613}
   - component: {fileID: 5223005046106319949}
   - component: {fileID: 7329875572449371366}
+  - component: {fileID: 595876359525976383}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -199,3 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
+  _playerMovingEvent: {fileID: 11400000, guid: 1a90586904ce61244835306dfc900d19, type: 2}
+--- !u!114 &595876359525976383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623045530711256422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6e749a7b9e446bba2491570d9f92e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 2258078087386116245, guid: 601f1db0c853d8f4bb991140418c305a, type: 3}
+  trackerEventChannel: {fileID: 11400000, guid: 08982f5e24fc4a14d87d43f80b4979c5, type: 2}

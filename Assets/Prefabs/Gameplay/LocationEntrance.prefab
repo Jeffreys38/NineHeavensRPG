@@ -52,6 +52,7 @@ MonoBehaviour:
   _pathStorage: {fileID: 0}
   _onSceneReady: {fileID: 11400000, guid: 11b5bb2f3111ad646bc16e6ceb6077e6, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  spawnPointOverride: {fileID: 0}
 --- !u!212 &4952417067267583153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,8 +142,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0018360767, y: 0.29685023}
-  m_Radius: 0.13015194
+  m_Offset: {x: -0.0018360665, y: 0.17264763}
+  m_Radius: 0.100579925
 --- !u!95 &5648236045334518701
 Animator:
   serializedVersion: 7

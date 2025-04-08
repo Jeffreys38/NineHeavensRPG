@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12e00f2f10555ca4384e34654acf47e0
+    m_Address: Assets/LocaliztionFiles/AssetTables/SceneNames/Scene_Name Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b6dc6439c0259d4d95d2ec35af4c879
     m_Address: Assets/LocaliztionFiles/AssetTables/Equipments/EquipmentsDescription/EquipmentsDescription
       Shared Data.asset
