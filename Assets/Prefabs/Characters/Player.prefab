@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
-  _playerMovingEvent: {fileID: 11400000, guid: 1a90586904ce61244835306dfc900d19, type: 2}
+  _transformEvent: {fileID: 11400000, guid: 1a90586904ce61244835306dfc900d19, type: 2}
 --- !u!114 &595876359525976383
 MonoBehaviour:
   m_ObjectHideFlags: 0

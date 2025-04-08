@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 159732195}
   - component: {fileID: 159732197}
   - component: {fileID: 159732196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 174889845}
   - component: {fileID: 174889844}
   - component: {fileID: 174889846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13930,7 +13930,7 @@ GameObject:
   - component: {fileID: 903053438}
   - component: {fileID: 903053440}
   - component: {fileID: 903053439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23454,7 +23454,7 @@ GameObject:
   - component: {fileID: 1083878398}
   - component: {fileID: 1083878400}
   - component: {fileID: 1083878399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23698,7 +23698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765530264}
   - component: {fileID: 1765530263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

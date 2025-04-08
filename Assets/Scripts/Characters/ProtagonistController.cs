@@ -7,6 +7,7 @@ using UnityEngine;
 public class ProtagonistController : MonoBehaviour
 {
 	[SerializeField] private InputReader _inputReader = default;
+	[SerializeField] private TransformEventChannelSO _transformEvent;
 	
 	private Rigidbody2D _rigidbody2D;
 	private Animator _animator;
@@ -53,6 +54,7 @@ public class ProtagonistController : MonoBehaviour
 	private void MovePosition()
 	{
 		_rigidbody2D.MovePosition(_rigidbody2D.position + _inputVector * _baseSpeed * Time.fixedDeltaTime);
+		_transformEvent.RaiseEvent(transform);
 	}
 
 	private void UpdatePlayerAnimation()
