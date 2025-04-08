@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc84d566b10c4b62aaa190a6edc7844e, type: 3}
   m_Name: Core_Space
   m_EditorClassIdentifier: 
-  description: 
+  description: "Kh\xF4ng gian b\xEAn trong nguy\xEAn th\u1EE7y th\u1EA7n "
   sceneType: 0
   sceneReference:
     m_AssetGUID: dd4ab9beb6ef9454484fea5c1232c1ce
@@ -30,6 +30,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  cutscene: {fileID: 0}
   references:
     version: 2
     RefIds: []

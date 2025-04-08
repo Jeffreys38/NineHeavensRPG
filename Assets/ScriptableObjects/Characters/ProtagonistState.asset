@@ -39,3 +39,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c8d1915d14f7df469ea9a3538d36cd2, type: 2}
   currentRealmTier: 0
   currentRealmStage: 0
+  lastScene: {fileID: 0}

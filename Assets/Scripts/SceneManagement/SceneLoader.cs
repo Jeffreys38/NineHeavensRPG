@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneLoader : MonoBehaviour
 {
+	[SerializeField] private GameStateSO _gameState = default;
 	[SerializeField] private GameSceneSO _gameplayScene = default;
 	[SerializeField] private InputReader _inputReader = default;
 
@@ -20,19 +21,19 @@ public class SceneLoader : MonoBehaviour
 
 	[Header("Broadcasting on")]
 	[SerializeField] private BoolEventChannelSO _toggleLoadingScreen = default;
-	[SerializeField] private VoidEventChannelSO _onSceneReady = default; //picked up by the SpawnSystem
+	[SerializeField] private VoidEventChannelSO _onSceneReady = default; // Picked up by the SpawnSystem
 	[SerializeField] private FadeChannelSO _fadeRequestChannel = default;
 
 	private AsyncOperationHandle<SceneInstance> _loadingOperationHandle;
 	private AsyncOperationHandle<SceneInstance> _gameplayManagerLoadingOpHandle;
 
-	//Parameters coming from scene loading requests
+	// Parameters coming from scene loading requests
 	private GameSceneSO _sceneToLoad;
 	private GameSceneSO _currentlyLoadedScene;
 	private bool _showLoadingScreen;
 
 	private SceneInstance _gameplayManagerSceneInstance;
-	private bool _isLoading = false; //To prevent a new loading request while already loading a new scene
+	private bool _isLoading = false; // To prevent a new loading request while already loading a new scene
 	private readonly float _fadeDuration = .9f;
 	
 	private void OnEnable()
@@ -78,7 +79,7 @@ public class SceneLoader : MonoBehaviour
 	/// </summary>
 	private void LoadLocation(GameSceneSO locationToLoad, bool showLoadingScreen, bool fadeScreen)
 	{
-		//Prevent a double-loading, for situations where the player falls in two Exit colliders in one frame
+		// Prevent a double-loading, for situations where the player falls in two Exit colliders in one frame
 		if (_isLoading)
 			return;
 
@@ -86,7 +87,7 @@ public class SceneLoader : MonoBehaviour
 		_showLoadingScreen = showLoadingScreen;
 		_isLoading = true;
 
-		//In case we are coming from the main menu, we need to load the Gameplay manager scene first
+		// In case we are coming from the main menu, we need to load the Gameplay manager scene first
 		if (_gameplayManagerSceneInstance.Scene == null || !_gameplayManagerSceneInstance.Scene.isLoaded)
 		{
 			_gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
@@ -118,10 +119,11 @@ public class SceneLoader : MonoBehaviour
 		_showLoadingScreen = showLoadingScreen;
 		_isLoading = true;
 
-		//In case we are coming from a Location back to the main menu, we need to get rid of the persistent Gameplay manager scene
-		if (_gameplayManagerSceneInstance.Scene != null
-			&& _gameplayManagerSceneInstance.Scene.isLoaded)
+		// In case we are coming from a Location back to the main menu, we need to get rid of the persistent Gameplay manager scene
+		if (_gameplayManagerSceneInstance.Scene != null && _gameplayManagerSceneInstance.Scene.isLoaded)
+		{
 			Addressables.UnloadSceneAsync(_gameplayManagerLoadingOpHandle, true);
+		}
 
 		StartCoroutine(UnloadPreviousScene());
 	}
@@ -136,19 +138,19 @@ public class SceneLoader : MonoBehaviour
 
 		yield return new WaitForSeconds(_fadeDuration);
 
-		if (_currentlyLoadedScene != null) //would be null if the game was started in Initialisation
+		if (_currentlyLoadedScene != null) // Would be null if the game was started in Initialisation
 		{
 			if (_currentlyLoadedScene.sceneReference.OperationHandle.IsValid())
 			{
-				//Unload the scene through its AssetReference, i.e. through the Addressable system
+				// Unload the scene through its AssetReference, i.e. through the Addressable system
 				_currentlyLoadedScene.sceneReference.UnLoadScene();
 			}
 #if UNITY_EDITOR
 			else
 			{
-				//Only used when, after a "cold start", the player moves to a new scene
-				//Since the AsyncOperationHandle has not been used (the scene was already open in the editor),
-				//the scene needs to be unloaded using regular SceneManager instead of as an Addressable
+				// Only used when, after a "cold start", the player moves to a new scene
+				// Since the AsyncOperationHandle has not been used (the scene was already open in the editor),
+				// the scene needs to be unloaded using regular SceneManager instead of as an Addressable
 				SceneManager.UnloadSceneAsync(_currentlyLoadedScene.sceneReference.editorAsset.name);
 			}
 #endif
@@ -173,9 +175,9 @@ public class SceneLoader : MonoBehaviour
 
 	private void OnNewSceneLoaded(AsyncOperationHandle<SceneInstance> obj)
 	{
-		//Save loaded scenes (to be unloaded at next load request)
+		// Save loaded scenes (to be unloaded at next load request)
 		_currentlyLoadedScene = _sceneToLoad;
-
+		
 		Scene s = obj.Result.Scene;
 		SceneManager.SetActiveScene(s);
 
@@ -191,12 +193,15 @@ public class SceneLoader : MonoBehaviour
 
 	private void StartGameplay()
 	{
+		if (_currentlyLoadedScene.sceneType == GameSceneSO.GameSceneType.Location)
+		{
+			_gameState.UpdateGameState(GameState.Gameplay);
+		}
+		else
+		{
+			_gameState.UpdateGameState(GameState.Cutscene);
+		}
+		
 		_onSceneReady.RaiseEvent();
-	}
-
-	private void ExitGame()
-	{
-		Application.Quit();
-		Debug.Log("Exit!");
 	}
 }

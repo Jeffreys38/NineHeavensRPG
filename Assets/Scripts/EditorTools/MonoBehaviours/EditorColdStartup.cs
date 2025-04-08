@@ -26,7 +26,6 @@ public class EditorColdStartup : MonoBehaviour
 			//Reset the path taken, so the character will spawn in this location's default spawn point
 			// _pathStorage.lastPathTaken = null;
 		}
-		CreateSaveFileIfNotPresent();
 	}
 
 	private void Start()
@@ -36,15 +35,8 @@ public class EditorColdStartup : MonoBehaviour
 			_persistentManagersSO.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true).Completed += LoadEventChannel;
 
 		}
-		CreateSaveFileIfNotPresent();
 	}
-	private void CreateSaveFileIfNotPresent()
-	{
-		if (_saveSystem != null)
-		{
-			_saveSystem.NewGame();
-		}
-	}
+	
 	private void LoadEventChannel(AsyncOperationHandle<SceneInstance> obj)
 	{
 		_notifyColdStartupChannel.LoadAssetAsync<LoadEventChannelSO>().Completed += OnNotifyChannelLoaded;

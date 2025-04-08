@@ -18,10 +18,10 @@ public class StartGame : MonoBehaviour
 	
 	[Header("Broadcasting on")]
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
+	[SerializeField] private CutsceneEventChannelSO _cutsceneEvent = default;
 
 	[Header("Listening to")]
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
-	[SerializeField] private VoidEventChannelSO _onContinueButton = default;
 	
 	public SaveSystem SaveSystem => _saveSystem;
 	
@@ -39,7 +39,6 @@ public class StartGame : MonoBehaviour
 		_inputReader.EnableMenuInput();
 		
 		_onNewGameButton.OnEventRaised += StartNewGame;
-		_onContinueButton.OnEventRaised += ContinuePreviousGame;
 	}
 
 	private void OnDestroy()
@@ -47,19 +46,11 @@ public class StartGame : MonoBehaviour
 		_inputReader.DisableAllInput();
 		
 		_onNewGameButton.OnEventRaised -= StartNewGame;
-		_onContinueButton.OnEventRaised -= ContinuePreviousGame;
 	}
 
 	private void StartNewGame()
 	{
 		_saveSystem.LoadGame();
-		_loadLocation.RaiseEvent(_locationsToLoad, true, true);
-		
-		_gameStateManager.UpdateGameState(GameState.Gameplay);
-	}
-
-	private void ContinuePreviousGame()
-	{
-		
+		_cutsceneEvent.RaiseEvent(_saveSystem.Protagonist.lastScene);
 	}
 }

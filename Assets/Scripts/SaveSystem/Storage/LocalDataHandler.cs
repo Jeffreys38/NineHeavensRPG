@@ -14,7 +14,7 @@ public class LocalDataHandler : IDataHandler
     {
         if (!File.Exists(filePath))
         {
-            Debug.LogWarning("Save file not found. Returning new GameData.");
+            Debug.Log("Save file not found. Returning new GameData.");
             return new GameData();
         }
         
@@ -25,7 +25,7 @@ public class LocalDataHandler : IDataHandler
         }
         catch (System.Exception ex)
         {
-            Debug.LogError($"Error loading save file: {ex.Message}");
+            Debug.Log($"Error loading save file: {ex.Message}");
             return new GameData();
         }
     }

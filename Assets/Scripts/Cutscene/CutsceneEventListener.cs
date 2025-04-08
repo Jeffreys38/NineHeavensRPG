@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CutsceneEventListener : MonoBehaviour
@@ -7,8 +6,9 @@ public class CutsceneEventListener : MonoBehaviour
       [SerializeField] private CutsceneEventChannelSO _onCutSceneRequested;
       
       [Header("Broadcasting on")]
-      [SerializeField] private LoadEventChannelSO _loadCutScene = default;
+      [SerializeField] private LoadEventChannelSO _loadScene;
 
+      private CutsceneSO _currentCutscene;
       public SaveSystem saveSystem;
 
       private void OnEnable()
@@ -21,14 +21,19 @@ public class CutsceneEventListener : MonoBehaviour
             _onCutSceneRequested.OnEventRaised -= PlayCutsceneIfFirstTimeAsync;
       }
       
-      private void PlayCutsceneIfFirstTimeAsync(CutsceneSO cutscene)
+      private void PlayCutsceneIfFirstTimeAsync(GameSceneSO gameScene)
       {
-            var finishedCutSceneGUIds = saveSystem.gameData.finishedCutSceneGUIds;
+            if (gameScene == null) return;
             
-            if (!finishedCutSceneGUIds.Contains(cutscene.Guid))
+            var finishedCutSceneGUIds = saveSystem.gameData.finishedCutSceneGUIds;
+            if (gameScene.cutscene != null && !finishedCutSceneGUIds.Contains(gameScene.cutscene.Guid))
             {
-                  _loadCutScene.RaiseEvent(cutscene, showLoadingScreen: false, fadeScreen: true);
-                  finishedCutSceneGUIds.Add(cutscene.Guid);
+                  _loadScene.RaiseEvent(gameScene.cutscene, showLoadingScreen: false, fadeScreen: true);
+                  finishedCutSceneGUIds.Add(gameScene.cutscene.Guid);
+            }
+            else
+            {
+                  _loadScene.RaiseEvent(gameScene, showLoadingScreen: false, fadeScreen: true);
             }
       }
 }

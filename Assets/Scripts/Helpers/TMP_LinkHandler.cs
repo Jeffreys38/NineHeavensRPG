@@ -14,7 +14,6 @@ public class TMP_LinkHandler : MonoBehaviour, IPointerClickHandler
     void Awake()
     {
         tmpText = GetComponent<TMP_Text>();
-        Debug.Log("TMP_LinkHandler: Awake");
     }
 
     public void OnPointerClick(PointerEventData eventData)

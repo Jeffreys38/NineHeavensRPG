@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc84d566b10c4b62aaa190a6edc7844e, type: 3}
   m_Name: Healven_Island
   m_EditorClassIdentifier: 
-  description: 
+  description: "C\u1EEDu thi\xEAn \u0111\u1EA1i l\u1EE5c - M\xE0n m\u1EDF \u0111\u1EA7u"
   sceneType: 0
   sceneReference:
     m_AssetGUID: 686a44a7cd33e4e46bbd04a5cc0cea80
@@ -30,6 +30,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  cutscene: {fileID: 11400000, guid: 0711b00617e754a46b6780865f419920, type: 2}
   references:
     version: 2
     RefIds: []

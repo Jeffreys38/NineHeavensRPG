@@ -3,47 +3,69 @@ using UnityEngine;
 
 public class SpawnSystem : MonoBehaviour
 {
-	[Header("Asset References")]
-	[SerializeField] private InputReader _inputReader = default;
-	[SerializeField] private GameObject _playerPrefab = default;
-	
-	[Header("Scene Ready Event")]
-	[SerializeField] private VoidEventChannelSO _onSceneReady = default; // Raised by SceneLoader when the scene is set to active
-	[SerializeField] private VoidEventChannelSO _onPlayerSpawned;
-	
-	private LocationEntrance[] _spawnLocations;
-	private Transform _defaultSpawnPoint;
+    [Header("Asset References")] 
+    [SerializeField] private InputReader _inputReader = default;
+    [SerializeField] private GameObject _playerPrefab = default;
+    [SerializeField] private PathStorageSO _pathStorage = default;
 
-	private void Awake()
-	{
-		// _spawnLocations = GameObject.FindObjectsOfType<LocationEntrance>();
-		_defaultSpawnPoint = transform.GetChild(0);
-	}
+    [Header("Listening To")] 
+    [SerializeField] private VoidEventChannelSO _onSceneReady = default;
 
-	private void OnEnable()
-	{
-		_onSceneReady.OnEventRaised += SpawnPlayer;
-	}
+    [Header("Broadcasting On")] 
+    [SerializeField] private VoidEventChannelSO _onPlayerSpawned;
 
-	private void OnDisable()
-	{
-		_onSceneReady.OnEventRaised -= SpawnPlayer;
-	}
+    private Transform _defaultSpawnPoint;
 
-	private Transform GetSpawnLocation()
-	{
-		//Look for the element in the available LocationEntries that matches tha last PathSO taken
-		return _defaultSpawnPoint;
-	}
+    private void Awake()
+    {
+        _defaultSpawnPoint = transform.GetChild(0);
+    }
 
-	private void SpawnPlayer()
-	{
-		Transform spawnLocation = GetSpawnLocation();
-		Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
-		
-		_onPlayerSpawned.RaiseEvent();
-		
-		//TODO: Probably move this to the GameManager once it's up and running
-		_inputReader.EnableGameplayInput();
-	}
+    private void OnEnable()
+    {
+        _onSceneReady.OnEventRaised += SpawnPlayer;
+    }
+
+    private void OnDisable()
+    {
+        _onSceneReady.OnEventRaised -= SpawnPlayer;
+    }
+
+    private Transform GetSpawnLocation()
+    {
+        if (_pathStorage.lastPathTaken == null)
+        {
+            Debug.Log("No previous path recorded. Spawning at default location.");
+            return _defaultSpawnPoint;
+        }
+        
+        LocationEntrance[] entrances = FindObjectsByType<LocationEntrance>(FindObjectsSortMode.None);
+        foreach (LocationEntrance entrance in entrances)
+        {
+            if (entrance.EntrancePath == _pathStorage.lastPathTaken)
+            {
+                if (entrance.spawnPointOverride != null)
+                    return entrance.spawnPointOverride;
+
+                // Nếu không có override thì dịch ra một chút như trước
+                Vector3 spawnPos = entrance.transform.position + entrance.transform.forward * 1.5f;
+                GameObject temp = new GameObject("TempSpawnPoint");
+                temp.transform.position = spawnPos;
+                temp.transform.rotation = entrance.transform.rotation;
+
+                return temp.transform;
+            }
+        }
+
+        return _defaultSpawnPoint;
+    }
+
+    private void SpawnPlayer()
+    {
+        Transform spawnLocation = GetSpawnLocation();
+        Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
+
+        _onPlayerSpawned.RaiseEvent();
+        _inputReader.EnableGameplayInput();
+    }
 }

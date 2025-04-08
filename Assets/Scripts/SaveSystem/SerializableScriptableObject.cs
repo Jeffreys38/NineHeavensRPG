@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class SerializableScriptableObject : ScriptableObject
 {
-    [HideInInspector] private string _guid;
+    [SerializeField] private string _guid;
     public string Guid => _guid;
 
 #if UNITY_EDITOR

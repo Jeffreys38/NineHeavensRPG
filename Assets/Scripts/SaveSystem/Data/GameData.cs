@@ -11,19 +11,15 @@ using UnityEngine.Localization;
 public class GameData
 {
     public ProtagonistData protagonistData;
-    public string locationId;
     public List<SerializedItemStack> itemStacks;
     public List<string> finishedQuestItemsGUIds;
     public List<string> finishedCutSceneGUIds;
-    
-    // Other settings
-    public Locale _currentLocale = default;
+    public string lastMapGUIds = "1bb1ff3615216f7408fa0c12d52cf7e6";
 
     public GameData()
     {
         itemStacks = new List<SerializedItemStack>();
-        finishedQuestItemsGUIds = new List<string>() {"1667f9c06fb5f30458b95a1808670908"};
-        protagonistData = new ProtagonistData();
+        finishedQuestItemsGUIds = new List<string>();
         finishedCutSceneGUIds = new List<string>();
     }
 }

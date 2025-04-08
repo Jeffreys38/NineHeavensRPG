@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
   _playerPrefab: {fileID: 8623045530711256422, guid: 0a7a5464b8a32794db1106fa00b1c2c6, type: 3}
+  _pathStorage: {fileID: 11400000, guid: eeecf795e1d122e44b4c9d73115f512a, type: 2}
   _onSceneReady: {fileID: 11400000, guid: 11b5bb2f3111ad646bc16e6ceb6077e6, type: 2}
   _onPlayerSpawned: {fileID: 11400000, guid: c4b2cff7a30cd30448195b47ec8b288a, type: 2}
 --- !u!1 &8935921023014296560

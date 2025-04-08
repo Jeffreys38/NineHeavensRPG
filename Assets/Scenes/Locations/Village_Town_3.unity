@@ -23367,13 +23367,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: _pathStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: eeecf795e1d122e44b4c9d73115f512a, type: 2}
+    - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: _sceneToLoad
       value: 
       objectReference: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
     - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: _entrancePath
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 77410ddcc614bbf47bab3b2115710a6f, type: 2}
+    - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: spawnPointOverride
+      value: 
+      objectReference: {fileID: 1388166085}
     - target: {fileID: 3880699278621692960, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: m_Name
       value: LocationEntrance
@@ -23424,9 +23432,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4263316618927035862, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1388166085}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+--- !u!4 &1026095772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4263316618927035862, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+  m_PrefabInstance: {fileID: 1026095771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083878397
 GameObject:
   m_ObjectHideFlags: 0
@@ -23641,6 +23657,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 979079f1e76f1bc4b97b384d5405603d, type: 3}
+--- !u!1 &1388166084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388166085}
+  m_Layer: 0
+  m_Name: SpawnPointOverride
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1388166085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388166084}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.481, y: 0.216, z: 1.5}
+  m_LocalScale: {x: 0.68027216, y: 0.68027216, z: 0.68027216}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1026095772}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765530262
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,3 @@
-// using Cinemachine;
-
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class LocationEntrance : MonoBehaviour
@@ -16,32 +12,17 @@ public class LocationEntrance : MonoBehaviour
     [Header("Broadcasting on")]
     [SerializeField] private LoadEventChannelSO _loadLocation = default;
     
-    public PathSO EntrancePath => _entrancePath;
+    [Header("Optional")]
+    public Transform spawnPointOverride;
     
-    private void Awake()
-    {
-       
-    }
+    public PathSO EntrancePath => _entrancePath;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            _pathStorage.lastPathTaken = _entrancePath;
             _loadLocation.RaiseEvent(_sceneToLoad, true, true);
         }
-    }
-
-    private void PlanTransition()
-    {
-        StartCoroutine(TransitionToGameCamera());
-    }
-    
-    private IEnumerator TransitionToGameCamera()
-    {
-    
-        yield return new WaitForSeconds(.1f);
-    
-        // entranceShot.Priority = -1;
-        _onSceneReady.OnEventRaised -= PlanTransition;
     }
 }

@@ -17,20 +17,24 @@ MonoBehaviour:
   _protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
   _playerInventory: {fileID: 11400000, guid: 158d629a8b2d29d4ab36a31f66ee09d9, type: 2}
   _questListSaved: {fileID: 11400000, guid: ebeb5b020cf53794081a4c6d9d7487fe, type: 2}
+  savedPath: C:/Users/quoct/AppData/LocalLow/JeffreyInc/Immortal_Cultivation\GameData.json
   gameData:
     protagonistData:
-      currentHealth: 0
-      currentMana: 0
-      currentIntelligence: 0
-      currentLucky: 0
+      currentHealth: 3500
+      currentMana: 3500
+      currentIntelligence: 500
+      currentLucky: 500
       currentRealmTier: 0
-      currentRealmStage: 0
-      currentExp: 0
+      currentRealmStage: 1
+      currentExp: 800
       currentPosition: {x: 0, y: 0, z: 0}
-      learnedSkills: []
-      power: 0
-    locationId: 
+      equippedEquipments: []
+      learnedSkills:
+      - aceea84dc1e30ab4abf90d2d0d845ada
+      - 8662a2191974f384398454be53c9f8ad
+      - 9c8d1915d14f7df469ea9a3538d36cd2
+      power: 6420
     itemStacks: []
-    finishedQuestItemsGUIds:
-    - 1667f9c06fb5f30458b95a1808670908
-    _currentLocale: {fileID: 0}
+    finishedQuestItemsGUIds: []
+    finishedCutSceneGUIds: []
+    lastMapGUIds: 1bb1ff3615216f7408fa0c12d52cf7e6

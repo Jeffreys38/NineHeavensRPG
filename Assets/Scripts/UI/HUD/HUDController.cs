@@ -24,6 +24,10 @@ public class HUDController : MonoBehaviour
         {
             canvasGameplay.SetActive(true);
         }
+        else
+        {
+            HideHUD();
+        }
     }
     
     private void HideHUD()

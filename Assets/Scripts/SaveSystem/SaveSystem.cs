@@ -5,13 +5,14 @@ using UnityEngine;
 public class SaveSystem : ScriptableObject
 {
 	[Header("Listening To")]
-	[SerializeField] private VoidEventChannelSO _saveSettingsEvent;
 	[SerializeField] private LoadEventChannelSO _loadLocation;
 
 	[Header("Data")]
 	[SerializeField] private ProtagonistStateSO _protagonist;
 	[SerializeField] private InventorySO _playerInventory;
 	[SerializeField] private QuestListSO _questListSaved;
+	
+	public ProtagonistStateSO Protagonist => _protagonist;
 	
 	private IDataHandler _dataHandler;
 	
@@ -20,16 +21,14 @@ public class SaveSystem : ScriptableObject
 	
 	void OnEnable()
 	{
-		_saveSettingsEvent.OnEventRaised += SaveSettings;
 		_loadLocation.OnLoadingRequested += CacheLoadLocations;
 	}
 
 	void OnDisable()
 	{
-		_saveSettingsEvent.OnEventRaised -= SaveSettings;
 		_loadLocation.OnLoadingRequested -= CacheLoadLocations;
 	}
-
+	
 	public void NewGame()
 	{
 		gameData = new GameData();
@@ -37,7 +36,10 @@ public class SaveSystem : ScriptableObject
 
 	public bool LoadGame()
 	{
-		_dataHandler = GameConstants.useDatabase ? new DatabaseDataHandler() : new LocalDataHandler(savedPath);
+		_dataHandler = GameConstants.useDatabase 
+			? new DatabaseDataHandler() 
+			: new LocalDataHandler(savedPath);
+		
 		gameData = _dataHandler.Load();
 		
 		// If no data can be loaded, initialize to a new game
@@ -51,32 +53,42 @@ public class SaveSystem : ScriptableObject
 		_protagonist.LoadData(gameData);
 		_playerInventory.LoadData(gameData);
 		_questListSaved.LoadData(gameData);
-		
+
 		return true;
 	}
 
 	public void SaveGame()
 	{
-		_protagonist.SaveData(ref gameData);
-		_playerInventory.SaveData(ref gameData);
-		_questListSaved.SaveData(ref gameData);
-		
-		_dataHandler.Save(gameData);
-	}
+		try
+		{
+			Debug.Log("Saving protagonist...");
+			_protagonist.SaveData(ref gameData);
 
-	private void SaveSettings()
-	{
-	
+			Debug.Log("Saving inventory...");
+			_playerInventory.SaveData(ref gameData);
+
+			Debug.Log("Saving quests...");
+			_questListSaved.SaveData(ref gameData);
+
+			Debug.Log("Writing to file...");
+			_dataHandler.Save(gameData);
+
+			Debug.Log("<color=green>SaveGame finished successfully.</color>");
+		}
+		catch (System.Exception ex)
+		{
+			Debug.LogError("Exception during SaveGame: " + ex.Message);
+			Debug.LogError("StackTrace:\n" + ex.StackTrace);
+		}
 	}
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen = true, bool fadeScreen = false)
 	{
-		LocationSO locationSO = locationToLoad as LocationSO;
-		if (locationSO)
+		if (locationToLoad)
 		{
-			gameData.locationId = locationSO.Guid;
+			gameData.lastMapGUIds = locationToLoad.Guid;
 		}
-
-		// SaveGame();
+		
+		SaveGame();
 	}
 }

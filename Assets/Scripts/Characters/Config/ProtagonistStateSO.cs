@@ -43,6 +43,8 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
     [Header("Equipped Items")]
     public Dictionary<EquipmentType, EquipmentItemSO> equippedItems = new Dictionary<EquipmentType, EquipmentItemSO>();
     
+    public GameSceneSO lastScene;
+    
     public void LoadData(GameData gameData)
     {
         var protagonistData = gameData.protagonistData;
@@ -56,6 +58,8 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
         currentRealmStage = protagonistData.currentRealmStage;
         currentExp = protagonistData.currentExp;
         currentPosition = protagonistData.currentPosition;
+        
+        GetMapFromGUID(gameData.lastMapGUIds);
     }
     
     public void SaveData(ref GameData data)
@@ -71,11 +75,10 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
         data.protagonistData.power = power;
         data.protagonistData.equippedEquipments = ConvertEquippedItemsToList();
         
-        // Bind skill
         List<string> skillsGUID = new List<string>();
         foreach (var skill in learnedSkills)
         {
-            skillsGUID.Add(skill.Guid.ToString());
+            skillsGUID.Add(skill.Guid);
         }
         data.protagonistData.learnedSkills = skillsGUID;
     }
@@ -83,5 +86,16 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
     private List<string> ConvertEquippedItemsToList()
     {
         return equippedItems.Select(kvp => kvp.Value.Guid).ToList();
-    } 
+    }
+
+    private void GetMapFromGUID(string guid)
+    {
+        List<string> guids = new List<string>() { guid };
+        
+        AddressableLoader.LoadAssetsByGuids<GameSceneSO>(guids, (loadedScenes) =>
+        {
+            lastScene = loadedScenes[0];
+            Debug.Log($"Loaded scene from Addressables: " + lastScene.Guid);
+        });
+    }
 }
