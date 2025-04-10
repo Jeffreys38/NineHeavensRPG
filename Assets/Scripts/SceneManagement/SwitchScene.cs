@@ -9,6 +9,6 @@ public class SwitchScene : MonoBehaviour
 
     void OnEnable()
     {
-        _loadLocation.RaiseEvent(_sceneToLoad, true, true);
+        _loadLocation.RaiseEvent(_sceneToLoad, false, true);
     }
 }

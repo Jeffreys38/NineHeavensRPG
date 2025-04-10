@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ae8b9c62264f0fb6d2681ce12f3881, type: 3}
   m_Name: SaveSystem
   m_EditorClassIdentifier: 
-  _saveSettingsEvent: {fileID: 11400000, guid: 4a7ebda2a1a914747a9f492fda3ecdaa, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _onResetGameRequested: {fileID: 11400000, guid: 0ec488e0e4c26154e87a74204f15f513, type: 2}
   _protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
   _playerInventory: {fileID: 11400000, guid: 158d629a8b2d29d4ab36a31f66ee09d9, type: 2}
   _questListSaved: {fileID: 11400000, guid: ebeb5b020cf53794081a4c6d9d7487fe, type: 2}

@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
+  _onTakeDamage: {fileID: 11400000, guid: a409a1d21775d1a49bc44d34c0210182, type: 2}
   _onManaConsumed: {fileID: 11400000, guid: 94ee28d1e15f01d4da49037dbd3e598f, type: 2}
   _onManaRestored: {fileID: 11400000, guid: dbc240633065fdd4488441564ba80210, type: 2}
   _onHealthConsumed: {fileID: 11400000, guid: a6f84531f2e829948a0c5367fe771907, type: 2}
@@ -559,7 +560,7 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 2103088368}
     - targetCorrespondingSourceObject: {fileID: 2623699195932472037, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 166183329}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ee82821918b3be4c9649656127ebf2a, type: 3}
@@ -1859,6 +1860,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.82
       objectReference: {fileID: 0}
+    - target: {fileID: 1309947958241130144, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: ShowCameraFrustum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118017374983065599, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: StandbyUpdate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3118017374983065599, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: Lens.ModeOverride
       value: 0
@@ -1884,8 +1893,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: orthographic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5103592947950646361, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: orthographic size
@@ -1898,6 +1923,10 @@ PrefabInstance:
     - target: {fileID: 5138290836097706751, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
       propertyPath: m_Name
       value: CameraSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468604245285626385, guid: 3d7402a94efd7be46a973212cd34e35c, type: 3}
+      propertyPath: TrackerSettings.BindingMode
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

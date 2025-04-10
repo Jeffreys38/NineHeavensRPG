@@ -22,7 +22,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   musicTrack: {fileID: 11400000, guid: c8d81481e6e25cd4ba9f0d4d044c8271, type: 2}
-  cutscene: {fileID: 11400000, guid: 0711b00617e754a46b6780865f419920, type: 2}
+  cutscene: {fileID: 0}
   locationName:
     m_TableReference:
       m_TableCollectionName: GUID:12e00f2f10555ca4384e34654acf47e0

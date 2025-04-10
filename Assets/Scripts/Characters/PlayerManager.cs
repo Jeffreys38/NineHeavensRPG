@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private ProtagonistStateSO _player;
     
     [Header("Listening to")] 
+    [SerializeField] private IntEventChannelSO _onTakeDamage;
     [SerializeField] private IntEventChannelSO _onManaConsumed;
     [SerializeField] private IntEventChannelSO _onManaRestored;
     [SerializeField] private IntEventChannelSO _onHealthConsumed;
@@ -41,6 +42,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnEnable()
     {
+        _onTakeDamage.OnEventRaised += TakeDamage;
         _onHealthConsumed.OnEventRaised += ConsumeHealth;
         _onHealthRestored.OnEventRaised += RestoreHealth;
         _onManaConsumed.OnEventRaised += ConsumeMana;
@@ -53,6 +55,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnDisable()
     {
+        _onTakeDamage.OnEventRaised -= TakeDamage;
         _onHealthConsumed.OnEventRaised -= ConsumeHealth;
         _onHealthRestored.OnEventRaised -= RestoreHealth;
         _onManaConsumed.OnEventRaised -= ConsumeMana;
@@ -61,6 +64,12 @@ public class PlayerManager : MonoBehaviour
         
         _onEquippedEquipment.OnEventRaised -= EquipItem;
         _onUnequippedEquipment.OnEventRaised -= UnequipItem;
+    }
+
+    private void TakeDamage(int damage)
+    {
+        if (_player.currentHealth >= damage) _player.currentHealth -= damage;
+        else _player.currentHealth = 0;
     }
     
     private void ConsumeHealth(int amount)

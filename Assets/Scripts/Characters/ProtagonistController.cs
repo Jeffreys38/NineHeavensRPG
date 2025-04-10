@@ -8,22 +8,16 @@ public class ProtagonistController : MonoBehaviour
 {
 	[SerializeField] private InputReader _inputReader = default;
 	[SerializeField] private TransformEventChannelSO _transformEvent;
+	[SerializeField] private Vector2EventChannelSO _onPlayerMoveDirection;
 	
 	private Rigidbody2D _rigidbody2D;
 	private Animator _animator;
 	private Vector2 _inputVector;
 	private Vector2 _lastInputVector;
 	private float _baseSpeed = 1f;
-
-	//These fields are read and manipulated by the StateMachine actions
+	private bool _isMovementBlocked = false;
+	
 	[NonSerialized] public bool isRunning;
-
-	public const float GRAVITY_MULTIPLIER = 5f;
-	public const float MAX_FALL_SPEED = -50f;
-	public const float MAX_RISE_SPEED = 100f;
-	public const float GRAVITY_COMEBACK_MULTIPLIER = .03f;
-	public const float GRAVITY_DIVIDER = .6f;
-	public const float AIR_RESISTANCE = 5f;
 
 	private void Start()
 	{
@@ -53,8 +47,23 @@ public class ProtagonistController : MonoBehaviour
 
 	private void MovePosition()
 	{
+		if (_isMovementBlocked) return;
+		
 		_rigidbody2D.MovePosition(_rigidbody2D.position + _inputVector * _baseSpeed * Time.fixedDeltaTime);
 		_transformEvent.RaiseEvent(transform);
+	}
+
+	public void BlockMovement()
+	{
+		_isMovementBlocked = true;
+		_inputVector = Vector2.zero;     
+		isRunning = false;               
+		UpdatePlayerAnimation();         
+	}
+
+	public void UnlockMovement()
+	{
+		_isMovementBlocked = false;
 	}
 
 	private void UpdatePlayerAnimation()
@@ -81,8 +90,9 @@ public class ProtagonistController : MonoBehaviour
 		
 		// Store last state to update idle state, because _inputVector will become 0,0 when character (idle)
 		_lastInputVector = _inputVector;
-		
 		isRunning = true;
+		
+		_onPlayerMoveDirection.RaiseEvent(movement);
 	}
 
 	private void OnIdle()

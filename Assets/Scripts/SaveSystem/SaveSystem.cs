@@ -6,6 +6,7 @@ public class SaveSystem : ScriptableObject
 {
 	[Header("Listening To")]
 	[SerializeField] private LoadEventChannelSO _loadLocation;
+	[SerializeField] private VoidEventChannelSO _onResetGameRequested;
 
 	[Header("Data")]
 	[SerializeField] private ProtagonistStateSO _protagonist;
@@ -22,16 +23,26 @@ public class SaveSystem : ScriptableObject
 	void OnEnable()
 	{
 		_loadLocation.OnLoadingRequested += CacheLoadLocations;
+		_onResetGameRequested.OnEventRaised += ResetGame;
 	}
 
 	void OnDisable()
 	{
 		_loadLocation.OnLoadingRequested -= CacheLoadLocations;
+		_onResetGameRequested.OnEventRaised -= ResetGame;
 	}
 	
-	public void NewGame()
+	private void NewGame()
 	{
 		gameData = new GameData();
+	}
+
+	private void ResetGame()
+	{
+		if (File.Exists(savedPath))
+		{
+			File.Delete(savedPath);
+		}
 	}
 
 	public bool LoadGame()

@@ -495,7 +495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onCutSceneRequested: {fileID: 11400000, guid: 96709d02f97825442b915366564d2f49, type: 2}
-  _loadScene: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _loadMenu: {fileID: 11400000, guid: 0f1813c377cfb654c9b214922e5f053d, type: 2}
   saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
 --- !u!4 &634070646
 Transform:
@@ -567,7 +568,7 @@ MonoBehaviour:
   _masterVolumeEventChannel: {fileID: 11400000, guid: 57d994a8bf24bbb47a0cba3703828992, type: 2}
   audioMixer: {fileID: 24100000, guid: dcb713813a3f3fd49a1b118a2dea2b11, type: 2}
   _masterVolume: 1
-  _musicVolume: 0.8
+  _musicVolume: 1
   _sfxVolume: 1
 --- !u!114 &825527286
 MonoBehaviour:

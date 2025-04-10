@@ -193,15 +193,6 @@ public class SceneLoader : MonoBehaviour
 
 	private void StartGameplay()
 	{
-		if (_currentlyLoadedScene.sceneType == GameSceneSO.GameSceneType.Location)
-		{
-			_gameState.UpdateGameState(GameState.Gameplay);
-		}
-		else
-		{
-			_gameState.UpdateGameState(GameState.Cutscene);
-		}
-		
 		_onSceneReady.RaiseEvent();
 	}
 }
