@@ -25,7 +25,7 @@ public class StartGame : MonoBehaviour
 	
 	public SaveSystem SaveSystem => _saveSystem;
 	
-	private const string FileName = "GameData.json";
+	private const string FileName = "Immortal.json";
 	private string savedPath;
 	private bool _hasSaveData;
 
@@ -38,19 +38,25 @@ public class StartGame : MonoBehaviour
 	{
 		_inputReader.EnableMenuInput();
 		
-		_onNewGameButton.OnEventRaised += StartNewGame;
+		_onNewGameButton.OnEventRaised += ContinueGame;
 	}
 
 	private void OnDestroy()
 	{
 		_inputReader.DisableAllInput();
 		
-		_onNewGameButton.OnEventRaised -= StartNewGame;
+		_onNewGameButton.OnEventRaised -= ContinueGame;
 	}
 
-	private void StartNewGame()
+	void ContinueGame()
+	{
+		StartCoroutine(StartNewGame());
+	}
+
+	private IEnumerator StartNewGame()
 	{
 		_saveSystem.LoadGame();
+		yield return new WaitForSeconds(1.5f);
 		_cutsceneEvent.RaiseEvent(_saveSystem.Protagonist.lastScene);
 	}
 }

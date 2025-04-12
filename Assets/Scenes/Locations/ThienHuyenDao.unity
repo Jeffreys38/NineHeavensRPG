@@ -268,7 +268,7 @@ AudioSource:
   m_GameObject: {fileID: 78727790}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6811141648607795453, guid: dcb713813a3f3fd49a1b118a2dea2b11, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8e1b19acd10a52941866b3b0ef91ae36, type: 3}
   m_Resource: {fileID: 8300000, guid: 8e1b19acd10a52941866b3b0ef91ae36, type: 3}
   m_PlayOnAwake: 0
@@ -40640,6 +40640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LocationEntrance
       objectReference: {fileID: 0}
+    - target: {fileID: 3880699278621692960, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4263316618927035862, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.081
@@ -40742,7 +40746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4496630281840391247, guid: 6c204982c532deb45a96473fd74d8b1f, type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9127132623920844537, guid: 6c204982c532deb45a96473fd74d8b1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40835,7 +40839,7 @@ PrefabInstance:
     - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: _sceneToLoad
       value: 
-      objectReference: {fileID: 11400000, guid: 301a79b19e51cd8479266430aeae2b22, type: 2}
+      objectReference: {fileID: 11400000, guid: 1ffcfc19436c88347b56ed7fb033a7c2, type: 2}
     - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: _entrancePath
       value: 
@@ -41023,7 +41027,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 0c08a455815b275479312ee4161aee84, type: 2}
     - target: {fileID: 7001148712064122515, guid: 60f6723f341b7be44ab4e2941cb8ab69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.21
+      value: -0.174
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

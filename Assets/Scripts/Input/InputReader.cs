@@ -118,7 +118,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	{
 		if (context.phase == InputActionPhase.Performed)
 		{
-			OpenInventoryEvent.Invoke();
+			OpenInventoryEvent?.Invoke();
 		}
 	}
     
@@ -126,7 +126,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
     {
     	if (context.phase == InputActionPhase.Performed)
     	{
-    		CloseInventoryEvent.Invoke();
+    		CloseInventoryEvent?.Invoke();
     	}
     }
 

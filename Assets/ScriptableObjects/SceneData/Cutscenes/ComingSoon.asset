@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1727f4f88df4a06a977f6d239acaa88, type: 3}
+  m_Name: ComingSoon
+  m_EditorClassIdentifier: 
+  description: 
+  sceneType: 6
+  sceneReference:
+    m_AssetGUID: a6876363cc2508142a9ba38d7c3c7dc6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  musicTrack: {fileID: 11400000, guid: 21c7b7a9671c4244c8c21bd5f87bd443, type: 2}
+  cutscene: {fileID: 0}

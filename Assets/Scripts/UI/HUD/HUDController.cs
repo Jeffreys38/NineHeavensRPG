@@ -1,8 +1,8 @@
-using System;
 using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
+    [SerializeField] private BoolEventChannelSO _setHUDStatus = default;
     [SerializeField] private VoidEventChannelSO _onSceneReady = default;
     [SerializeField] private GameStateSO _gameState = default;
 
@@ -10,28 +10,23 @@ public class HUDController : MonoBehaviour
 
     private void OnEnable()
     {
-        _onSceneReady.OnEventRaised += ShowHUD;
+        _setHUDStatus.OnEventRaised += ShowHUD;
+        _onSceneReady.OnEventRaised += InitializedHUD;
     }
 
     private void OnDisable()
     {
-        _onSceneReady.OnEventRaised -= ShowHUD;
+        _setHUDStatus.OnEventRaised -= ShowHUD;
+        _onSceneReady.OnEventRaised -= InitializedHUD;
     }
 
-    private void ShowHUD()
+    private void InitializedHUD()
     {
-        if (_gameState.CurrentGameState == GameState.Gameplay)
-        {
-            canvasGameplay.SetActive(true);
-        }
-        else
-        {
-            HideHUD();
-        }
+        canvasGameplay.SetActive(true);
     }
-    
-    private void HideHUD()
+
+    private void ShowHUD(bool value = true)
     {
-        canvasGameplay.SetActive(false);
+        canvasGameplay.SetActive(value);
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Music_Config
   m_EditorClassIdentifier: 
   OutputAudioMixerGroup: {fileID: -5014086260620424341, guid: dcb713813a3f3fd49a1b118a2dea2b11, type: 2}
-  _priorityLevel: 128
+  _priorityLevel: 64
   Mute: 0
   Volume: 1
   Pitch: 1

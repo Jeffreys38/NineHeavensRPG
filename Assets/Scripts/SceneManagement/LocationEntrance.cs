@@ -11,6 +11,7 @@ public class LocationEntrance : MonoBehaviour
     
     [Header("Broadcasting on")]
     [SerializeField] private LoadEventChannelSO _loadLocation = default;
+    [SerializeField] private LoadEventChannelSO _loadMenu = default;
     
     [Header("Optional")]
     public Transform spawnPointOverride;
@@ -21,8 +22,15 @@ public class LocationEntrance : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _pathStorage.lastPathTaken = _entrancePath;
-            _loadLocation.RaiseEvent(_sceneToLoad, true, true);
+            if (_sceneToLoad.sceneType == GameSceneSO.GameSceneType.Cutscene)
+            {
+                _loadMenu.RaiseEvent(_sceneToLoad, false, true);
+            }
+            else
+            {
+                _pathStorage.lastPathTaken = _entrancePath;
+                _loadLocation.RaiseEvent(_sceneToLoad, false, true);
+            }
         }
     }
 }

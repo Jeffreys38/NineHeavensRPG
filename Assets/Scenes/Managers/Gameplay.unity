@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c11bb1dd6444e59bf76c65a2771309b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _setHUDStatus: {fileID: 11400000, guid: 0116c7193121b2a43b3c2bc940e736fe, type: 2}
   _onSceneReady: {fileID: 11400000, guid: 11b5bb2f3111ad646bc16e6ceb6077e6, type: 2}
   _gameState: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
   canvasGameplay: {fileID: 334489272}
@@ -1433,7 +1434,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2160,8 +2161,8 @@ SceneRoots:
   - {fileID: 1174554993}
   - {fileID: 1219422048}
   - {fileID: 1777671273}
-  - {fileID: 352624315}
   - {fileID: 1153599537}
   - {fileID: 1714273399}
   - {fileID: 76789386}
+  - {fileID: 352624315}
   - {fileID: 334489269}

@@ -14,7 +14,7 @@ public class GameData
     public List<SerializedItemStack> itemStacks;
     public List<string> finishedQuestItemsGUIds;
     public List<string> finishedCutSceneGUIds;
-    public string lastMapGUIds = "1bb1ff3615216f7408fa0c12d52cf7e6";
+    public string lastMapGUIds;
 
     public GameData()
     {

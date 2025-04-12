@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -79,29 +80,36 @@ public class UIItemSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        var draggedItem = eventData.pointerDrag.GetComponent<UIDragItem>();
-        if (draggedItem == null) return;
-
-        var sourceSlot = draggedItem.ParentSlot;
-
-        // If the target slot already contains an item, perform a swap instead of direct placement
-        if (!this.IsEmpty && !sourceSlot.IsEmpty)
+        try
         {
-            SwapItem(sourceSlot);
-            return;
-        }
+            var draggedItem = eventData.pointerDrag.GetComponent<UIDragItem>();
+            if (draggedItem == null) return;
 
-        // If the target slot is an equipment slot, check if the dragged item is a valid equipment type
-        var equipmentItemSO = sourceSlot.CurrentItem.Item as EquipmentItemSO;
-        if (IsEquipmentSlot && (equipmentItemSO == null || this.SlotType != equipmentItemSO.EquipmentType))
+            var sourceSlot = draggedItem.ParentSlot;
+
+            // If the target slot already contains an item, perform a swap instead of direct placement
+            if (!this.IsEmpty && !sourceSlot.IsEmpty)
+            {
+                SwapItem(sourceSlot);
+                return;
+            }
+
+            // If the target slot is an equipment slot, check if the dragged item is a valid equipment type
+            var equipmentItemSO = sourceSlot.CurrentItem.Item as EquipmentItemSO;
+            if (IsEquipmentSlot && (equipmentItemSO == null || this.SlotType != equipmentItemSO.EquipmentType))
+            {
+                Debug.Log("Cannot place this item in this slot!");
+                return;
+            }
+
+            // Move the item from the source slot to the target slot
+            SetItem(sourceSlot.CurrentItem);
+            sourceSlot.ClearItem();
+        }
+        catch (Exception e)
         {
-            Debug.Log("Cannot place this item in this slot!");
-            return;
+            Debug.LogError(e);
         }
-
-        // Move the item from the source slot to the target slot
-        SetItem(sourceSlot.CurrentItem);
-        sourceSlot.ClearItem();
     }
 
     private void SwapItem(UIItemSlot sourceSlot)
