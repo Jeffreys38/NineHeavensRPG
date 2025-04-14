@@ -12,29 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda454e0c7049ca8acf7edfae72f854, type: 3}
   m_Name: ProtagonistState
   m_EditorClassIdentifier: 
+  _guid: b18040af8f8de00468701005dee38fc8
   nickName: 
   avatarUrl: 
   bio: 
   prefabReview: {fileID: 8623045530711256422, guid: 0a7a5464b8a32794db1106fa00b1c2c6, type: 3}
   maxHealth: 14000
   maxMana: 50000
-  currentAtk: 500
-  currentDefense: 500
+  currentAtk: 0
+  currentDefense: 0
   currentHealth: 100000
   currentMana: 100000
-  currentIntelligence: 10
-  currentLucky: 5
+  currentIntelligence: 1000
+  currentLucky: 1000
   bonusAtk: 0
   bonusDefense: 0
-  bonusHealth: 100000
+  bonusHealth: 0
   bonusMana: 0
   bonusIntelligence: 0
   bonusLucky: 0
-  power: 100000
+  power: 0
   currentExp: 0
   currentPosition: {x: 0, y: 0, z: 0}
-  learnedSkills:
-  - {fileID: 11400000, guid: 9c8d1915d14f7df469ea9a3538d36cd2, type: 2}
+  learnedSkills: []
   currentRealmTier: 0
   currentRealmStage: 0
-  lastScene: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}

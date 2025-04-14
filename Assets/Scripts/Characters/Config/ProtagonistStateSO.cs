@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Protagonist State", menuName = "State/Protagonist State")]
-public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
+public class ProtagonistStateSO : SerializableScriptableObject
 {
     [Header("Info")] 
     public string nickName;
@@ -43,59 +44,8 @@ public class ProtagonistStateSO : SerializableScriptableObject, IDataPersistence
     [Header("Equipped Items")]
     public Dictionary<EquipmentType, EquipmentItemSO> equippedItems = new Dictionary<EquipmentType, EquipmentItemSO>();
     
-    public GameSceneSO lastScene;
-    
-    public void LoadData(GameData gameData)
-    {
-        var protagonistData = gameData.protagonistData;
-        
-        currentHealth = protagonistData.currentHealth;
-        currentMana = protagonistData.currentMana;
-        power = protagonistData.power;
-        currentIntelligence = protagonistData.currentIntelligence;
-        currentLucky = protagonistData.currentLucky;
-        currentRealmTier = protagonistData.currentRealmTier;
-        currentRealmStage = protagonistData.currentRealmStage;
-        currentExp = protagonistData.currentExp;
-        currentPosition = protagonistData.currentPosition;
-        
-        GetMapFromGUID(gameData.lastMapGUIds);
-    }
-    
-    public void SaveData(ref GameData data)
-    {
-        data.protagonistData.currentHealth = currentHealth;
-        data.protagonistData.currentMana = currentMana;
-        data.protagonistData.currentIntelligence = currentIntelligence;
-        data.protagonistData.currentLucky = currentLucky;
-        data.protagonistData.currentRealmTier = currentRealmTier;
-        data.protagonistData.currentRealmStage = currentRealmStage;
-        data.protagonistData.currentExp = currentExp;
-        data.protagonistData.currentPosition = currentPosition;
-        data.protagonistData.power = power;
-        data.protagonistData.equippedEquipments = ConvertEquippedItemsToList();
-        
-        List<string> skillsGUID = new List<string>();
-        foreach (var skill in learnedSkills)
-        {
-            skillsGUID.Add(skill.Guid);
-        }
-        data.protagonistData.learnedSkills = skillsGUID;
-    }
-    
     private List<string> ConvertEquippedItemsToList()
     {
         return equippedItems.Select(kvp => kvp.Value.Guid).ToList();
-    }
-
-    private void GetMapFromGUID(string guid)
-    {
-        List<string> guids = new List<string>() { guid };
-        
-        AddressableLoader.LoadAssetsByGuids<GameSceneSO>(guids, (loadedScenes) =>
-        {
-            lastScene = loadedScenes[0];
-            Debug.Log($"Loaded scene from Addressables: " + lastScene.Guid);
-        });
     }
 }

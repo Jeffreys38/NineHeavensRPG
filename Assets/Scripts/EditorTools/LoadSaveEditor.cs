@@ -11,9 +11,9 @@ public class LoadSaveEditor : Editor
 
         GameManager gameManager = (GameManager)target;
 
-        if (GUILayout.Button("Save data"))
+        if (GUILayout.Button("Save data to disk"))
         {
-            gameManager.saveSystem.SaveGame();
+            gameManager.saveSystem.SaveDataToDisk();
         }
     }
 }

@@ -156,7 +156,7 @@ MonoBehaviour:
   _sfxEventChannel: {fileID: 11400000, guid: 64b9d1d5036448e4eb84a780730ff376, type: 2}
   _SFX: {fileID: 11400000, guid: afc0b837799534d4db4a59842e932ba4, type: 2}
   _SFXConfiguration: {fileID: 11400000, guid: 4fea454a3b4c65c4d8f936a5c93f9c26, type: 2}
-  skillSO: {fileID: 11400000, guid: 8662a2191974f384398454be53c9f8ad, type: 2}
+  skillSO: {fileID: 11400000, guid: 9c8d1915d14f7df469ea9a3538d36cd2, type: 2}
 --- !u!58 &-5654295714245709084
 CircleCollider2D:
   m_ObjectHideFlags: 0

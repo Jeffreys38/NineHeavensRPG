@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: DataScriptableObjects
   m_GUID: e5be820763ea288478e76838439b7622
   m_SerializeEntries:
+  - m_GUID: 06952d1c65d7dc24fbe8a8b9118ceae9
+    m_Address: Assets/ScriptableObjects/Skills
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c812a17eb900204595ba79938d698e1
     m_Address: Assets/ScriptableObjects/Audio
     m_ReadOnly: 0
@@ -37,6 +42,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b5c6cf2b476fdff4386589f17110de5c
     m_Address: Assets/ScriptableObjects/Table
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b81eeb2d666caeb48adfb98c879c394f
+    m_Address: Assets/ScriptableObjects/Inventory
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebeb5b020cf53794081a4c6d9d7487fe
+    m_Address: Assets/ScriptableObjects/SaveSystem/Storage_QuestList.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

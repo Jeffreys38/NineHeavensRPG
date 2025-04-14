@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f110b68f53de4e9d9e75ddd5efb14b75, type: 3}
   m_Name: PlayerSpawnedEvent
   m_EditorClassIdentifier: 
-  _guid: 
+  _guid: 1a90586904ce61244835306dfc900d19
   description: 

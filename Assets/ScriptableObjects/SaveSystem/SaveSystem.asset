@@ -17,21 +17,32 @@ MonoBehaviour:
   _protagonist: {fileID: 11400000, guid: b18040af8f8de00468701005dee38fc8, type: 2}
   _playerInventory: {fileID: 11400000, guid: 158d629a8b2d29d4ab36a31f66ee09d9, type: 2}
   _questListSaved: {fileID: 11400000, guid: ebeb5b020cf53794081a4c6d9d7487fe, type: 2}
-  savedPath: 
+  saveFilename: Save.NineHeavensRPG.json
+  backupSaveFilename: Save.NineHeavensRPG.bak
   gameData:
-    protagonistData:
+    _protagonistData:
       currentHealth: 100000
       currentMana: 100000
-      currentIntelligence: 10
-      currentLucky: 5
+      currentAtk: 0
+      currentDefense: 0
+      currentIntelligence: 1000
+      currentLucky: 1000
+      bonusAtk: 0
+      bonusDefense: 0
+      bonusIntelligence: 0
+      bonusLucky: 0
+      bonusHealth: 0
+      bonusMana: 0
       currentRealmTier: 0
       currentRealmStage: 0
       currentExp: 0
       currentPosition: {x: 0, y: 0, z: 0}
       equippedEquipments: []
       learnedSkills: []
-      power: 100000
-    itemStacks: []
-    finishedQuestItemsGUIds: []
-    finishedCutSceneGUIds: []
-    lastMapGUIds: 
+      power: 0
+    _itemStacks: []
+    _finishedQuestItemsGUIds:
+    - 1667f9c06fb5f30458b95a1808670908
+    _finishedCutSceneGUIds:
+    - 0711b00617e754a46b6780865f419920
+    _locationId: 1ffcfc19436c88347b56ed7fb033a7c2

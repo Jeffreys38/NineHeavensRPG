@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba7f6e3d6bd450088c1946d2e59f498, type: 3}
   m_Name: OnEnemyKilled
   m_EditorClassIdentifier: 
-  _guid: 
+  _guid: 6a2da443b6d52834b8b24875006e389f
   description: 

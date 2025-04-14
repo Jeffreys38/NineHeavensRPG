@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Analytics;
@@ -15,48 +16,63 @@ public class StartGame : MonoBehaviour
 	[SerializeField] private GameSceneSO _locationsToLoad;
 	[SerializeField] private SaveSystem _saveSystem = default;
 	[SerializeField] private InputReader _inputReader = default;
-	
-	[Header("Broadcasting on")]
+
+	[Header("Broadcasting on")] 
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
 	[SerializeField] private CutsceneEventChannelSO _cutsceneEvent = default;
 
-	[Header("Listening to")]
+	[Header("Listening to")] 
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
-	
-	public SaveSystem SaveSystem => _saveSystem;
-	
-	private const string FileName = "Immortal.json";
-	private string savedPath;
-	private bool _hasSaveData;
 
-	private void Awake()
-	{
-		_saveSystem.savedPath = Path.Combine(Application.persistentDataPath, FileName);
-	}
+	private bool _hasSaveData;
 
 	private void Start()
 	{
 		_inputReader.EnableMenuInput();
-		
-		_onNewGameButton.OnEventRaised += ContinueGame;
+		_hasSaveData = _saveSystem.LoadSaveDataFromDisk();
+		_onNewGameButton.OnEventRaised += ContinuePreviousGame;
 	}
 
 	private void OnDestroy()
 	{
 		_inputReader.DisableAllInput();
+		_onNewGameButton.OnEventRaised -= ContinuePreviousGame;
+	}
+
+	void StartNewGame()
+	{
+		_hasSaveData = false;
+
+		_saveSystem.WriteEmptySaveFile();
+		_saveSystem.SetNewGameData();
+		_loadLocation.RaiseEvent(_locationsToLoad);
+	}
+
+	void ContinuePreviousGame()
+	{
+		StartCoroutine(LoadSaveGame());
+	}
+	
+	private IEnumerator LoadSaveGame() {
+		yield return StartCoroutine(_saveSystem.LoadSavedPlayerData());
+		yield return StartCoroutine(_saveSystem.LoadSavedInventory());
+		_saveSystem.LoadSavedQuestlineStatus();
 		
-		_onNewGameButton.OnEventRaised -= ContinueGame;
-	}
+		var locationGuid = _saveSystem.gameData._locationId;
+		Debug.Log("locationGuid before loading: " + locationGuid);
+		if (String.IsNullOrEmpty(locationGuid))
+		{
+			
+		}
+		
+		var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
+		yield return asyncOperationHandle;
 
-	void ContinueGame()
-	{
-		StartCoroutine(StartNewGame());
-	}
-
-	private IEnumerator StartNewGame()
-	{
-		_saveSystem.LoadGame();
-		yield return new WaitForSeconds(1.5f);
-		_cutsceneEvent.RaiseEvent(_saveSystem.Protagonist.lastScene);
+		if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
+		{
+			LocationSO locationSO = asyncOperationHandle.Result;
+			Debug.Log("Location is loaded: " + locationSO.Guid);
+			_cutsceneEvent.RaiseEvent(locationSO);
+		}
 	}
 }

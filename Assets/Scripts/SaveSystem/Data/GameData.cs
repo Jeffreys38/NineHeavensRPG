@@ -10,32 +10,42 @@ using UnityEngine.Localization;
 [Serializable]
 public class GameData
 {
-    public ProtagonistData protagonistData;
-    public List<SerializedItemStack> itemStacks;
-    public List<string> finishedQuestItemsGUIds;
-    public List<string> finishedCutSceneGUIds;
-    public string lastMapGUIds;
+    public ProtagonistData _protagonistData;
+    public List<SerializedItemStack> _itemStacks;
+    public List<string> _finishedQuestItemsGUIds;
+    public List<string> _finishedCutSceneGUIds;
+    public string _locationId;
 
-    public GameData()
+    public void Reset()
     {
-        protagonistData = new ProtagonistData
+        _protagonistData = new ProtagonistData
         {
             currentHealth = 100000,
             currentMana = 100000,
-            currentIntelligence = 10f,
-            currentLucky = 5f,
+            currentIntelligence = 1000f,
+            currentLucky = 1000f,
             currentRealmTier = RealmTier.Mortal,
             currentRealmStage = RealmStage.Early,
             currentExp = 0,
             currentPosition = Vector3.zero,
             equippedEquipments = new List<string>(),
             learnedSkills = new List<string>(),
-            power = 100000
+            power = 0
         };
 
-        itemStacks = new List<SerializedItemStack>();
-        finishedQuestItemsGUIds = new List<string>();
-        finishedCutSceneGUIds = new List<string>();
-        lastMapGUIds = "1bb1ff3615216f7408fa0c12d52cf7e6";
+        _itemStacks = new List<SerializedItemStack>();
+        _finishedQuestItemsGUIds = new List<string>();
+        _finishedCutSceneGUIds = new List<string>();
+        _locationId = "1bb1ff3615216f7408fa0c12d52cf7e6";
+    }
+    
+    public string ToJson()
+    {
+        return JsonUtility.ToJson(this);
+    }
+
+    public void LoadFromJson(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, this);
     }
 }

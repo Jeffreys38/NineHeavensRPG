@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
@@ -6,8 +7,9 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 [CreateAssetMenu(fileName = "Storage_QuestList", menuName = "Quest/Current Quest List")]
-public class QuestListSO : ScriptableObject, IDataPersistence
+public class QuestListSO : ScriptableObject
 {
+    [Header("Data")]
     [SerializeField] private List<QuestDataSO> _currentQuests = new List<QuestDataSO>();
     
     public List<QuestDataSO> CurrentQuests => _currentQuests;
@@ -17,25 +19,13 @@ public class QuestListSO : ScriptableObject, IDataPersistence
         _currentQuests.Add(quest);
     }
 
-    public void SaveData(ref GameData data)
-    {
-        data.finishedQuestItemsGUIds.Clear(); 
-        
-        foreach (var quest in _currentQuests)
-        {
-            string questID = quest.Guid;
-            data.finishedQuestItemsGUIds.Add(questID);
-        }
-    }
-
-    public void LoadData(GameData data)
+    public void ResetQuestlines()
     {
         _currentQuests.Clear();
+    }
 
-        AddressableLoader.LoadAssetsByGuids<QuestDataSO>(data.finishedQuestItemsGUIds, (loadedQuests) =>
-        {
-            _currentQuests.AddRange(loadedQuests);
-            Debug.Log($"Loaded {_currentQuests.Count} quests from Addressables.");
-        });
+    public void SetQuestlineItemsFromSave(List<string> finishedItemsGUIds)
+    {
+        
     }
 }

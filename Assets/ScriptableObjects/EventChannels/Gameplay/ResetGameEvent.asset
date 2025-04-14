@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc454878377480ba3d3ce436801d56a, type: 3}
   m_Name: ResetGameEvent
   m_EditorClassIdentifier: 
-  _guid: 
+  _guid: 0ec488e0e4c26154e87a74204f15f513
   description: 

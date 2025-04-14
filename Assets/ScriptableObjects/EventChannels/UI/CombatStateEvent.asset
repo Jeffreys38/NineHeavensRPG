@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8812fdbd35c34deeaff9c386f02097c3, type: 3}
   m_Name: CombatStateEvent
   m_EditorClassIdentifier: 
-  _guid: 
+  _guid: 2ea618c3d72058a4f91b8f0b391f193e
   description: 

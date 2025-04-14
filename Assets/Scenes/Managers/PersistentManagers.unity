@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onCutSceneRequested: {fileID: 11400000, guid: 96709d02f97825442b915366564d2f49, type: 2}
+  _onSkipCutsceneRequested: {fileID: 11400000, guid: 8429ef669dfbbb44ca94ad5ede4b00e3, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
   _loadMenu: {fileID: 11400000, guid: 0f1813c377cfb654c9b214922e5f053d, type: 2}
   saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}

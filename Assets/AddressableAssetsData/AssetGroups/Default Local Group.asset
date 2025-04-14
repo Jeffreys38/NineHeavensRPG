@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: c976f25db807fdc499a4151c1e052034
-  m_SerializeEntries:
-  - m_GUID: a6876363cc2508142a9ba38d7c3c7dc6
-    m_Address: Assets/Scenes/Cutscenes/ComingSoon.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b6c2fad1dbca5bd46bb4c6d45d1de32b, type: 2}
   m_SchemaSet:
