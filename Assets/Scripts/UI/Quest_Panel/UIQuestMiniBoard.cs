@@ -14,29 +14,4 @@ public class UIQuestMiniBoard : MonoBehaviour
 
     private QuestDataSO _activeQuest;
     
-    private void OnEnable()
-    {
-        List<QuestDataSO> activeQuests = _questManager.CurrentQuests;
-
-        if (activeQuests.Count > 0)
-        {
-            _activeQuest = activeQuests[0];
-        }
-
-        UpdateQuest();
-    }
-
-    private void OnDisable()
-    {
-        
-    }
-
-    private void UpdateQuest()
-    {
-        if (_activeQuest == null) return;
-        
-        titleEvent.StringReference = _activeQuest.Name;
-        descriptionEvent.StringReference = _activeQuest.Description;
-        progressText.SetText("0 / 3");
-    }
 }

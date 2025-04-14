@@ -12,7 +12,8 @@ public class GameData
 {
     public ProtagonistData _protagonistData;
     public List<SerializedItemStack> _itemStacks;
-    public List<string> _finishedQuestItemsGUIds;
+    public List<string> _inProgressQuestItemsGUIds;
+    public List<string> _completedQuestItemsGUIds;
     public List<string> _finishedCutSceneGUIds;
     public string _locationId;
 
@@ -20,7 +21,7 @@ public class GameData
     {
         _protagonistData = new ProtagonistData
         {
-            currentHealth = 100000,
+            currentHealth = 200000,
             currentMana = 100000,
             currentIntelligence = 1000f,
             currentLucky = 1000f,
@@ -34,7 +35,8 @@ public class GameData
         };
 
         _itemStacks = new List<SerializedItemStack>();
-        _finishedQuestItemsGUIds = new List<string>();
+        _inProgressQuestItemsGUIds = new List<string>();
+        _completedQuestItemsGUIds = new List<string>();
         _finishedCutSceneGUIds = new List<string>();
         _locationId = "1bb1ff3615216f7408fa0c12d52cf7e6";
     }

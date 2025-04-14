@@ -20,8 +20,7 @@ public class UIQuestPanel : MonoBehaviour
 
     private void InitQuestBoard()
     {
-        _currentQuests = _questManager.CurrentQuests;
-        UpdateQuestBoard(_currentQuests);
+        
     }
 
     private void UpdateQuestBoard(List<QuestDataSO> quests)

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -22,8 +20,12 @@ public class SaveSystem : ScriptableObject
 	public string backupSaveFilename = "Save.NineHeavensRPG.bak";
 	public GameData gameData = new GameData();
 	
+	private string _lastSavedLocationId;
+	
 	void OnEnable()
 	{
+		Debug.Log("[SaveSystem] OnEnable called");
+		
 		_loadLocation.OnLoadingRequested += CacheLoadLocations;
 		_onResetGameRequested.OnEventRaised += SetNewGameData;
 	}
@@ -53,10 +55,15 @@ public class SaveSystem : ScriptableObject
 		}
 		
 		// Quest
-		gameData._finishedQuestItemsGUIds.Clear();
-		foreach (var item in _questListSaved.CurrentQuests)
+		gameData._completedQuestItemsGUIds.Clear();
+		gameData._inProgressQuestItemsGUIds.Clear();
+		foreach (var guid in _questListSaved.InProgressQuestGuids)
 		{
-			gameData._finishedQuestItemsGUIds.Add(item.Guid);
+			gameData._inProgressQuestItemsGUIds.Add(guid);
+		}
+		foreach (var guid in _questListSaved.CompletedQuestGuids)
+		{
+			gameData._completedQuestItemsGUIds.Add(guid);
 		}
 		
 		// Player
@@ -112,17 +119,19 @@ public class SaveSystem : ScriptableObject
 	{
 		if (FileManager.LoadFromFile(saveFilename, out var json))
 		{
-			// Using default data in case of not exist save data
 			if (String.IsNullOrEmpty(json))
 			{
-				gameData.Reset();
-				json = gameData.ToJson();	
+				gameData.Reset(); // gọi reset nếu không có gì
 			}
-			
-			gameData.LoadFromJson(json);
+			else
+			{
+				gameData.Reset(); // ⚠️ Reset trước khi FromJsonOverwrite
+				gameData.LoadFromJson(json);
+			}
 			return true;
 		}
 
+		gameData.Reset(); // không có file -> reset luôn
 		return false;
 	}
 
@@ -141,9 +150,11 @@ public class SaveSystem : ScriptableObject
 		}
 	}
 
-	public void LoadSavedQuestlineStatus()
+	public IEnumerator LoadSavedQuestlineStatus()
 	{
-		_questListSaved.SetQuestlineItemsFromSave(gameData._finishedQuestItemsGUIds);
+		_questListSaved.SetInProgressQuestlinesFromSave(gameData._inProgressQuestItemsGUIds);
+		_questListSaved.SetCompletedQuestlinesFromSave(gameData._completedQuestItemsGUIds);
+		yield return _questListSaved.LoadAllQuestsFromGuids();
 	}
 
 	public IEnumerator LoadSavedPlayerData()
@@ -210,11 +221,12 @@ public class SaveSystem : ScriptableObject
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen = true, bool fadeScreen = false)
 	{
-		if (locationToLoad.sceneType == GameSceneSO.GameSceneType.Location)
-		{
-			gameData._locationId = locationToLoad.Guid;
-		}
-		
-		SaveDataToDisk();
+		LocationSO location = locationToLoad as LocationSO;
+		if (location)
+    	{
+    		gameData._locationId = locationToLoad.Guid;
+			
+    		SaveDataToDisk();
+    	}
 	}
 }

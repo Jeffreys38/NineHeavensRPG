@@ -34,13 +34,22 @@ public class CutsceneEventListener : MonoBehaviour
             _finishedCutSceneGUIds = saveSystem.gameData._finishedCutSceneGUIds;
             if (_currentScene.cutscene && !_finishedCutSceneGUIds.Contains(gameScene.cutscene.Guid))
             {
-                  _loadMenu.RaiseEvent(gameScene.cutscene, showLoadingScreen: false, fadeScreen: false);
-                  
+                  Debug.Log("Called if");
                   var guid = _currentScene.cutscene.Guid;
                   MarkCutsceneAsFinished(guid);
+                  
+                  _loadMenu.RaiseEvent(gameScene.cutscene, showLoadingScreen: false, fadeScreen: true);
             }
             else
             {
+                  Debug.Log("Called elseif");
+                  if (_finishedCutSceneGUIds.Count > 0)
+                  {
+                        foreach (var o in  _finishedCutSceneGUIds)
+                        {
+                              Debug.Log(o + "\n");
+                        }
+                  }
                   _loadLocation.RaiseEvent(gameScene, showLoadingScreen: false, fadeScreen: true);
             }
       }
@@ -57,6 +66,7 @@ public class CutsceneEventListener : MonoBehaviour
       {
             if (!_finishedCutSceneGUIds.Contains(cutsceneGuid))
             {
+                  Debug.Log("MarkCutsceneAsFinished");
                   _finishedCutSceneGUIds.Add(cutsceneGuid);
                   saveSystem.gameData._finishedCutSceneGUIds = _finishedCutSceneGUIds;
             }

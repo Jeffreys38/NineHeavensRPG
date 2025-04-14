@@ -45,7 +45,6 @@ public class StartGame : MonoBehaviour
 
 		_saveSystem.WriteEmptySaveFile();
 		_saveSystem.SetNewGameData();
-		_loadLocation.RaiseEvent(_locationsToLoad);
 	}
 
 	void ContinuePreviousGame()
@@ -56,23 +55,21 @@ public class StartGame : MonoBehaviour
 	private IEnumerator LoadSaveGame() {
 		yield return StartCoroutine(_saveSystem.LoadSavedPlayerData());
 		yield return StartCoroutine(_saveSystem.LoadSavedInventory());
-		_saveSystem.LoadSavedQuestlineStatus();
+		yield return StartCoroutine(_saveSystem.LoadSavedQuestlineStatus());
 		
 		var locationGuid = _saveSystem.gameData._locationId;
-		Debug.Log("locationGuid before loading: " + locationGuid);
 		if (String.IsNullOrEmpty(locationGuid))
 		{
 			
 		}
 		
-		var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
+		var asyncOperationHandle = Addressables.LoadAssetAsync<GameSceneSO>(locationGuid);
 		yield return asyncOperationHandle;
 
 		if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
 		{
-			LocationSO locationSO = asyncOperationHandle.Result;
-			Debug.Log("Location is loaded: " + locationSO.Guid);
-			_cutsceneEvent.RaiseEvent(locationSO);
+			GameSceneSO gameSceneSO = asyncOperationHandle.Result;
+			_cutsceneEvent.RaiseEvent(gameSceneSO);
 		}
 	}
 }

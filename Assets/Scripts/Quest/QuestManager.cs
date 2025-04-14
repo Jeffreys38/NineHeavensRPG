@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private ItemStackEventChannelSO _onQuestRewardRequested;
     [SerializeField] private QuestEventChannelSO _onQuestAddRequested;
     
-    public List<QuestDataSO> CurrentQuests => _questListSaved.CurrentQuests;
+    public List<QuestDataSO> AllQuests => _questListSaved.AllLoadedQuests;
 
     private void OnEnable()
     {
@@ -32,7 +32,7 @@ public class QuestManager : MonoBehaviour
     private void AddQuest(QuestDataSO quest)
     {
         quest.questState = QuestState.InProgress;
-        _questListSaved.AddQuest(quest);
+        _questListSaved.AllLoadedQuests.Add(quest);
         
         Debug.Log("Active quest: " + quest.questState.ToString());
     }
