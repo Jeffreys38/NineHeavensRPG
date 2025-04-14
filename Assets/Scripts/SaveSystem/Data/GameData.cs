@@ -50,4 +50,19 @@ public class GameData
     {
         JsonUtility.FromJsonOverwrite(json, this);
     }
+    
+    public override string ToString()
+    {
+        string itemStacksString = string.Join(", ", _itemStacks);
+        string inProgressQuestItemsString = string.Join(", ", _inProgressQuestItemsGUIds);
+        string completedQuestItemsString = string.Join(", ", _completedQuestItemsGUIds);
+        string finishedCutSceneString = string.Join(", ", _finishedCutSceneGUIds);
+
+        return $"ProtagonistData: {(_protagonistData != null ? _protagonistData.ToString() : "null")}\n" +
+               $"ItemStacks: [{itemStacksString}]\n" +
+               $"InProgressQuestItems: [{inProgressQuestItemsString}]\n" +
+               $"CompletedQuestItems: [{completedQuestItemsString}]\n" +
+               $"FinishedCutScenes: [{finishedCutSceneString}]\n" +
+               $"LocationId: {_locationId}";
+    }
 }

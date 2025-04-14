@@ -338,57 +338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idName: StartGame
   _onAction: {fileID: 11400000, guid: eb8720dc6d6d19d4f9e075f92a1e182a, type: 2}
---- !u!1 &620898775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 620898777}
-  - component: {fileID: 620898776}
-  m_Layer: 0
-  m_Name: StartGameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &620898776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620898775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52845bb1f0d471eb2f4ffa0ccd54c82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameStateManager: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
-  _locationsToLoad: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
-  _saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
-  _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
-  _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
-  _cutsceneEvent: {fileID: 11400000, guid: 96709d02f97825442b915366564d2f49, type: 2}
-  _onNewGameButton: {fileID: 11400000, guid: eb8720dc6d6d19d4f9e075f92a1e182a, type: 2}
---- !u!4 &620898777
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620898775}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.318019, y: 0.16442987, z: -0.9367946}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337921313
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +516,57 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1524682686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524682687}
+  - component: {fileID: 1524682688}
+  m_Layer: 0
+  m_Name: StartGameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524682687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524682686}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1814.1321, y: 1018.5832, z: -0.7172988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1524682688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524682686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52845bb1f0d471eb2f4ffa0ccd54c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameStateManager: {fileID: 11400000, guid: d38e329909070474d9f03902da411930, type: 2}
+  _locationsToLoad: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
+  _saveSystem: {fileID: 11400000, guid: 8b89e54f916a0564f9b9f34c94efe481, type: 2}
+  _inputReader: {fileID: 11400000, guid: 1b6017479bc63954a811905a68d33001, type: 2}
+  _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
+  _cutsceneEvent: {fileID: 11400000, guid: 96709d02f97825442b915366564d2f49, type: 2}
+  _onNewGameButton: {fileID: 11400000, guid: eb8720dc6d6d19d4f9e075f92a1e182a, type: 2}
 --- !u!1 &1888318754
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ SceneRoots:
   - {fileID: 255400630}
   - {fileID: 2047750096}
   - {fileID: 1452711119}
-  - {fileID: 620898777}
   - {fileID: 1337921314}
   - {fileID: 2067659315}
   - {fileID: 1888318756}
+  - {fileID: 1524682687}

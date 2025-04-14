@@ -111,6 +111,7 @@ public class SaveSystem : ScriptableObject
 
 		if (FileManager.WriteToFile(saveFilename, gameData.ToJson()))
 		{
+			Debug.Log(gameData);
 			Debug.Log("Save successful " + saveFilename);
 		}
 	}
@@ -119,19 +120,25 @@ public class SaveSystem : ScriptableObject
 	{
 		if (FileManager.LoadFromFile(saveFilename, out var json))
 		{
+			Debug.Log("1. Loading save data from disk");
+			Debug.Log(json);
+			Debug.Log("2. Check if json is nul or empty");
+			
 			if (String.IsNullOrEmpty(json))
 			{
-				gameData.Reset(); // gọi reset nếu không có gì
+				gameData.Reset();
+				Debug.Log("json is null or empty");
+				Debug.Log(gameData);
+				FileManager.WriteToFile(saveFilename, gameData.ToJson());
 			}
 			else
 			{
-				gameData.Reset(); // ⚠️ Reset trước khi FromJsonOverwrite
 				gameData.LoadFromJson(json);
 			}
+			
 			return true;
 		}
 
-		gameData.Reset(); // không có file -> reset luôn
 		return false;
 	}
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,24 +33,37 @@ public class CutsceneEventListener : MonoBehaviour
       {
             _currentScene = gameScene;
             _finishedCutSceneGUIds = saveSystem.gameData._finishedCutSceneGUIds;
+            
             if (_currentScene.cutscene && !_finishedCutSceneGUIds.Contains(gameScene.cutscene.Guid))
             {
-                  Debug.Log("Called if");
+                  Debug.Log($"Playing cutscene: {gameScene.cutscene.Guid}");
+                  Debug.Log($"_finishedCutSceneGUIds: {_finishedCutSceneGUIds.Count}");
+                  foreach (var a in _finishedCutSceneGUIds)
+                  {
+                       Debug.Log(a);
+                       Debug.Log("\n");
+                  }
                   var guid = _currentScene.cutscene.Guid;
                   MarkCutsceneAsFinished(guid);
-                  
+
                   _loadMenu.RaiseEvent(gameScene.cutscene, showLoadingScreen: false, fadeScreen: true);
             }
             else
             {
-                  Debug.Log("Called elseif");
+                  Debug.Log("Cutscene already played or no cutscene found.");
+
                   if (_finishedCutSceneGUIds.Count > 0)
                   {
-                        foreach (var o in  _finishedCutSceneGUIds)
+                        foreach (var o in _finishedCutSceneGUIds)
                         {
-                              Debug.Log(o + "\n");
+                              Debug.Log($"Finished cutscene GUID: {o}");
                         }
                   }
+                  else
+                  {
+                        Debug.Log("No finished cutscenes.");
+                  }
+
                   _loadLocation.RaiseEvent(gameScene, showLoadingScreen: false, fadeScreen: true);
             }
       }
@@ -66,7 +80,6 @@ public class CutsceneEventListener : MonoBehaviour
       {
             if (!_finishedCutSceneGUIds.Contains(cutsceneGuid))
             {
-                  Debug.Log("MarkCutsceneAsFinished");
                   _finishedCutSceneGUIds.Add(cutsceneGuid);
                   saveSystem.gameData._finishedCutSceneGUIds = _finishedCutSceneGUIds;
             }

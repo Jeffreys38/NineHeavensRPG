@@ -14,8 +14,8 @@ public class StartGame : MonoBehaviour
 {
 	[SerializeField] private GameStateSO _gameStateManager;
 	[SerializeField] private GameSceneSO _locationsToLoad;
-	[SerializeField] private SaveSystem _saveSystem = default;
-	[SerializeField] private InputReader _inputReader = default;
+	[SerializeField] private SaveSystem _saveSystem;
+	[SerializeField] private InputReader _inputReader;
 
 	[Header("Broadcasting on")] 
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
@@ -57,18 +57,13 @@ public class StartGame : MonoBehaviour
 		yield return StartCoroutine(_saveSystem.LoadSavedInventory());
 		yield return StartCoroutine(_saveSystem.LoadSavedQuestlineStatus());
 		
-		var locationGuid = _saveSystem.gameData._locationId;
-		if (String.IsNullOrEmpty(locationGuid))
-		{
-			
-		}
-		
-		var asyncOperationHandle = Addressables.LoadAssetAsync<GameSceneSO>(locationGuid);
+		var asyncOperationHandle = Addressables.LoadAssetAsync<GameSceneSO>(_saveSystem.gameData._locationId);
 		yield return asyncOperationHandle;
 
 		if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
 		{
 			GameSceneSO gameSceneSO = asyncOperationHandle.Result;
+			Debug.Log("Game Data at LoadSaveGame: " + _saveSystem.gameData);
 			_cutsceneEvent.RaiseEvent(gameSceneSO);
 		}
 	}

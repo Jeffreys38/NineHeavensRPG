@@ -1326,6 +1326,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251189776188367430, guid: 979079f1e76f1bc4b97b384d5405603d, type: 3}
+      propertyPath: _saveSystem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251189776188367430, guid: 979079f1e76f1bc4b97b384d5405603d, type: 3}
+      propertyPath: _thisSceneSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bb1ff3615216f7408fa0c12d52cf7e6, type: 2}
     - target: {fileID: 2488414022549780485, guid: 979079f1e76f1bc4b97b384d5405603d, type: 3}
       propertyPath: m_Name
       value: EditorInitializer
@@ -40832,6 +40840,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
+      propertyPath: _loadMenu
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f1813c377cfb654c9b214922e5f053d, type: 2}
     - target: {fileID: 1263234742477013514, guid: 7342925c16d62484a9bf9e5129e5db1b, type: 3}
       propertyPath: _pathStorage
       value: 

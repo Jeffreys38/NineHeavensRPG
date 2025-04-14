@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3cf72c5de047a2b7dedbf990d31141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
+  saveSystem: {fileID: 11400000, guid: 8b89e54f916a0564f9b9f34c94efe481, type: 2}
 --- !u!1 &634070644
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +678,7 @@ MonoBehaviour:
   _onSkipCutsceneRequested: {fileID: 11400000, guid: 8429ef669dfbbb44ca94ad5ede4b00e3, type: 2}
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
   _loadMenu: {fileID: 11400000, guid: 0f1813c377cfb654c9b214922e5f053d, type: 2}
-  saveSystem: {fileID: 11400000, guid: 5dc72421f76551943a033efb27cd1a1b, type: 2}
+  saveSystem: {fileID: 11400000, guid: 8b89e54f916a0564f9b9f34c94efe481, type: 2}
 --- !u!4 &634070646
 Transform:
   m_ObjectHideFlags: 0

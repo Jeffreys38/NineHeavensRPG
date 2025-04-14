@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4ae8b9c62264f0fb6d2681ce12f3881, type: 3}
-  m_Name: SaveSystem
+  m_Name: Storage
   m_EditorClassIdentifier: 
   _loadLocation: {fileID: 11400000, guid: 1af2fea53420dfa4085451eac619af95, type: 2}
   _onResetGameRequested: {fileID: 11400000, guid: 0ec488e0e4c26154e87a74204f15f513, type: 2}
@@ -21,12 +21,12 @@ MonoBehaviour:
   backupSaveFilename: Save.NineHeavensRPG.bak
   gameData:
     _protagonistData:
-      currentHealth: 100000
-      currentMana: 100000
+      currentHealth: 0
+      currentMana: 0
       currentAtk: 0
       currentDefense: 0
-      currentIntelligence: 1000
-      currentLucky: 1000
+      currentIntelligence: 0
+      currentLucky: 0
       bonusAtk: 0
       bonusDefense: 0
       bonusIntelligence: 0
@@ -41,8 +41,7 @@ MonoBehaviour:
       learnedSkills: []
       power: 0
     _itemStacks: []
-    _finishedQuestItemsGUIds:
-    - 1667f9c06fb5f30458b95a1808670908
-    _finishedCutSceneGUIds:
-    - 0711b00617e754a46b6780865f419920
-    _locationId: 1ffcfc19436c88347b56ed7fb033a7c2
+    _inProgressQuestItemsGUIds: []
+    _completedQuestItemsGUIds: []
+    _finishedCutSceneGUIds: []
+    _locationId: 
