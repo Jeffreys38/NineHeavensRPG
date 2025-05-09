@@ -6,7 +6,7 @@
 </div>
 
 
-## About NineHeavensRPG (https://youtu.be/nTTStcqcWe0?si=HSkZo2H1WxuVzall)
+## About NineHeavensRPG
 
 **Nine Heavens Saga** is a **2D Xianxia RPG** where players embark on an epic cultivation journey, striving to ascend through the mystical realms of the **Nine Heavens Continent (九天大陆)**. Inspired by Chinese mythology, the game features deep character progression, martial arts techniques, and a rich storyline filled with legendary battles and celestial adventures.
 
